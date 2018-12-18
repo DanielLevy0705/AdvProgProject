@@ -5,6 +5,7 @@
 #include "Line.h"
 
 class Lexer {
+public:
     Line lexer(string input) {
         vector<string> vec;
         Line line = Line(vec);
@@ -38,6 +39,10 @@ class Lexer {
                 newWordAddition = true;
             }
             idx++;
+        }
+        //add the last word into the line
+        if (!newWord.empty()) {
+            line.addWord(newWord);
         }
         return line;
     }
