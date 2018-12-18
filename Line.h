@@ -12,15 +12,15 @@
 using namespace std;
 
 class Line {
-    vector <string> line;
+    vector<string> line;
 public:
-    Line(vector <string> newLine) {
+    Line(vector<string> newLine) {
         line = newLine;
     }
 
     string popFirst() {
         string retVal = line.at(0);
-        line = vector<string>(&line[1], &line[size - 1]);
+        line = vector<string>(&line[1], &line[line.size() - 1]);
 
     }
 
