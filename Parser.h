@@ -33,13 +33,17 @@ class Parser {
         //...
     }
 
+    void getCommandPacket() {
+        while
+    }
+
 public:
     Parser(DataTable* table) {
         lexer = Lexer();
         inputer = Inputer();
     }
     list<Expression&> next() {
-        Line line = lexer.lex(inputer.next());
+        Line line = lexer.lexer(inputer.next());
         list<Expression&> expList;
         while (!line.empty()) {
             Line temp;
@@ -47,19 +51,19 @@ public:
             if (dictionary.count(word) > 0) {
                 //if the word is recognized by the map add it to list
                 expList.emplace_front(dictionary[word]);
-            } else if (isNum(word) || isOpr(word) || table.exist(word) || word == "(") {
+            } else if (isNum(word) || isOpr(word) || symbolMap->exist(word) || word == "(") {
                 //if its the begginig of maths exp
-                expList.emplace_front(parseMathLine(getMathLine(word, line)));
+                expList.emplace_back( parseMathLine(  getMathLine(word, line)));
             } else if (isStringWord(word)){
                 //if its a word in commas "____"
-                expList.emplace_front(StringExpression(word));
+                expList.emplace_back(StringExpression(word));
             } else if (isLetters(word)) {
                 //if its letters can emphsaize new name for var
-                expList.emplace_front(UnknownNameExpression(word));
+                expList.emplace_back(newExpression(word));
             } else if (word == "{") {
-                expList.emplace_front(getExpressionCollection());
+                expList.emplace_back(getCommandPacket());
             } else {
-                throw "Error: ilegal expression: " + word;
+                throw "Error: illegal expression: " + word;
             };
 
         }

@@ -5,7 +5,7 @@
 
 int main() {
     DataServer dataServer;
-    TableMap table = TableMap(dataServer); //will be connected to data server and flight server
+    SymbolMap symbols = TableMap(dataServer); //will be connected to data server and flight server
     Expressioner expressioner;
     Expressioner.add(map<string, Expression> = {
             {"var",VarCommand(&expressioner, table)},

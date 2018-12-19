@@ -46,7 +46,6 @@ private:
             expressions = reserve.pop_back();
         }
     }
-
 }
 
 #endif //EXPRESSIONER_H
