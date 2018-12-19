@@ -6,40 +6,30 @@
 int main() {
     DataServer dataServer;
     TableMap table = TableMap(dataServer); //will be connected to data server and flight server
-    Parser parser;
-    parser.add(map<string, Expression> = {
-            {"var",VarCommand(&parser, table)},
-            {"startDataServer",DSCommand(&parser, dataServer)},
-            {"connect",ConnectCommend(&parser, table)},
-            {"=",AssignCommend(&parser, table)},
-            {"+",PlusExp(&parser)},
-            {"num",NumExp(&parser)}
+    Expressioner expressioner;
+    Expressioner.add(map<string, Expression> = {
+            {"var",VarCommand(&expressioner, table)},
+            {"startDataServer",DSCommand(&expressioner, dataServer)},
+            {"connect",ConnectCommend(&expressioner, table)},
+            {"=",AssignCommend(&expressioner, table)},
+            {"+",PlusExp(&expressioner)},
+            {"num",NumExp(&expressioner)}
     };
 
     while (true) {
-        Line line = lexer.lex(inputer.next());
-        string first = line.popFirst();
-        parser.parse(first).calculate(line);
+        expressioner.push(parser.parse(lexer.lex(inputer.next())));
+        expressioner.next().calculate();
     }
 }
 
 
 class ConnectDataServerCommand {
     DataServer dataServer;
-    Parser parser;
+    Expressioner Expressioner;
 
     execute() {
-        Expression ip = parser.next();
-        Expression port = parser.nextMathamethical(line);
-        dataServer.connect(parser.parse(argA), parser.parse(argB))
+        Expression ip = Expressioner.next();
+        Expression port = Expressioner.nextMathamethical(line);
+        dataServer.connect(Expressioner.parse(argA), Expressioner.parse(argB))
     }
-};
-
-4+ 5 / 5
-
-4 / 5 + 5
-
- + 5 / 5  4
-
-  +
-
+}
