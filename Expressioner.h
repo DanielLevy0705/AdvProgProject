@@ -29,7 +29,7 @@ public:
 
     Expression next() {
         if (expressions.empty())
-            return NULL;
+            return nullptr;
         return expressions.back();
     }
 
