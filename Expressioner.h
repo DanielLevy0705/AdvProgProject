@@ -10,10 +10,15 @@
 using namespace std;
 class Expressioner {
     Parser parser;
+    list<list<Expression&>> reserve;
     list<Expression &> expressions;
 
 public:
-    Expressioner(Parser prsr) : parser(prsr) {}
+    Expressioner() : parser() {}
+
+    void initiate(Parser& prsr) {
+        parser parser;
+    }
 
     Expression &popNext() {
         return expressions.pop_back();
@@ -23,8 +28,8 @@ public:
         return expressions.back();
     }
 
-    void push(Expression &expression) {
-        expressions.emplace(expression);
+    void push(list<Expression&> expList) {
+        reserve.emplace_front(expression);
     }
 
 private:

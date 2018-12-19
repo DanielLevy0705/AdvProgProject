@@ -9,20 +9,23 @@
 
 class OpenDataServerCommand {
     Expressioner* expressioner;
-    
+    OpenDataServerCommand(Expressioner* expr) {
+        expressioner = expr;
+    }
+
     calculate() {
         Expression& prt = expressioner->next();
         Expression& frq = expressioner->next();
-        
+
         try {
             openDataServer((int)prt.calculate(), (int)frq.calculate())
         }
-        
+
     }
-    
-    
+
+
     void openDataServer(int port, int frequency) {
-        
+
     }
 };
 

@@ -17,7 +17,6 @@ int main() {
     };
 
     while (true) {
-        expressioner.push(parser.parse(lexer.lex(inputer.next())));
-        expressioner.next().calculate();
+        expressioner.popNext().calculate();
     }
 }
