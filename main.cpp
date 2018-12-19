@@ -21,35 +21,3 @@ int main() {
         expressioner.next().calculate();
     }
 }
-class WhileCommand {
-    Expressioner expressioner;
-    queue<Expressioner> que;
-    calculate() {
-        Line line = lexer.lex(inputer.next());
-        while (!line.contain("}")) {
-            que.push(Exprresioner(parser.parse(line)))
-            line = lexer.lex(inputer.next())
-        }
-        que.push(Exprresioner(parser.parse(line)))
-        while (condition.calculate()) {
-            queue<Expressioner> copy = que.copy();
-            while (!copy.empty()) {
-                Expressioner temp = copy.pop();
-                while (!temp.empty())
-                    temp.next().calculate();
-            }
-        }
-    }
-
-};
-
-class ConnectDataServerCommand {
-    DataServer dataServer;
-    Expressioner Expressioner;
-
-    execute() {
-        Expression ip = Expressioner.next();
-        Expression port = Expressioner.nextMathamethical(line);
-        dataServer.connect(Expressioner.parse(argA), Expressioner.parse(argB))
-    }
-}
