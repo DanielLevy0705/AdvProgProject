@@ -21,10 +21,14 @@ public:
     }
 
     Expression &popNext() {
+        if (expressions.empty()) {
+            load();
+        }
         return expressions.pop_back();
     }
 
     Expression next() {
+
         return expressions.back();
     }
 
@@ -34,9 +38,11 @@ public:
 
 private:
     void load() {
-        //if there is no more expressions get more from parser
-        if (expressions.empty()) {
+        //if there is no more expressions get more from parser or from reserve
+        if (reserve.empty()) {
             expressions = parser.next();
+        } else {
+            expressions = reserve.pop_back();
         }
     }
 
