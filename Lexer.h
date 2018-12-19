@@ -22,7 +22,8 @@ public:
                     newWord = "";
                 }
                 //if its not alphabet,number or a dot, its an operator.
-            } else if (!isalpha(input[idx]) && !isdigit(input[idx]) && (input[idx] != '.')) {
+            } else if (!isalpha(input[idx]) && !isdigit(input[idx]) &&
+                       (input[idx] != '.') && (input[idx] != '\"')) {
                 if (newWordAddition) {
                     //add new word and nullify the next.
                     line.addWord(newWord);
