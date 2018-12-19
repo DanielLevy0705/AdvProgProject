@@ -14,6 +14,7 @@ class Parser {
     Lexer lexer;
     Inputer inputer;
     DataTable* table;
+    bool isPacketGetterON;
     map <string, Expression&> dictionary;
 
     Line shuntingYard(Line line) {
@@ -34,7 +35,16 @@ class Parser {
     }
 
     void getCommandPacket() {
-        while
+        isPacketGetterON = true;
+        //create the required command packet
+        CommandPacket cp;
+        //get the next line from parser
+        list<Expression> temp = next();
+        while (temp.back().toString() == "}") {
+            cp.push(temp);
+            temp = next();
+        }
+        isPacketGetterON = false
     }
 
 public:
@@ -62,7 +72,9 @@ public:
                 expList.emplace_back(newExpression(word));
             } else if (word == "{") {
                 expList.emplace_back(getCommandPacket());
-            } else {
+            }  else if (word == "}" && isPacketGetterON) {
+                expList.emplace_back(newExpression(word));
+            }else {
                 throw "Error: illegal expression: " + word;
             };
 
