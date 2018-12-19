@@ -28,7 +28,8 @@ public:
     }
 
     Expression next() {
-
+        if (expressions.empty())
+            return NULL;
         return expressions.back();
     }
 
