@@ -1,21 +1,45 @@
 
+
 #include "Inputer.h"
 #include "lexer.h"
 
 int main() {
     DataServer dataServer;
-    ValTable table;
+    TableMap table = TableMap(dataServer); //will be connected to data server and flight server
     Parser parser;
-    parser.add("var",VarCommand(table));
-    parser.add("startDataServer",DSCommand(dataServer));
-    parser.add("connect",ConnectCommend(dataServer))
-    parser.add("=",AssignCommend(table));
-    parser.add("+",PlusExp());
-    parser.add("num",NumExp());
-
-
+    parser.add(map<string, Expression> = {
+            {"var",VarCommand(&parser, table)},
+            {"startDataServer",DSCommand(&parser, dataServer)},
+            {"connect",ConnectCommend(&parser, table)},
+            {"=",AssignCommend(&parser, table)},
+            {"+",PlusExp(&parser)},
+            {"num",NumExp(&parser)}
+    };
 
     while (true) {
-        parser.parse(lexer.lex(inputer.next())).execute();
+        Line line = lexer.lex(inputer.next());
+        string first = line.popFirst();
+        parser.parse(first).calculate(line);
     }
 }
+
+
+class ConnectDataServerCommand {
+    DataServer dataServer;
+    Parser parser;
+
+    execute() {
+        Expression ip = parser.next();
+        Expression port = parser.nextMathamethical(line);
+        dataServer.connect(parser.parse(argA), parser.parse(argB))
+    }
+};
+
+4+ 5 / 5
+
+4 / 5 + 5
+
+ + 5 / 5  4
+
+  +
+
