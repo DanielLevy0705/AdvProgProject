@@ -56,6 +56,8 @@ public:
             } else if (isLetters(word)) {
                 //if its letters can emphsaize new name for var
                 expList.emplace_front(UnknownNameExpression(word));
+            } else if (word == "{") {
+                expList.emplace_front(getExpressionCollection());
             } else {
                 throw "Error: ilegal expression: " + word;
             };
