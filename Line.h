@@ -45,6 +45,13 @@ public:
     bool empty() {
         return line.empty();
     }
+
+    string back() {
+        if (line.empty()) {
+            return nullptr;
+        }
+        return line.back();
+    }
 };
 
 

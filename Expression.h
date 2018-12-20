@@ -2,9 +2,15 @@
 #define PROJ1_EXPRESSION_H
 
 
+#include <string>
+
+using namespace std;
+
 class Expression {
 public:
     virtual double calculate() = 0;
+
+    virtual string getString() = 0;
 };
 
 

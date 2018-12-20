@@ -2,19 +2,26 @@
 #define PROJ1_DIV_H
 
 
+#include <string>
 #include "Expression.h"
 
 class Div : public Expression {
     Expression *leftExp;
     Expression *rightExp;
+    string strRep;
 public:
-    Div(Expression *left, Expression *right) {
+    Div(string strVal, Expression *left, Expression *right) {
         leftExp = left;
         rightExp = right;
+        strRep = strVal;
     }
 
     virtual double calculate() {
         return this->leftExp->calculate() / this->rightExp->calculate();
+    }
+
+    virtual string getString() {
+        return strRep;
     }
 };
 

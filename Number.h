@@ -9,14 +9,19 @@
 #include <string>
 #include "Expression.h"
 
-class Number: public Expression {
-    std::string number;
+class Number : public Expression {
+    string number;
 public:
-    Number(std::string num){
-        number=num;
+    Number(std::string num) {
+        number = num;
     }
-    virtual double calculate(){
+
+    virtual double calculate() {
         return stod(number);
+    }
+
+    virtual string getString() {
+        return number;
     }
 };
 

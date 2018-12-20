@@ -6,14 +6,20 @@
 
 class Minus : public Expression {
     Expression *leftExp, *rightExp;
+    string strRep;
 public:
-    Minus(Expression *left, Expression *right) {
+    Minus(string strVal, Expression *left, Expression *right) {
         leftExp = left;
         rightExp = right;
+        strRep = strVal;
     }
 
     virtual double calculate() {
         return leftExp->calculate() - rightExp->calculate();
+    }
+
+    virtual string getString(){
+        return strRep;
     }
 };
 

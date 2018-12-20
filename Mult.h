@@ -10,14 +10,20 @@
 
 class Mult : public Expression {
     Expression *leftExp, *rightExp;
+    string strRep;
 
-    Mult(Expression *left, Expression *right) {
+    Mult(string strVal,Expression *left, Expression *right) {
         leftExp = left;
         rightExp = right;
+        strRep = strVal;
     }
 
     virtual double calculate() {
         return leftExp->calculate() * rightExp->calculate();
+    }
+
+    virtual string getString(){
+        return strRep;
     }
 };
 
