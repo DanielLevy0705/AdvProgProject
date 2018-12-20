@@ -1,8 +1,22 @@
 //
-// Created by elronbandel on 12/19/18.
+// Created by elronbandel on 12/20/18.
 //
+#include "Value.h"
+#ifndef LOCALVALUE_H
+#define LOCALVALUE_H
 
-#ifndef UNTITLED4_LOCALVALUE_H
-#define UNTITLED4_LOCALVALUE_H
+class LocalValue: public Value {
+    double value;
+public:
+    LocalValue(double val) {
+        value = val;
+    }
+    void operator = (double num) {
+        value = num;
+    }
+    operator double() {
+        return value;
+    }
+};
 
-#endif //UNTITLED4_LOCALVALUE_H
+#endif //LOCALVALUE_H

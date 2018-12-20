@@ -40,7 +40,10 @@ class Parser {
         CommandPacket cp;
         //get the next line from parser
         list<Expression> temp = next();
-        while (temp.back().toString() == "}") {
+        while (temp.back().toString() != "}") {
+
+            if(temp.size() > 1)    //if its int the same line with other
+                temp.pop_back();
             cp.push(temp);
             temp = next();
         }

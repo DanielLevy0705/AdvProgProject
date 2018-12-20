@@ -1,8 +1,13 @@
 //
-// Created by elronbandel on 12/19/18.
+// Created by elronbandel on 12/20/18.
 //
 
-#ifndef UNTITLED4_VALUE_H
-#define UNTITLED4_VALUE_H
+#ifndef VALUE_H
+#define VALUE_H
+class Value {
+public:
+    virtual void operator = (double num) = 0;
+    virtual operator double() = 0;
+};
 
-#endif //UNTITLED4_VALUE_H
+#endif// VALUE_H
