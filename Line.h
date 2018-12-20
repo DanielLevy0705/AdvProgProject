@@ -18,6 +18,8 @@ public:
         line = newLine;
     }
 
+    Line() {}
+
     string popFirst() {
         string retVal = line.at(0);
         line = vector<string>(&line[1], &line[line.size() - 1]);
@@ -40,6 +42,9 @@ public:
         line.push_back(newWord);
     }
 
+    bool empty() {
+        return line.empty();
+    }
 };
 
 
