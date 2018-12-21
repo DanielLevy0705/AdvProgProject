@@ -47,6 +47,7 @@ void* sendAsClient(void* arg) {
     if (write(clientSocket, buffer, info->msg.size()) == FAILED)
         throw "Error: failed to send to server";
     close(clientSocket);
+    delete(info);
     pthread_exit(nullptr);
 }
 using namespace std;
@@ -58,23 +59,23 @@ class BindedValue : public Value {
 
 public:
     BindedValue(const string& pth, BindedSymbolMap* symbolMap, const string& srvrIp, int srvrPort) {
-        path = path;
+        path = pth;
         symap = symbolMap;
         serverIP = srvrIp;
         serverPort = srvrPort;
     }
     void operator = (double num) {
         string command = "set " + path + " " + to_string(num);
-        Info info;
-        info.serverIp = serverIP;
-        info.serverPort = serverPort;
-        info.msg = command;
+        Info* info = new Info();
+        info->serverIp = serverIP;
+        info->serverPort = serverPort;
+        info->msg = command;
         //send command to server to set value in diffrent thread
         pthread_t clientThread;
-        pthread_create(&clientThread, nullptr, sendAsClient, &info);
+        pthread_create(&clientThread, nullptr, sendAsClient, info);
     }
     operator double() {
-        return (*symap)[path];
+        return *(*symap)[path];
     }
 };
 
