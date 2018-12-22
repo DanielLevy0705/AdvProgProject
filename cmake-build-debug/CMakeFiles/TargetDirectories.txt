@@ -1,0 +1,3 @@
+/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/untitled4.dir
