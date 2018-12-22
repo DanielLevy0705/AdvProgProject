@@ -6,39 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-stdio.h
--
-stdlib.h
--
-netdb.h
--
-unistd.h
--
-netinet/in.h
--
-string.h
--
-sys/socket.h
--
-pthread.h
--
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 string
 -
-map
--
-list
--
-iostream
--
-vector
--
-sstream
--
-Value.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Value.h
-LocalValue.h
-/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 Parser.h
@@ -47,18 +17,24 @@ Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 list
 -
+
+/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h
+queue
+-
 string
 -
 
-/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
-Value.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Value.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/Value.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
+list
+-
+map
+-
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/main.cpp
+Inputer.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 
