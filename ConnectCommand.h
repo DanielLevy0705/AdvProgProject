@@ -22,7 +22,7 @@ public:
     double calculate() override {
         try {
 
-            string ip = expressioner->popNext()->toString();
+            string ip = expressioner->popNext()->getString();
             int port = (int)expressioner->popNext()->calculate();
 
             symap->connect(ip, port);
@@ -33,8 +33,9 @@ public:
 
 
     }
-
-
+    string getString() override {
+        return "ConnectCommand";
+    }
 };
 
 

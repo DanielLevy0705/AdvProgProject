@@ -27,7 +27,7 @@ public:
         }
     }
 
-    string toString() {
+    string getString() {
         return string("openDataServerCommand");
     }
 };
