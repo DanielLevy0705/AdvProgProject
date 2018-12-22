@@ -1,0 +1,3 @@
+/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir
+/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/edit_cache.dir

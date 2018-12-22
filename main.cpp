@@ -5,7 +5,7 @@
 
 int main() {
     BindedSymbolMap* symap = new BindedSymbolMap; //will be connected to data server and flight server
-    Expressioner* expressioner = new Expressioner(map<string, Expression> =
+    Expressioner* expressioner = new Expressioner(map<string, Expression*> =
                                                   new {"var",VarCommand(expressioner, symap)},
                                                   new {"openDataServer",DataServerOpenCommand(expressioner, symap)},
                                                   new {"connect",ConnectCommend(expressioner, symap)});
@@ -14,4 +14,5 @@ int main() {
         expressioner.popNext().calculate();
     }
     delete symap;
+    delete expressioner;
 }
