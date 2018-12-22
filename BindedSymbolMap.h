@@ -35,124 +35,61 @@ static vector<string> split(const string& s, char delimiter){
     }
     return tokens;
 }
-string getInnerString(char start,string s, char end)  {
-    bool rec = false;
-    string res;
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] == end && rec)
-            return res;
-        if (rec)
-            res = res + s[i];
-        if (s[i] == start)
-            rec = true;
-    }
-}
+string getInnerString(char start, const string& s, char end);
 typedef struct sockaddr_in Address;
-typedef struct ServerConfig
-{
-    int port;
-    int frequency;
-    map<string, Value*>* symbolMap;
-    bool* active;
-} ServerConfig;
-void* startUpdatesServer(void* serverConfig) {
-    ServerConfig* config = (ServerConfig*)serverConfig;
-    if (config != nullptr) {
-        map<string, Value*>* symap = config->symbolMap;
-        int port = config->port;
-        int frequency = config->frequency;
-        bool* active = config->active;
-        delete serverConfig;
-        //now actually opening the server
-        Address serverAddress;
-        socklen_t servAddrLen = sizeof(serverAddress);
-        // create socket point
-        int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
-        if (serverSocket == FAILED)
-            throw "Error: socket opening failed";
-        /* Initialize socket structure */
-        bzero((char *) &serverAddress, sizeof(serverAddress));
-        //address
-        serverAddress.sin_family = AF_INET;
-        serverAddress.sin_addr.s_addr = INADDR_ANY;
-        serverAddress.sin_port = htons(port);
-        //bind the host adress using bind
-        if (bind(serverSocket, (struct sockaddr*)&serverAddress, servAddrLen) == FAILED)
-            throw "Error: socket binding failed";
-        //start listening to incoming connections
-        listen(serverSocket, MAX_CONNEDTED_CLIENTS);
-        //main routine loop of collecting clients
-        //define the client sockets structure
-        int clientSocket;
-        Address clientAdress;
-        socklen_t cliAddrLen = sizeof(clientAdress);
-        //look for clients
-        clientSocket = accept(serverSocket, (struct sockaddr*)&clientAdress, &cliAddrLen);
-        if (clientSocket == FAILED)
-            throw "Error: client socket failed";
 
-        char buffer[BUFFER_SIZE];
-        vector<string> lines;
-
-        //while this thread should be active try and get info from client
-        while(*active) {
-            if (read(clientSocket,buffer, BUFFER_SIZE) != FAILED) {
-                string packet = getInnerString('{', buffer,'}');
-                lines = split(packet,'\n');
-                for (auto& line: lines){   //if its adress of variable
-                     //split to pair
-                    vector<string> pair = split(line,',');
-                    //put the pair in the symbol map
-                    if (!symap->count(pair[0]))  {
-                        (*symap)[pair[0]] = new LocalValue(stod(pair[1]));
-                    }  else {
-                         *(*symap)[pair[0]] = stod(pair[1]);
-                    }
-                }
-                usleep(1000/frequency);
-            };
-        }
-        //finish the connsction
-        close(clientSocket);
-        close(serverSocket);
-    }
-    return nullptr;
-}
 
 class BindedSymbolMap {
     map<string, Value*>* symbolMap;
     //server-client members
     pthread_t serverThread, clientThread;
-    bool serverActive = false;
+    bool* updatesThreadActive;
+    int updatesServerSocket;
+    int clientSocket;
+    int updatesSocket;
+    int updatesFrequency; //how many time a second should be updated
+    pthread_mutex_t updatsMutex;
 
+
+    void openServerAndGetClient(int port);
+    static void* startUpdatesRoutine(void* serverConfig);
 public:
+    //constructor
     BindedSymbolMap () {
         symbolMap = new map<string, Value*>;
+        updatesThreadActive = new bool(false); //the
+        updatsMutex = PTHREAD_MUTEX_INITIALIZER;
     }
-    void openDataServer(int port, int frequency) {
-        ServerConfig* config = new ServerConfig();
-        //give the server all the things it needs to update the symbol map
-        config->port = port;
-        config->frequency = frequency;
-        config->active = &serverActive;
-        config->symbolMap = symbolMap;
-        //start the thread of the server
-        serverActive = true;
-       
-       if (pthread_create(&serverThread, nullptr, startUpdatesServer, config))
-            throw "Error: failed creating pthred";
-    }
+    //external function to open the data server
+    void openDataServer(int port, int frequency);
+
+
     void close() {
-        pthread_cancel(serverThread);
+        *updatesThreadActive = false;
+        ::close(updatesSocket);
+        ::close(clientSocket);
+        ::close(updatesServerSocket);
     }
+    void connect(const string& ip, int port);
+    int getClientSocket() {
+        return clientSocket;
+    }
+    void updateTable();
+    bool isUpdatesActive() {
+        return updatesThreadActive;
+    }
+    void waitBetweenUpdates();
+
     Value*& operator [] (const string& key) {
         return (*symbolMap)[key];
     }
     ~BindedSymbolMap() {
+        close();
         for (auto& valuePointer : *symbolMap) {
             delete(valuePointer.second);
         }
         delete symbolMap;
+        delete updatesThreadActive;
     }
 };
 

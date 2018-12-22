@@ -1,10 +1,20 @@
 //
-// Created by elronbandel on 12/19/18.
+// Created by elronbandel on 12/21/18.
 //
 
 #ifndef EXPRESSION_H
 #define EXPRESSION_H
+
+#include <string>
+using namespace std;
 class Expression {
-    virtual Expression* calculate() = 0;
+protected:
+
+public:
+
+    virtual double calculate() = 0;
+    virtual operator string() = 0;
 };
-#endif EXPRESSION_H
+
+
+#endif //EXPRESSION_H
