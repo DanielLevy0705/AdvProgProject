@@ -22,7 +22,7 @@ public:
     double calculate() override {
         try {
 
-            string ip = *expressioner->popNext();
+            string ip = expressioner->popNext()->toString();
             int port = (int)expressioner->popNext()->calculate();
 
             symap->connect(ip, port);

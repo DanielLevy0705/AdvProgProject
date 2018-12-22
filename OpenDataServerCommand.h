@@ -27,7 +27,7 @@ public:
         }
     }
 
-    operator string() override {
+    string toString() {
         return string("openDataServerCommand");
     }
 };

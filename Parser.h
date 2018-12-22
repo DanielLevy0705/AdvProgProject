@@ -209,24 +209,24 @@ public:
                 (word == "/") || (word == "(") || (word == ")") || (word == ","));
     }
 
-    void getCommandPacket() {
-        isPacketGetterON = true;
-        //create the required command packet
-        CommandPacket cp;
-        //get the next line from parser
-        list<Expression> temp = next();
-        while (temp.back().toString() != "}") {
-            cp.push(temp);
-            temp = next();
-        }
-        isPacketGetterON = false;
-    }
+//    void getCommandPacket() {
+//        isPacketGetterON = true;
+//        //create the required command packet
+//        CommandPacket cp;
+//        //get the next line from parser
+//        list<Expression> temp = next();
+//        while (temp.back().toString() != "}") {
+//            cp.push(temp);
+//            temp = next();
+//        }
+//        isPacketGetterON = false;
+//    }
 
 public:
 
 
     list<Expression*> next() {
-        Line line = lexer.lexer(inputer.next());
+        Line line* = &lexer.lexer(inputer.next());
         list<Expression*> expList;
         while (!line->empty()) {
             Line temp;
