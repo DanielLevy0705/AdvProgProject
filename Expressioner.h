@@ -1,6 +1,4 @@
-//
-// Created by elronbandel on 12/21/18.
-//
+
 
 #ifndef EXPRESSIONER_H
 #define EXPRESSIONER_H
@@ -8,6 +6,7 @@
 #include "Parser.h"
 #include "Expression.h"
 #include <list>
+#include <string>
 
 using namespace std;
 
@@ -15,10 +14,11 @@ class Expressioner {
     Parser parser;
     list<list<Expression*>> reserve;
     list<Expression*> expressions;
+    bool active;
 
 public:
     Expressionermap<string, Expression*> expressions() : parser(expressions) {
-
+        active = true;
     }
 
     void initiate(Parser& prsr) {
@@ -42,6 +42,10 @@ public:
 
     void push(list<Expression*> expList) {
         reserve.emplace_front(expList);
+    }
+
+    bool on() {
+        return active;
     }
 
 private:
