@@ -17,7 +17,7 @@ class Expressioner {
     list<Expression*> expressions;
 
 public:
-    Expressioner() : parser() {
+    Expressionermap<string, Expression*> expressions() : parser(expressions) {
 
     }
 
