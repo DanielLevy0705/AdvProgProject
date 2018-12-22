@@ -1,5 +1,5 @@
-/snap/clion/57/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/elronbandel/CLionProjects/AdvProgProject2
--- The C compiler identification is GNU 7.3.0
+/opt/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fatuity/CLionProjects/AdvProgProject
+-- The C compiler identification is GNU 4.8.5
 -- The CXX compiler identification is GNU 7.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug
+-- Build files have been written to: /home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug
