@@ -1,7 +1,6 @@
 
-
-#include "Inputer.h"
 #include "Expressioner.h"
+#include "BindedSymbolMap.h"
 
 int main() {
     BindedSymbolMap* symap = new BindedSymbolMap; //will be connected to data server and flight server
@@ -10,8 +9,8 @@ int main() {
                                                   new {"openDataServer",DataServerOpenCommand(expressioner, symap)},
                                                   new {"connect",ConnectCommend(expressioner, symap)});
 
-    while (expressioner.on()) {
-        expressioner.popNext().calculate();
+    while (expressioner->on()) {
+        expressioner->popNext()->calculate();
     }
     delete symap;
     delete expressioner;
