@@ -30,8 +30,18 @@ public:
                     newWordAddition = false;
                     newWord = "";
                 }
+                //check for two chars size bool operators.
+                if ((idx < input.size() - 1) && (input[idx] == '!' || input[idx] == '=' ||
+                                                 input[idx] == '<' || input[idx] == '>')) {
+                    if (input[idx + 1] == '=') {
+                        newWord += input[idx] + input[idx + 1];
+                        //two chars are added so need to move the index forward.
+                        idx++;
+                    }
+                } else {
+                    newWord += input[idx];
+                }
                 //add the operator then nullify the next word.
-                newWord += input[idx];
                 line.addWord(newWord);
                 newWord = "";
                 //if its a digit or a letter add it to the word, and notify that youre buliding a word.

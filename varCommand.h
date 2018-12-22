@@ -8,14 +8,19 @@
 #include <string>
 #include <map>
 #include "Value.h"
+
 using namespace std;
+
 class varCommand {
-    map<string,Value> symbolMap;
-    Expressioner* expressioner;
-    double execute();
-    double setExpressioner(Expressioner exp){
-        expressioner = exp;
+    map<string, Value> symbolMap;
+    Expressioner *expressioner;
+public:
+    varCommand(Expressioner *expr) {
+        expressioner = expr;
     }
+
+    double execute();
+
     bool isLegitVar(string var);
 };
 

@@ -11,6 +11,9 @@ class Div : public Expression {
     string strRep;
 public:
     Div(string strVal, Expression *left, Expression *right) {
+        if (right->calculate() == 0) {
+            throw "dividing by zero exception";
+        }
         leftExp = left;
         rightExp = right;
         strRep = strVal;

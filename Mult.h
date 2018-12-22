@@ -11,7 +11,7 @@
 class Mult : public Expression {
     Expression *leftExp, *rightExp;
     string strRep;
-
+public:
     Mult(string strVal,Expression *left, Expression *right) {
         leftExp = left;
         rightExp = right;

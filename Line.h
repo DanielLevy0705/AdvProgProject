@@ -21,9 +21,12 @@ public:
     Line() {}
 
     string popFirst() {
+        if (line.empty()) {
+            throw "line is empty";
+        }
         string retVal = line.at(0);
         line = vector<string>(&line[1], &line[line.size() - 1]);
-
+        return retVal;
     }
 
     string operator[](size_t n) {
