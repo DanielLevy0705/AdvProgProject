@@ -1,12 +1,19 @@
-//
-// Created by elronbandel on 12/18/18.
-//
+//created by: elron bandel and daniel levy
+
 #ifndef INPUTER_H
 #define INPUTER_H
-//
+
 #include <queue>
 #include <string>
+#include <fstream>
+#include <iostream>
+
 using namespace std;
+
+/****
+ * Iputer - handle the input from command line or files
+ *
+ ***/
 class Inputer {
     queue<string> que;
 
@@ -17,7 +24,7 @@ class Inputer {
         if (sourceFile.is_open()) {
             while (!sourceFile.eof()) {
                 getline(sourceFile, line);
-                que.push_back(line);
+                que.push(line);
             }
             sourceFile.close();
         }
@@ -26,11 +33,15 @@ class Inputer {
     string next() {
         if (que.empty()) {
             string s;
-            return s << cin
+            cin >> s;
+            return s;
         } else {
-            return que.pop_front();
+            string s = que.front();
+            que.pop();
+            return  s;
         }
     }
 };
-//
-#endif INPUTER_H
+
+
+#endif// INPUTER_H

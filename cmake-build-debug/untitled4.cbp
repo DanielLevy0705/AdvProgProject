@@ -90,7 +90,19 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h">
 			<Option target="untitled4"/>
 		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">
+			<Option target="untitled4"/>
+		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Value.h">

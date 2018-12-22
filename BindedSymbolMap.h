@@ -25,6 +25,7 @@
 #define FAILED -1
 #define BUFFER_SIZE 1024
 using  namespace std;
+
 static vector<string> split(const string& s, char delimiter){
     vector<string> tokens;
     string token;
@@ -36,6 +37,7 @@ static vector<string> split(const string& s, char delimiter){
     return tokens;
 }
 string getInnerString(char start, const string& s, char end);
+
 typedef struct sockaddr_in Address;
 
 
