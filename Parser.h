@@ -35,11 +35,15 @@ class Parser {
     map<string, Expression*> dictionary;
 public:
     
-    Parser(map<string, Expression*> dict, BindedSymbolMap* symbolMap) {
-        dictionary = dict;
+    Parser(BindedSymbolMap* symbolMap) {
+
         lexer = Lexer();
         inputer = Inputer();
         isPacketGetterON = false;
+    }
+    void initiate(map<string, Expression*> dict) {
+        dictionary = dict;
+
     }
 
     Line getMathLine(Line *line) {

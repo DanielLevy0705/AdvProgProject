@@ -18,12 +18,12 @@ class Expressioner {
     bool active;
 
 public:
-    Expressioner(map<string, Expression*> expressions, BindedSymbolMap* symap) : parser(expressions, symap) {
+    explicit Expressioner(BindedSymbolMap* symap) : parser(symap) {
         active = true;
     }
 
-    void initiate(Parser& prsr) {
-        parser = prsr;
+    void initiate(map<string, Expression*> dictionary) {
+        parser.initiate(dictionary);
     }
 
     Expression* popNext() {
