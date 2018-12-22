@@ -20,17 +20,27 @@
 #include "Minus.h"
 #include "Plus.h"
 #include "Neg.h"
+#include "Inputer.h"
+#include "BindedSymbolMap.h"
 
 using namespace std;
 
 class Parser {
     Lexer lexer;
     Inputer inputer;
-    DataTable *table;
+    BindedSymbolMap* symap;
     bool isPacketGetterON;
     //need to mark unary minus with a string that won't be in the expression.
     const string neg = "$";
-    map<string, Expression &> dictionary;
+    map<string, Expression*> dictionary;
+public:
+    
+    Parser(map<string, Expression*> dict, BindedSymbolMap* symbolMap) {
+        dictionary = dict;
+        lexer = Lexer();
+        inputer = Inputer();
+        isPacketGetterON = false;
+    }
 
     Line getMathLine(Line *line) {
         Line mathExp;
@@ -43,9 +53,9 @@ class Parser {
                 return mathExp;
             }
             //if theres a symbol and no operators its the end of an expression.
-            if (symbolMap->exist(line->operator[](0)) && (!isOpr(line->operator[](1)) ||
+            if (symap->exist(line->operator[](0)) && (!isOpr(line->operator[](1)) ||
                                                           line->operator[](1) == ",")) {
-                string val = to_string(symbolMap[line->popFirst()].getValue());
+                string val = to_string(symap[line->popFirst()].getValue());
                 mathExp.addWord(val);
                 return mathExp;
             }
@@ -61,7 +71,7 @@ class Parser {
                 }
                 //if the next is not a number and not a "-" the expression is illegal.
                 if ((!isNum(line->operator[](1)))
-                    && (!symbolMap->exist(line->operator[](1)))) {
+                    && (!symap->exist(line->operator[](1)))) {
                     if (line->operator[](1) != "-") {
                         throw "Error: illegal line : " + line->operator[](0) + " " + line->operator[](1);
                     }
@@ -70,7 +80,7 @@ class Parser {
                         //if the next char does not fit to an unary minus throw exception.
                         if (line->operator[](2) != "(" &&
                             !isNum(line->operator[](2)) &&
-                            (!symbolMap->exist(line->operator[](2)))) {
+                            (!symap->exist(line->operator[](2)))) {
                             throw "Error: illegal line";
                         }
                     }
@@ -213,33 +223,30 @@ class Parser {
     }
 
 public:
-    Parser(DataTable *table) {
-        lexer = Lexer();
-        inputer = Inputer();
-    }
 
-    list<Expression &> next() {
-        Line *line = &lexer.lexer(inputer.next());
-        list<Expression &> expList;
+
+    list<Expression*> next() {
+        Line line = lexer.lexer(inputer.next());
+        list<Expression*> expList;
         while (!line->empty()) {
             Line temp;
             string word = line->popFirst();
             if (dictionary.count(word) > 0) {
                 //if the word is recognized by the map add it to list
                 expList.emplace_front(dictionary[word]);
-            } else if (isNum(word) || isOpr(word) || symbolMap->exist(word) || word == "(") {
+            } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
                 //if its the begginig of maths exp
                 expList.emplace_back(shuntingYard(getMathLine(line)));
-            } else if (isStringWord(word)) {
-                //if its a word in commas "____"
-                expList.emplace_back(StringExpression(word));
-            } else if (isLetters(word)) {
-                //if its letters can emphsaize new name for var
-                expList.emplace_back(newExpression(word));
-            } else if (word == "{") {
-                expList.emplace_back(getCommandPacket());
-            } else if (word == "}" && isPacketGetterON) {
-                expList.emplace_back(newExpression(word));
+//            } else if (isStringWord(word)) {
+//                //if its a word in commas "____"
+//                expList.emplace_back(StringExpression(word));
+//            } else if (isLetters(word)) {
+//                //if its letters can emphsaize new name for var
+//                expList.emplace_back(newExpression(word));
+//            } else if (word == "{") {
+//                expList.emplace_back(getCommandPacket());
+//            } else if (word == "}" && isPacketGetterON) {
+//                expList.emplace_back(newExpression(word));
             } else {
                 throw "Error: illegal expression: " + word;
             };

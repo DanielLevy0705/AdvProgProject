@@ -16,7 +16,7 @@ using namespace std;
  ***/
 class Inputer {
     queue<string> que;
-
+public:
 //load - function that add to the queue more command lines from file
     void load(string path) {
         ifstream sourceFile(path);

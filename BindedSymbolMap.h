@@ -81,6 +81,9 @@ public:
         return updatesThreadActive;
     }
     void waitBetweenUpdates();
+    bool exist(const string& name) {
+        return (symbolMap->count(name) > 0);
+    }
 
     Value*& operator [] (const string& key) {
         return (*symbolMap)[key];

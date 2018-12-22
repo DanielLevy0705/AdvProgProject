@@ -12,12 +12,13 @@ using namespace std;
 
 class Expressioner {
     Parser parser;
+
     list<list<Expression*>> reserve;
     list<Expression*> expressions;
     bool active;
 
 public:
-    Expressionermap<string, Expression*> expressions() : parser(expressions) {
+    Expressioner(map<string, Expression*> expressions, BindedSymbolMap* symap) : parser(expressions, symap) {
         active = true;
     }
 
