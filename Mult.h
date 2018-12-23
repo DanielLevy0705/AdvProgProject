@@ -7,8 +7,9 @@
 
 
 #include "Expression.h"
+#include "MathExpression.h"
 
-class Mult : public Expression {
+class Mult : public MathExpression {
     Expression *leftExp, *rightExp;
     string strRep;
 public:
@@ -18,11 +19,11 @@ public:
         strRep = strVal;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return leftExp->calculate() * rightExp->calculate();
     }
 
-    virtual string getString(){
+    virtual string getString() const{
         return strRep;
     }
 };

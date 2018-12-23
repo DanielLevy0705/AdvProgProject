@@ -4,8 +4,9 @@
 
 #include <string>
 #include "Expression.h"
+#include "MathExpression.h"
 
-class Div : public Expression {
+class Div : public MathExpression {
     Expression *leftExp;
     Expression *rightExp;
     string strRep;
@@ -19,11 +20,11 @@ public:
         strRep = strVal;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return this->leftExp->calculate() / this->rightExp->calculate();
     }
 
-    virtual string getString() {
+    virtual string getString() const {
         return strRep;
     }
 };

@@ -10,20 +10,24 @@
 
 using namespace std;
 
-class StringExpression: public Expression{
+class StringExpression : public Expression {
     string str;
 
 public:
-    explicit StringExpression(const string& stri) {
+    explicit StringExpression(const string &stri) {
         str = stri;
     }
 
-    double calculate() override {
+    double calculate() const override {
         return 1;
     }
 
-    string getString() override{
+    string getString() const override {
         return str;
+    }
+
+    virtual void print(ostream &out) const {
+        out << str;
     }
 };
 
