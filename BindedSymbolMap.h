@@ -51,13 +51,15 @@ class BindedSymbolMap {
     int updatesSocket;
     int updatesFrequency; //how many time a second should be updated
     pthread_mutex_t updatsMutex;
+    vector<string> paths;
 
 
     void openServerAndGetClient(int port);
     static void* startUpdatesRoutine(void* serverConfig);
 public:
     //constructor
-    BindedSymbolMap () {
+    BindedSymbolMap (vector<string> pats) {
+        paths = pats;
         symbolMap = new map<string, Value*>;
         updatesThreadActive = new bool(false); //the
         updatsMutex = PTHREAD_MUTEX_INITIALIZER;
