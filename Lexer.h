@@ -11,7 +11,7 @@ public:
         Line line = Line(vec);
         int idx = 0;
         string newWord, substring;
-        bool newWordAddition = false;
+        bool newWordAddition = false, addAnotherChar = false;
         //run for every char of the line.
         while (idx != input.size()) {
             //check if the char is space, if it is, add the last word and nullify the next word.
@@ -34,11 +34,15 @@ public:
                 if ((idx < input.size() - 1) && (input[idx] == '!' || input[idx] == '=' ||
                                                  input[idx] == '<' || input[idx] == '>')) {
                     if (input[idx + 1] == '=') {
-                        newWord += input[idx] + input[idx + 1];
-                        //two chars are added so need to move the index forward.
-                        idx++;
+                        addAnotherChar = true;
+                    } else {
+                        addAnotherChar = false;
                     }
-                } else {
+                }
+                newWord += input[idx];
+                //we want the full boolean expression.
+                if (addAnotherChar) {
+                    idx++;
                     newWord += input[idx];
                 }
                 //add the operator then nullify the next word.
