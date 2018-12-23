@@ -41,7 +41,7 @@ public:
                 } else if (typeid(*next) == typeid(StringExpression)) {
                     symap->set(name, new StringValue(expressioner->popNext()->getString()));
                 } else {
-                    symap->set(name, new LocalValue(expressioner->popNext()->calculate()));
+                    symap->set(name, new LocalValue(next->calculate()));
             }
             }
         }

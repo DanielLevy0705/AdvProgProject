@@ -220,7 +220,7 @@ list<Expression *> Parser::next() {
 
         if (dictionary.find(word) != dictionary.end()) {
             //if the word is recognized by the map add it to list
-            expList.emplace_front(dictionary[word]);
+            expList.emplace_back(dictionary[word]);
             line->popFirst();
         } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
             //if its the begginig of maths exp
