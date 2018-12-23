@@ -183,7 +183,7 @@ Line Parser::getMathLine(Line *line) {
         //if the word is an operator.
         if (isOpr((*line)[0])) {
             //if the expression ended with an operator throw exception.
-            if (1 == line->size()) {
+            if (1 == line->size() && (*line)[0] != ")") {
                 throw "Error: illegal expression : " + (*line)[0];
             }
             //if the next is not a number and not a "-" the expression is illegal.
@@ -237,6 +237,7 @@ list<Expression *> Parser::next() {
             } else if (isStringWord(word)) {
                 //if its a word in commas "____"
                expList.emplace_back(new StringExpression(word.substr(1,word.size()-3)));
+               line->popFirst();
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
             expList.emplace_back(new NewExpression(word));
