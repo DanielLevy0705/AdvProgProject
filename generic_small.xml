@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 
-<!-- Example usage: <dash><dash>generic=file,out,50,fgfs.truth,insgns-truth -->
+<!-- Example output:
+   {/controls/flight/speedbrake,0.5323000
+    /controls/engines/engine/throttle,0.1872728
+    ....
+    /instrumentation/altimeter/indicated-altitude-ft,0.0000000}
+-->
 
 <PropertyList>
 
