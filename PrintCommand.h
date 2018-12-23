@@ -23,8 +23,7 @@ public:
     double calculate() override {
 
         while (expressioner->argumentsInLine() > 0) {
-            string expStr = expressioner->popNext()->getString();
-            cout << expStr;
+            cout << expressioner->popNext()->getString() + " ";
         }
         cout << endl;
         return 0;
