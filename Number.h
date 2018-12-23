@@ -8,19 +8,20 @@
 
 #include <string>
 #include "Expression.h"
+#include "MathExpression.h"
 
-class Number : public Expression {
+class Number : public MathExpression {
     string number;
 public:
     Number(std::string num) {
         number = num;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return stod(number);
     }
 
-    virtual string getString() {
+    virtual string getString() const {
         return number;
     }
 };

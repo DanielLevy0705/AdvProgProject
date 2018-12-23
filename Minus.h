@@ -3,8 +3,9 @@
 
 
 #include "Expression.h"
+#include "MathExpression.h"
 
-class Minus : public Expression {
+class Minus : public MathExpression {
     Expression *leftExp, *rightExp;
     string strRep;
 public:
@@ -14,11 +15,11 @@ public:
         strRep = strVal;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return leftExp->calculate() - rightExp->calculate();
     }
 
-    virtual string getString(){
+    virtual string getString() const {
         return strRep;
     }
 };

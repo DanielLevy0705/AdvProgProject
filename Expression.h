@@ -3,14 +3,23 @@
 
 
 #include <string>
+#include <iostream>
 
 using namespace std;
 
 class Expression {
-public:
-    virtual double calculate() = 0;
+    virtual void print(ostream &out) const = 0;
 
-    virtual string getString() = 0;
+public:
+
+    virtual double calculate() const = 0;
+
+    virtual string getString() const = 0;
+
+    friend ostream &operator<<(ostream &out, const Expression &e) {
+        e.print(out);
+        return out;
+    }
 };
 
 

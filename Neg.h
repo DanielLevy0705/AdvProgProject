@@ -7,8 +7,9 @@
 
 
 #include "Expression.h"
+#include "MathExpression.h"
 
-class Neg : public Expression {
+class Neg : public MathExpression {
     Expression* expression;
     string strVal;
 public:
@@ -17,11 +18,11 @@ public:
         strVal = stringVal;
     }
 
-    double calculate() {
+    virtual double calculate() const {
         return -expression->calculate();
     }
 
-    string getString() {
+    virtual string getString() const {
         return strVal;
     }
 };

@@ -8,29 +8,35 @@
 #include <iostream>
 #include "Expression.h"
 #include "Expressioner.h"
+
 using namespace std;
 
-class PrintCommand: public Expression{
+class PrintCommand : public Expression {
 
-    Expressioner* expressioner;
+    Expressioner *expressioner;
 
 public:
 
-    explicit PrintCommand(Expressioner* expr) {
+    explicit PrintCommand(Expressioner *expr) {
         expressioner = expr;
     }
 
-    double calculate() override {
+    double calculate() const override {
 
         while (expressioner->argumentsInLine() > 0) {
-            cout << expressioner->popNext()->getString() + " ";
+            cout << expressioner->popNext();
+            cout << " ";
         }
         cout << endl;
         return 0;
     }
 
-    string getString() override {
+    string getString() const override {
         return "print";
+    }
+
+    virtual void print(ostream &out) const {
+        out << "print";
     }
 };
 
