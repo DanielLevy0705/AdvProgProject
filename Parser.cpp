@@ -10,13 +10,13 @@ Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
     if (op == "+") {
         return new Plus(op, left, right);
     } else if (op == "-") {
-        new Minus(op, left, right);
+        return new Minus(op, left, right);
     } else if (op == "*") {
-        new Mult(op, left, right);
+        return new Mult(op, left, right);
     } else if (op == "/") {
-        new Div(op, left, right);
+        return new Div(op, left, right);
     } else if (op == neg) {
-        new Neg(op, left);
+        return new Neg(op, left);
     }
 }
 
