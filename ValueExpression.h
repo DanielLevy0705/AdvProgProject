@@ -44,8 +44,6 @@ public:
                     symap->set(name, new LocalValue(expressioner->popNext()->calculate()));
             }
             }
-            if (expressioner->argumentsInLine() > 0)
-                throw string("Error: non useful arguments:" + expressioner->popNext()->getString());
         }
         return *(*symap)[name];
     }
