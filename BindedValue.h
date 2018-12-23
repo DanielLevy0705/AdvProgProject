@@ -56,8 +56,9 @@ public:
     }
 
     void sendToServer(const string& msg) {
-        if (write(symap->getClientSocket(), msg.c_str(), msg.size()) == FAILED)
+        if (send(symap->getClientSocket(), msg.c_str(), msg.size(),0) == FAILED)
             throw "Error: failed to send to server";
+
     }
     operator double() {
         return *(*symap)[path];
