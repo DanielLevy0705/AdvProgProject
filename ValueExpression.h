@@ -39,9 +39,9 @@ public:
                 if (typeid(*next) == typeid(BindCommand)) {
                    symap->set(name, new BindedValue(next->getString(), symap));
                 } else if (typeid(*next) == typeid(StringExpression)) {
-                    symap->set(name, new StringValue(expressioner->popNext()->getString()));
+                    symap->set(name, new StringValue(next->getString()));
                 } else {
-                    symap->set(name, new LocalValue(expressioner->popNext()->calculate()));
+                    symap->set(name, new LocalValue(next->calculate()));
             }
             }
         }

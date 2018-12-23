@@ -64,16 +64,14 @@ void BindedSymbolMap::updateTable() {
     vector<string> lines;
     //read from flightgear server the values
     if (read(updatesSocket, buffer, BUFFER_SIZE) != FAILED) {
-        string packet = getInnerString('{', buffer, '}');
-        lines = split(packet, '\n');
-        for (auto &line: lines) {   //if its adress of variable
-            //split to pair
-            vector<string> pair = split(line, ',');
-            //put the pair in the symbol map
-            if (!symbolMap->count(pair[0])) {
-                (*symbolMap)[pair[0]] = new LocalValue(stod(pair[1]));
-            } else {
-                *(*symbolMap)[pair[0]] = stod(pair[1]);
+        string packet = getInnerString('\n', buffer, '\n');
+        if (packet == "")
+            read(updatesSocket, buffer, BUFFER_SIZE);
+        packet = getInnerString('\n', buffer, '\n');
+        lines = split(packet, ',');
+        if (lines.size() == paths.size()) {
+            for (int i = 0; i < paths.size(); i++) {   //if its adress of variable
+                (*symbolMap)[paths[i]] = new LocalValue((double)stof(lines[i]));
             }
         }
     }

@@ -102,6 +102,9 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BoolExpression.h">
 			<Option target="untitled4"/>
 		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h">
+			<Option target="untitled4"/>
+		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h">
 			<Option target="untitled4"/>
 		</Unit>
@@ -115,6 +118,9 @@
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">

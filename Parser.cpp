@@ -10,13 +10,13 @@ Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
     if (op == "+") {
         return new Plus(op, left, right);
     } else if (op == "-") {
-        new Minus(op, left, right);
+        return new Minus(op, left, right);
     } else if (op == "*") {
-        new Mult(op, left, right);
+        return new Mult(op, left, right);
     } else if (op == "/") {
-        new Div(op, left, right);
+        return new Div(op, left, right);
     } else if (op == neg) {
-        new Neg(op, left);
+        return new Neg(op, left);
     }
 }
 
@@ -128,6 +128,12 @@ bool Parser::isIp(const string &word) {
     return true;
 }
 
+bool Parser::isStringWord(const string &word) {
+    if (word[0] == '\"' && word[word.size()-1] == '\"')
+        return true;
+    return false;
+}
+
 bool Parser::isLegalVarName(const string &word) {
     if (isdigit(word[0]))
         return false;
@@ -173,7 +179,7 @@ Line Parser::getMathLine(Line *line) {
         //if the word is an operator.
         if (isOpr((*line)[0])) {
             //if the expression ended with an operator throw exception.
-            if (1 == line->size()) {
+            if (1 == line->size() && (*line)[0] != ")") {
                 throw "Error: illegal expression : " + (*line)[0];
             }
             //if the next is not a number and not a "-" the expression is illegal.
@@ -216,7 +222,7 @@ list<Expression *> Parser::next() {
 
         if (dictionary.find(word) != dictionary.end()) {
             //if the word is recognized by the map add it to list
-            expList.emplace_front(dictionary[word]);
+            expList.emplace_back(dictionary[word]);
             line->popFirst();
         } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
             //if its the begginig of maths exp
@@ -224,9 +230,10 @@ list<Expression *> Parser::next() {
         } else if (isIp(word)) {
             expList.emplace_back(new StringExpression(word));
             line->popFirst();
-//            } else if (isStringWord(word)) {
-//                //if its a word in commas "____"
-//                expList.emplace_back(StringExpression(word));
+            } else if (isStringWord(word)) {
+                //if its a word in commas "____"
+               expList.emplace_back(new StringExpression(word.substr(1,word.size()-3)));
+               line->popFirst();
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
             expList.emplace_back(new NewExpression(word));
