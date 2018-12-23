@@ -10,7 +10,7 @@ public:
         vector<string> vec;
         Line line = Line(vec);
         int idx = 0;
-        string newWord, substring;
+        string newWord;
         bool newWordAddition = false, addAnotherChar = false;
         //run for every char of the line.
         while (idx != input.size()) {
@@ -46,6 +46,15 @@ public:
                     newWord += input[idx];
                 }
                 //add the operator then nullify the next word.
+                line.addWord(newWord);
+                newWord = "";
+                //if its a string word get the string from " to ".
+            } else if (input[idx] == '\"') {
+                newWord += input[idx];
+                while (input[++idx] != '\"' && idx != input.size()) {
+                    newWord += input[idx];
+                }
+                newWord += input[idx];
                 line.addWord(newWord);
                 newWord = "";
                 //if its a digit or a letter add it to the word, and notify that youre buliding a word.

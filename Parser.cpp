@@ -16,7 +16,7 @@ Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
     } else if (op == "/") {
         return new Div(op, left, right);
     } else if (op == neg) {
-        return new Neg(op, left);
+        return new Neg(op, right);
     }
 }
 
@@ -145,11 +145,11 @@ bool Parser::isLegalVarName(const string &word) {
 }
 
 bool parenthesesCheck(Line *line) {
-    int counter=0;
+    int counter = 0;
     for (int i = 0; i < line->size(); i++) {
-        if((*line)[i] == "("){
+        if ((*line)[i] == "(") {
             counter++;
-        }else if((*line)[i] == ")"){
+        } else if ((*line)[i] == ")") {
             counter--;
         }
     }
@@ -159,7 +159,7 @@ bool parenthesesCheck(Line *line) {
 Line Parser::getMathLine(Line *line) {
     Line mathExp;
     if (!parenthesesCheck(line)) {
-        throw "Error : open and close parentheses number is not equal";
+        throw "Error: parenthesis count is'nt equal : " + (*line)[0];
     }
     while (!line->empty()) {
         //if there's only one number
@@ -203,7 +203,7 @@ Line Parser::getMathLine(Line *line) {
                 //if the next is not a number and not a "-" the expression is illegal.
                 if ((!isNum((*line)[1]))
                     && (!symap->exist((*line)[1])) && ((*line)[0] != ")")) {
-                    if ((*line)[1] != "-") {
+                    if ((*line)[1] != "-" && (*line)[1] != "(") {
                         throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
                     }
                     //if the next char is an unary minus and the size > 2.
@@ -212,7 +212,7 @@ Line Parser::getMathLine(Line *line) {
                         if ((*line)[2] != "(" &&
                             !isNum((*line)[2]) &&
                             (!symap->exist((*line)[2]))) {
-                            throw "Error: illegal line";
+                            throw "Error: illegal line: " + (*line)[0];
                         }
                     }
                 }
@@ -252,7 +252,7 @@ list<Expression *> Parser::next() {
             line->popFirst();
         } else if (isStringWord(word)) {
             //if its a word in commas "____"
-            expList.emplace_back(new StringExpression(word.substr(1, word.size() - 3)));
+            expList.emplace_back(new StringExpression(word.substr(1, word.size() - 2)));
             line->popFirst();
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
