@@ -3,12 +3,13 @@
 
 
 #include <string>
-#include <iostream>
+#include "Printable.h"
+#include <typeinfo>
+
 
 using namespace std;
 
-class Expression {
-    virtual void print(ostream &out) const = 0;
+class Expression : public Printable {
 
 public:
 
@@ -16,10 +17,7 @@ public:
 
     virtual string getString() const = 0;
 
-    friend ostream &operator<<(ostream &out, const Expression &e) {
-        e.print(out);
-        return out;
-    }
+
 };
 
 

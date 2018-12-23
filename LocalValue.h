@@ -5,10 +5,12 @@
 #ifndef LOCALVALUE_H
 #define LOCALVALUE_H
 
+using namespace std;
+
 class LocalValue: public Value {
     double value;
 public:
-    LocalValue(double val) {
+    explicit LocalValue(double val) {
         value = val;
     }
     void operator = (double num) {
@@ -16,6 +18,20 @@ public:
     }
     operator double() {
         return value;
+    }
+};
+
+class StringValue: public Value {
+    string value;
+public:
+    explicit StringValue(const string& val) {
+        value = val;
+    }
+    void operator = (double num) {
+        value = to_string(num);
+    }
+    operator double() {
+        return -1;
     }
 };
 

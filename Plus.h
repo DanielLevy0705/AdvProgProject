@@ -18,10 +18,6 @@ public:
     virtual double calculate() const {
         return leftExp->calculate() + rightExp->calculate();
     }
-
-    virtual string getString() const {
-        return strRep;
-    }
 };
 
 

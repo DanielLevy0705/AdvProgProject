@@ -24,7 +24,7 @@ public:
     double calculate() const override {
 
         while (expressioner->argumentsInLine() > 0) {
-            cout << expressioner->popNext();
+            cout << expressioner->popNext()->getString();
             cout << " ";
         }
         cout << endl;
@@ -38,6 +38,8 @@ public:
     virtual void print(ostream &out) const {
         out << "print";
     }
+
+
 };
 
 

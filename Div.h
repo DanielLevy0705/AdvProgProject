@@ -24,9 +24,6 @@ public:
         return this->leftExp->calculate() / this->rightExp->calculate();
     }
 
-    virtual string getString() const {
-        return strRep;
-    }
 };
 
 

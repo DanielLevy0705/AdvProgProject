@@ -8,38 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled4">
-				<Option output="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug"/>
+				<Option output="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,19 +42,17 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled4/fast">
-				<Option output="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug"/>
+				<Option output="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,66 +65,95 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/BindedSymbolMap.cpp">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/BindedSymbolMap.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/BindedValue.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/ConnectCommand.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/Expressioner.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/Inputer.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/LocalValue.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/MathExpression.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/OpenDataServerCommand.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/PrintCommand.cpp">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/PrintCommand.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/StringExpression.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/StringsLibrary.cpp">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/StringsLibrary.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/Value.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/main.cpp">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Printable.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/fatuity/CLionProjects/AdvProgProject/CMakeLists.txt">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Value.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

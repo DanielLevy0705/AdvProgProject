@@ -16,7 +16,12 @@ class MathExpression : public Expression {
 public:
     virtual double calculate() const = 0;
 
-    virtual string getString() const = 0;
+    string getString() const override {
+        double res = this->calculate();
+        if ((int)res == res)
+            return to_string((int)res);
+        return to_string(res);
+    }
 };
 
 

@@ -77,7 +77,7 @@ public:
             //if the word is an operator.
             if (isOpr((*line)[0])) {
                 //if the expression ended with an operator throw exception.
-                if (i = line->size() - 1) {
+                if (1 == line->size()) {
                     throw "Error: illegal expression : " + (*line)[0];
                 }
                 //if the next is not a number and not a "-" the expression is illegal.

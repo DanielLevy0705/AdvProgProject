@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/fatuity/CLionProjects/AdvProgProject/BindedSymbolMap.cpp" "/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o"
-  "/home/fatuity/CLionProjects/AdvProgProject/PrintCommand.cpp" "/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/untitled4.dir/PrintCommand.cpp.o"
-  "/home/fatuity/CLionProjects/AdvProgProject/StringsLibrary.cpp" "/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/untitled4.dir/StringsLibrary.cpp.o"
-  "/home/fatuity/CLionProjects/AdvProgProject/main.cpp" "/home/fatuity/CLionProjects/AdvProgProject/cmake-build-debug/CMakeFiles/untitled4.dir/main.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/BindCommand.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/PrintCommand.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/StringsLibrary.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
