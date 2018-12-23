@@ -1,8 +1,7 @@
 
-#include "Expressioner.h"
-#include "BindedSymbolMap.h"
+#include "ProgramTools.h"
 #include "Commands.h"
-#include "NewExpression.h"
+#include "Expressions.h"
 #include <map>
 using namespace std;
 

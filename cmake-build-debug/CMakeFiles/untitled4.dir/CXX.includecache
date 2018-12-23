@@ -7,10 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
-Expression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+Expressions.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
 Expression.h
@@ -85,6 +83,8 @@ PrintCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h
 BindCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
+AssignmentCommand.h
+/home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
 BindedSymbolMap.h
@@ -109,14 +109,28 @@ typeinfo
 -
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-Parser.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
-Expression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 list
 -
 string
 -
+BindedSymbolMap.h
+/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
+Div.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Div.h
+Mult.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Mult.h
+Number.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Number.h
+Minus.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Minus.h
+Plus.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
+Neg.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Neg.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h
 queue
@@ -184,19 +198,25 @@ Expressioner.h
 BindedSymbolMap.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 
+/home/elronbandel/CLionProjects/AdvProgProject2/Parser.cpp
+Parser.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
+NewExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
+ValueExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
 list
 -
+
+/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
 map
 -
 stack
 -
 Line.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Line.h
-Expression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
-StringExpression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
+Expressions.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
 Lexer.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Lexer.h
 Div.h
@@ -213,8 +233,10 @@ Neg.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Neg.h
 Inputer.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+Expressioner.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+StringExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
 Expression.h
@@ -234,6 +256,8 @@ Expressioner.h
 iostream
 -
 
+/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h
+
 /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
 string
 -
@@ -249,34 +273,34 @@ BindedSymbolMap.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-BindCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
 AssignmentCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
+BindCommand.h
+/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 BindedValue.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
-Expression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-NewExpression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
+Expressions.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
+BindedSymbolMap.h
+/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 ValueExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-Commands.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
 NewExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
+
+/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp
+ProgramTools.h
+/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h
+Commands.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
+Expressions.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
 map
 -
 

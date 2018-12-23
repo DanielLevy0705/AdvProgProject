@@ -4,13 +4,14 @@
 
 
 #ifndef VARCOMMAND_H
-
-
-#include "Expression.h"
-#include "BindedSymbolMap.h"
 #include "Expressioner.h"
-#include "NewExpression.h"
+#include "Expressions.h"
+#include "BindedSymbolMap.h"
 #include "ValueExpression.h"
+#include "NewExpression.h"
+
+class Expressioner;
+
 
 class VarCommand: public Expression {
 

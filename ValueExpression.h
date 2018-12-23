@@ -8,11 +8,12 @@
 #include "StringExpression.h"
 #include "BindedSymbolMap.h"
 #include "Expressioner.h"
-#include "BindCommand.h"
 #include "AssignmentCommand.h"
+#include "BindCommand.h"
+#include "Expression.h"
 #include "BindedValue.h"
 
-class ValueExpression : Expression{
+class ValueExpression : public Expression {
 
     Expressioner* expressioner;
     BindedSymbolMap* symap;

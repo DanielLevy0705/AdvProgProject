@@ -87,9 +87,6 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.cpp">
-			<Option target="untitled4"/>
-		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
@@ -108,7 +105,13 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp">
+			<Option target="untitled4"/>
+		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">
@@ -123,13 +126,19 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.cpp">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Parser.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Printable.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h">

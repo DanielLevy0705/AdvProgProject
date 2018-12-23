@@ -11,5 +11,6 @@
 #include "OpenDataServerCommand.h"
 #include "PrintCommand.h"
 #include "BindCommand.h"
+#include "AssignmentCommand.h"
 
 #endif //UNTITLED4_COMMANDS_H

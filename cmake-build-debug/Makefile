@@ -123,33 +123,6 @@ untitled4/fast:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/build
 .PHONY : untitled4/fast
 
-BindCommand.o: BindCommand.cpp.o
-
-.PHONY : BindCommand.o
-
-# target to build an object file
-BindCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.o
-.PHONY : BindCommand.cpp.o
-
-BindCommand.i: BindCommand.cpp.i
-
-.PHONY : BindCommand.i
-
-# target to preprocess a source file
-BindCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.i
-.PHONY : BindCommand.cpp.i
-
-BindCommand.s: BindCommand.cpp.s
-
-.PHONY : BindCommand.s
-
-# target to generate assembly for a file
-BindCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.s
-.PHONY : BindCommand.cpp.s
-
 BindedSymbolMap.o: BindedSymbolMap.cpp.o
 
 .PHONY : BindedSymbolMap.o
@@ -177,32 +150,59 @@ BindedSymbolMap.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.s
 .PHONY : BindedSymbolMap.cpp.s
 
-PrintCommand.o: PrintCommand.cpp.o
+Expressioner.o: Expressioner.cpp.o
 
-.PHONY : PrintCommand.o
+.PHONY : Expressioner.o
 
 # target to build an object file
-PrintCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/PrintCommand.cpp.o
-.PHONY : PrintCommand.cpp.o
+Expressioner.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Expressioner.cpp.o
+.PHONY : Expressioner.cpp.o
 
-PrintCommand.i: PrintCommand.cpp.i
+Expressioner.i: Expressioner.cpp.i
 
-.PHONY : PrintCommand.i
+.PHONY : Expressioner.i
 
 # target to preprocess a source file
-PrintCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/PrintCommand.cpp.i
-.PHONY : PrintCommand.cpp.i
+Expressioner.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Expressioner.cpp.i
+.PHONY : Expressioner.cpp.i
 
-PrintCommand.s: PrintCommand.cpp.s
+Expressioner.s: Expressioner.cpp.s
 
-.PHONY : PrintCommand.s
+.PHONY : Expressioner.s
 
 # target to generate assembly for a file
-PrintCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/PrintCommand.cpp.s
-.PHONY : PrintCommand.cpp.s
+Expressioner.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Expressioner.cpp.s
+.PHONY : Expressioner.cpp.s
+
+Parser.o: Parser.cpp.o
+
+.PHONY : Parser.o
+
+# target to build an object file
+Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Parser.cpp.o
+.PHONY : Parser.cpp.o
+
+Parser.i: Parser.cpp.i
+
+.PHONY : Parser.i
+
+# target to preprocess a source file
+Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Parser.cpp.i
+.PHONY : Parser.cpp.i
+
+Parser.s: Parser.cpp.s
+
+.PHONY : Parser.s
+
+# target to generate assembly for a file
+Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Parser.cpp.s
+.PHONY : Parser.cpp.s
 
 StringsLibrary.o: StringsLibrary.cpp.o
 
@@ -267,15 +267,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... untitled4"
 	@echo "... edit_cache"
-	@echo "... BindCommand.o"
-	@echo "... BindCommand.i"
-	@echo "... BindCommand.s"
 	@echo "... BindedSymbolMap.o"
 	@echo "... BindedSymbolMap.i"
 	@echo "... BindedSymbolMap.s"
-	@echo "... PrintCommand.o"
-	@echo "... PrintCommand.i"
-	@echo "... PrintCommand.s"
+	@echo "... Expressioner.o"
+	@echo "... Expressioner.i"
+	@echo "... Expressioner.s"
+	@echo "... Parser.o"
+	@echo "... Parser.i"
+	@echo "... Parser.s"
 	@echo "... StringsLibrary.o"
 	@echo "... StringsLibrary.i"
 	@echo "... StringsLibrary.s"
