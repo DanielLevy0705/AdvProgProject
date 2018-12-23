@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+<!-- Example usage: <dash><dash>generic=file,out,50,fgfs.truth,insgns-truth -->
+
+<PropertyList>
+
+ <generic>
+  <output>
+    <line_separator>newline</line_separator>
+     <var_separator>newline</var_separator>
+
+	<chunk>
+      <name>SPEEDBREAK</name>
+      <type>double</type>
+          <format>{/controls/flight/speedbrake,%f</format>
+      <node>/controls/flight/speedbrake</node>
+    </chunk>
+
+    <chunk>
+      <name>THORTHLE</name>
+      <type>double</type>
+          <format>/controls/engines/engine/throttle,%f</format>
+      <node>/controls/engines/engine/throttle</node>
+    </chunk>
+
+    <chunk>
+      <name>OFFSET_DEG</name>
+      <type>double</type>
+      <format>/instrumentation/heading-indicator/offset-deg,%f</format>
+      <node>/instrumentation/heading-indicator/offset-deg</node>
+    </chunk>
+
+    <chunk>
+      <name>IND_SPD_KIT</name>
+      <type>double</type>
+          <format>/instrumentation/airspeed-indicator/indicated-speed-kt,%f</format>
+      <node>/instrumentation/airspeed-indicator/indicated-speed-kt</node>
+    </chunk>
+
+    <chunk>
+      <name>IND_ROLL_DEG</name>
+      <type>double</type>
+          <format>/instrumentation/attitude-indicator/indicated-roll-deg,%f</format>
+      <node>/instrumentation/attitude-indicator/indicated-roll-deg</node>
+    </chunk>
+
+    <chunk>
+      <name>INT_PITCH_DEG</name>
+      <type>double</type>
+          <format>/instrumentation/attitude-indicator/internal-pitch-deg,%f</format>
+      <node>/instrumentation/attitude-indicator/internal-pitch-deg</node>
+    </chunk>
+
+    <chunk>
+      <name>RUDDER</name>
+      <type>double</type>
+          <format>/controls/flight/rudder,%f</format>
+      <node>/controls/flight/rudder</node>
+    </chunk>
+
+    <chunk>
+      <name>ALIERON</name>
+      <type>double</type>
+          <format>/controls/flight/aileron,%f</format>
+      <node>/controls/flight/aileron</node>
+    </chunk>
+
+      <chunk>
+      <name>ELVATOR</name>
+      <type>double</type>
+          <format>/controls/flight/elevator,%f</format>
+      <node>/controls/flight/elevator</node>
+    </chunk>
+
+    <chunk>
+      <name>IND_ALT_FT</name>
+      <type>double</type>
+          <format>/instrumentation/altimeter/indicated-altitude-ft,%f}</format>
+      <node>/instrumentation/altimeter/indicated-altitude-ft</node>
+    </chunk>
+
+  </output>
+
+ </generic>
+
+</PropertyList>

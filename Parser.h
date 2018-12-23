@@ -275,6 +275,7 @@ public:
 //            } else if (word == "}" && isPacketGetterON) {
 //                expList.emplace_back(newExpression(word));
             } else {
+                delete line;
                 throw "Error: illegal expression: " + word;
             };
 
