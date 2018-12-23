@@ -142,16 +142,19 @@ Line Parser::getMathLine(Line *line) {
     Line mathExp;
     int i = 0;
     while (!line->empty()) {
+
         //if there's only one number
         if (line->size() == 1 && isNum((*line)[0])) {
             mathExp.addWord(line->popFirst());
             return mathExp;
         }
+
         //if theres only one variable
         if (line->size() == 1 && symap->exist((*line)[0])) {
             mathExp.addWord(line->popFirst());
             return mathExp;
         }
+
         //if theres a number and then no operators its the end of an expression.
         if (isNum(((*line)[0])) && (!isOpr((*line)[1]) ||
                                     (*line)[1] == ",")) {
@@ -163,7 +166,7 @@ Line Parser::getMathLine(Line *line) {
                                          (*line)[1] == ",")) {
             //add the variable to the mathExp
             string
-            val = line->popFirst());
+            val = line->popFirst();
             mathExp.addWord(val);
             return mathExp;
         }
