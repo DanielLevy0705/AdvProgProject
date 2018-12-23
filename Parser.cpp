@@ -162,8 +162,7 @@ Line Parser::getMathLine(Line *line) {
         if (symap->exist((*line)[0]) && (!isOpr((*line)[1]) ||
                                          (*line)[1] == ",")) {
             //add the variable to the mathExp
-            string
-            val = line->popFirst());
+            string val = line->popFirst();
             mathExp.addWord(val);
             return mathExp;
         }
