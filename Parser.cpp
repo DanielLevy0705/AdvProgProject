@@ -6,7 +6,7 @@
 #include "ValueExpression.h"
 #include <list>
 
-Expression* Parser::applyOp(Expression *left, Expression *right, string op)  {
+Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
     if (op == "+") {
         return new Plus(op, left, right);
     } else if (op == "-") {
@@ -19,6 +19,7 @@ Expression* Parser::applyOp(Expression *left, Expression *right, string op)  {
         new Neg(op, left);
     }
 }
+
 int Parser::precendance(string opr) {
     if (opr == "+" || opr == "-") {
         return 1;
@@ -31,7 +32,8 @@ int Parser::precendance(string opr) {
     }
     return 0;
 }
-void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values) {
+
+void Parser::shuntingYardHelper(stack <string> &oprs, stack<Expression *> &values) {
     string op;
     Expression *leftVal, *rightVal;
     if (oprs.top() == neg) {
@@ -55,9 +57,10 @@ void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values
         values.push(applyOp(leftVal, rightVal, op));
     }
 }
-Expression* Parser::shuntingYard(Line exp) {
-    stack<Expression *> values;
-    stack<string> oprs;
+
+Expression *Parser::shuntingYard(Line exp) {
+    stack < Expression * > values;
+    stack <string> oprs;
     string op;
     Expression *rightVal;
     Expression *leftVal;
@@ -70,6 +73,8 @@ Expression* Parser::shuntingYard(Line exp) {
         } else if (isNum(exp[i])) {
             values.push(new Number(exp[i]));
             //if its closing braces pop all operators to values stack.
+        } else if (symap->exist(exp[i])) {
+            values.push(new ValueExpression(symap, expressioner, exp[i]));
         } else if (exp[i] == ")") {
             while (!oprs.empty() && oprs.top() != "(") {
                 shuntingYardHelper(oprs, values);
@@ -90,6 +95,7 @@ Expression* Parser::shuntingYard(Line exp) {
     }
     return values.top();
 }
+
 bool Parser::isNum(string word) {
     bool dotCount = false;
     for (int i = 0; i < word.size(); i++) {
@@ -105,22 +111,25 @@ bool Parser::isNum(string word) {
     }
     return true;
 }
-bool Parser::isOpr(const string &word)  {
+
+bool Parser::isOpr(const string &word) {
     return ((word == "+") || (word == "-") || (word == "*") ||
             (word == "/") || (word == "(") || (word == ")") || (word == ","));
 }
+
 bool Parser::isIp(const string &word) {
-    vector<string> numbers = split(word, '.');
+    vector <string> numbers = split(word, '.');
     if (numbers.size() != 4)
         return false;
-    for (auto& number : numbers) {
+    for (auto &number : numbers) {
         if (!isNum(number))
             return false;
     }
     return true;
 }
-bool Parser::isLegalVarName(const string &word)  {
-    if(isdigit(word[0]))
+
+bool Parser::isLegalVarName(const string &word) {
+    if (isdigit(word[0]))
         return false;
     for (auto c : word) {
         if (!isdigit(c) && !isalpha(c))
@@ -128,12 +137,13 @@ bool Parser::isLegalVarName(const string &word)  {
     }
     return true;
 }
+
 Line Parser::getMathLine(Line *line) {
     Line mathExp;
     int i = 0;
     while (!line->empty()) {
         //if there's only one number
-        if (line->size() == 1 && isNum((*line)[0] )) {
+        if (line->size() == 1 && isNum((*line)[0])) {
             mathExp.addWord(line->popFirst());
             return mathExp;
         }
@@ -151,7 +161,9 @@ Line Parser::getMathLine(Line *line) {
         //if theres a symbol and no operators its the end of an expression.
         if (symap->exist((*line)[0]) && (!isOpr((*line)[1]) ||
                                          (*line)[1] == ",")) {
-            string val = to_string(*(*symap)[line->popFirst()]);
+            //add the variable to the mathExp
+            string
+            val = line->popFirst());
             mathExp.addWord(val);
             return mathExp;
         }
@@ -196,9 +208,9 @@ Line Parser::getMathLine(Line *line) {
     return mathExp;
 }
 
-list<Expression*> Parser::next()  {
-    Line* line = new Line(lexer.lexer(inputer.next()));
-    list<Expression*> expList;
+list<Expression *> Parser::next() {
+    Line *line = new Line(lexer.lexer(inputer.next()));
+    list < Expression * > expList;
     while (!line->empty()) {
         Line temp;
         string word = line->first();
