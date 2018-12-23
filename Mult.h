@@ -23,9 +23,6 @@ public:
         return leftExp->calculate() * rightExp->calculate();
     }
 
-    virtual string getString() const{
-        return strRep;
-    }
 };
 
 

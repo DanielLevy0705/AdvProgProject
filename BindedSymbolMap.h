@@ -85,6 +85,12 @@ public:
         return (symbolMap->find(name) != symbolMap->end());
     }
 
+    void set(const string& key, Value* val) {
+        if ((*symbolMap)[key] != nullptr)
+            delete (*symbolMap)[key];
+        (*symbolMap)[key] = val;
+    }
+
     Value*& operator [] (const string& key) {
         return (*symbolMap)[key];
     }

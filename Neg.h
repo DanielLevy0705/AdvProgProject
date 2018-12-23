@@ -22,9 +22,6 @@ public:
         return -expression->calculate();
     }
 
-    virtual string getString() const {
-        return strVal;
-    }
 };
 
 

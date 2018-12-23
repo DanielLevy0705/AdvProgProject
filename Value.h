@@ -8,6 +8,7 @@ class Value {
 public:
     virtual void operator = (double num) = 0;
     virtual operator double() = 0;
+    //virtual ~Value();
 };
 
 #endif// VALUE_H

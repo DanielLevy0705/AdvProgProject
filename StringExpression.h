@@ -26,6 +26,7 @@ public:
         return str;
     }
 
+
     virtual void print(ostream &out) const {
         out << str;
     }
