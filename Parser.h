@@ -76,6 +76,7 @@ public:
 //        isPacketGetterON = false;
 //    }
     bool isLegalVarName(const string& word);
+    bool isStringWord(const string& word);
 
     bool isIp(const string& word);
 

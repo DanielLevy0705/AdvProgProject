@@ -128,6 +128,12 @@ bool Parser::isIp(const string &word) {
     return true;
 }
 
+bool Parser::isStringWord(const string &word) {
+    if (word[0] == '\"' && word[word.size()-1] == '\"')
+        return true;
+    return false;
+}
+
 bool Parser::isLegalVarName(const string &word) {
     if (isdigit(word[0]))
         return false;
@@ -228,9 +234,9 @@ list<Expression *> Parser::next() {
         } else if (isIp(word)) {
             expList.emplace_back(new StringExpression(word));
             line->popFirst();
-//            } else if (isStringWord(word)) {
-//                //if its a word in commas "____"
-//                expList.emplace_back(StringExpression(word));
+            } else if (isStringWord(word)) {
+                //if its a word in commas "____"
+               expList.emplace_back(StringExpression(word));
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
             expList.emplace_back(new NewExpression(word));
