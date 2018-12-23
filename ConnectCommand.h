@@ -10,8 +10,10 @@
 #include "Expressioner.h"
 
 class ConnectCommand: public Expression {
+
     Expressioner* expressioner;
     BindedSymbolMap* symap;
+
 public:
     //constructor:
     ConnectCommand(BindedSymbolMap* bindedSymbolMap, Expressioner* expr) {
@@ -20,6 +22,10 @@ public:
     }
 
     double calculate() override {
+
+        if (expressioner->argumentsInLine() != 2)
+            throw string("Error: not enough argument for:" + getString());
+
         try {
 
             string ip = expressioner->popNext()->getString();

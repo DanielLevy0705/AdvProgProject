@@ -82,7 +82,7 @@ public:
     }
     void waitBetweenUpdates();
     bool exist(const string& name) {
-        return (symbolMap->count(name) > 0);
+        return (symbolMap->find(name) != symbolMap->end());
     }
 
     Value*& operator [] (const string& key) {

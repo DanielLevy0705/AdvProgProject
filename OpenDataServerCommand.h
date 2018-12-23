@@ -18,6 +18,8 @@ public:
     }
 
     double calculate() override{
+        if (expressioner->argumentsInLine() != 2)
+            throw string("Error: not enough argument for:" + getString());
         try {
             int port = (int)expressioner->popNext()->calculate();
             int frequency = (int)expressioner->popNext()->calculate();

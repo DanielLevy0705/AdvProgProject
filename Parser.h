@@ -12,7 +12,9 @@
 #include <list>
 #include <map>
 #include <stack>
+#include "Line.h"
 #include "Expression.h"
+#include "StringExpression.h"
 #include "Lexer.h"
 #include "Div.h"
 #include "Mult.h"
@@ -36,7 +38,7 @@ class Parser {
 public:
     
     Parser(BindedSymbolMap* symbolMap) {
-
+        symap = symbolMap;
         lexer = Lexer();
         inputer = Inputer();
         isPacketGetterON = false;
@@ -50,47 +52,52 @@ public:
         Line mathExp;
         int i = 0;
         while (!line->empty()) {
+            //if there's only one number
+            if (line->size() == 1 && isNum((*line)[0])) {
+                mathExp.addWord(line->popFirst());
+                return mathExp;
+            }
             //if theres a number and then no operators its the end of an expression.
-            if (isNum((line->operator[](0))) && (!isOpr(line->operator[](1)) ||
-                                                 line->operator[](1) == ",")) {
+            if (isNum(((*line)[0])) && (!isOpr((*line)[1]) ||
+                                                 (*line)[1] == ",")) {
                 mathExp.addWord(line->popFirst());
                 return mathExp;
             }
             //if theres a symbol and no operators its the end of an expression.
-            if (symap->exist(line->operator[](0)) && (!isOpr(line->operator[](1)) ||
-                                                          line->operator[](1) == ",")) {
-                string val = to_string(symap[line->popFirst()].getValue());
+            if (symap->exist((*line)[0]) && (!isOpr((*line)[1]) ||
+                                                          (*line)[1] == ",")) {
+                string val = to_string(*(*symap)[line->popFirst()]);
                 mathExp.addWord(val);
                 return mathExp;
             }
-            if (line->operator[](0) == ",") {
+            if ((*line)[0] == ",") {
                 line->popFirst();
                 continue;
             }
             //if the word is an operator.
-            if (isOpr(line->operator[](0))) {
+            if (isOpr((*line)[0])) {
                 //if the expression ended with an operator throw exception.
                 if (i = line->size() - 1) {
-                    throw "Error: illegal expression : " + line->operator[](0);
+                    throw "Error: illegal expression : " + (*line)[0];
                 }
                 //if the next is not a number and not a "-" the expression is illegal.
-                if ((!isNum(line->operator[](1)))
-                    && (!symap->exist(line->operator[](1)))) {
-                    if (line->operator[](1) != "-") {
-                        throw "Error: illegal line : " + line->operator[](0) + " " + line->operator[](1);
+                if ((!isNum((*line)[1]))
+                    && (!symap->exist((*line)[1]))) {
+                    if ((*line)[1] != "-") {
+                        throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
                     }
                     //if the next char is an unary minus and the size > 2.
                     if (line->size() > 2) {
                         //if the next char does not fit to an unary minus throw exception.
-                        if (line->operator[](2) != "(" &&
-                            !isNum(line->operator[](2)) &&
-                            (!symap->exist(line->operator[](2)))) {
+                        if ((*line)[2] != "(" &&
+                            !isNum((*line)[2]) &&
+                            (!symap->exist((*line)[2]))) {
                             throw "Error: illegal line";
                         }
                     }
                 }
                 //if its "-" check if its unary.
-                if (line->operator[](0) == "-") {
+                if ((*line)[0] == "-") {
                     if ((mathExp.empty()) || ((mathExp.back() != ")") && isOpr(mathExp.back()))) {
                         line->popFirst();
                         mathExp.addWord(neg);
@@ -226,21 +233,37 @@ public:
 //        isPacketGetterON = false;
 //    }
 
+    bool isIp(const string& word) {
+        vector<string> numbers = split(word, '.');
+        if (numbers.size() != 4)
+            return false;
+        for (auto& number : numbers) {
+            if (!isNum(number))
+                return false;
+        }
+        return true;
+    }
+
 public:
 
 
     list<Expression*> next() {
-        Line line* = &lexer.lexer(inputer.next());
+        Line* line = new Line(lexer.lexer(inputer.next()));
         list<Expression*> expList;
         while (!line->empty()) {
             Line temp;
-            string word = line->popFirst();
-            if (dictionary.count(word) > 0) {
+            string word = line->first();
+
+            if (dictionary.find(word) != dictionary.end()) {
                 //if the word is recognized by the map add it to list
                 expList.emplace_front(dictionary[word]);
+                line->popFirst();
             } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
                 //if its the begginig of maths exp
                 expList.emplace_back(shuntingYard(getMathLine(line)));
+            } else if (isIp(word)) {
+                expList.emplace_back(new StringExpression(word));
+                line->popFirst();
 //            } else if (isStringWord(word)) {
 //                //if its a word in commas "____"
 //                expList.emplace_back(StringExpression(word));
@@ -256,12 +279,13 @@ public:
             };
 
         }
+        delete line;
         return expList;
     }
 
 };
 
-#endif PARSER_H
+#endif //PARSER_H
 
 
 #endif //PROJ1_PARSER_H

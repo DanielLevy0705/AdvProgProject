@@ -33,7 +33,7 @@ public:
     string next() {
         if (que.empty()) {
             string s;
-            cin >> s;
+            getline(cin, s);
             return s;
         } else {
             string s = que.front();

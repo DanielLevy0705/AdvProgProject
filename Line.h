@@ -8,28 +8,40 @@
 
 #include <string>
 #include <vector>
+#include <assert.h>
 
 using namespace std;
 
 class Line {
     vector<string> line;
 public:
-    Line(vector<string> newLine) {
+    explicit Line(vector<string> newLine) {
         line = newLine;
     }
 
     Line() {}
+
+    string first() {
+        if (line.empty()) {
+            throw "line is empty";
+        }
+        return line.at(0);
+    }
 
     string popFirst() {
         if (line.empty()) {
             throw "line is empty";
         }
         string retVal = line.at(0);
-        line = vector<string>(&line[1], &line[line.size() - 1]);
+        assert(!line.empty());
+        line.erase(line.begin());
         return retVal;
     }
 
     string operator[](size_t n) {
+        if (line.size() - 1 < n) {
+            return nullptr;
+        }
         return line.at(n);
     }
 

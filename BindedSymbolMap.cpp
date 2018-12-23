@@ -103,17 +103,3 @@ void BindedSymbolMap::connect(const string &ip, int port)  {
     if (::connect(clientSocket,(struct sockaddr*)&serverAddress, addressLen) == FAILED)
         throw "Error: client failed to connect to server";
 }
-//function to work with strings
-string getInnerString(char start,const string& s, char end)  {
-    bool rec = false;
-    string res;
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] == end && rec)
-            return res;
-        if (rec)
-            res = res + s[i];
-        if (s[i] == start)
-            rec = true;
-    }
-    return res;
-}

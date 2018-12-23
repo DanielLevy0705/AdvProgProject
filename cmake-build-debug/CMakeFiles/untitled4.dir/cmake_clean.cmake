@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled4.dir/main.cpp.o"
+  "CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o"
+  "CMakeFiles/untitled4.dir/StringsLibrary.cpp.o"
+  "CMakeFiles/untitled4.dir/PrintCommand.cpp.o"
   "untitled4.pdb"
   "untitled4"
 )

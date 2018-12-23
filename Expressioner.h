@@ -30,15 +30,15 @@ public:
         if (expressions.empty()) {
             load();
         }
-        Expression* next = expressions.back();
-        expressions.pop_back();
+        Expression* next = expressions.front();
+        expressions.pop_front();
         return next;
     }
 
     Expression* next() {
         if (expressions.empty())
             return nullptr;
-        return expressions.back();
+        return expressions.front();
     }
 
     void push(list<Expression*> expList) {
@@ -47,6 +47,10 @@ public:
 
     bool on() {
         return active;
+    }
+
+    int argumentsInLine() {
+        return expressions.size();
     }
 
 private:

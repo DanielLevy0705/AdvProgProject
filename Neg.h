@@ -9,7 +9,7 @@
 #include "Expression.h"
 
 class Neg : public Expression {
-    Expression expression;
+    Expression* expression;
     string strVal;
 public:
     Neg(string stringVal, Expression* exp) {
@@ -18,7 +18,7 @@ public:
     }
 
     double calculate() {
-        return -expression.calculate();
+        return -expression->calculate();
     }
 
     string getString() {
