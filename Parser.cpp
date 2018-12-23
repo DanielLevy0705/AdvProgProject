@@ -236,7 +236,7 @@ list<Expression *> Parser::next() {
             line->popFirst();
             } else if (isStringWord(word)) {
                 //if its a word in commas "____"
-               expList.emplace_back(StringExpression(word));
+               expList.emplace_back(new StringExpression(word.substr(1,word.size()-3)));
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
             expList.emplace_back(new NewExpression(word));
