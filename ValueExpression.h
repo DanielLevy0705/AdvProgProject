@@ -36,7 +36,10 @@ public:
                 if (expressioner->argumentsInLine() == 0)
                     throw string("Error: operator = with no argument to assign");
                 next = expressioner->popNext();
-                if (typeid(*next) == typeid(BindCommand)) {
+                if (symap->exist(name) && typeid(*next) != typeid(StringExpression)
+                                       && typeid(*next) != typeid(BindCommand)) {
+                    symap->set(name, next->calculate());
+                } else if (typeid(*next) == typeid(BindCommand)) {
                    symap->set(name, new BindedValue(next->getString(), symap));
                 } else if (typeid(*next) == typeid(StringExpression)) {
                     symap->set(name, new StringValue(next->getString()));

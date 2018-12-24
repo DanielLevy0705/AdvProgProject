@@ -34,7 +34,7 @@ public:
             string path = expressioner->popNext()->getString();
             if(!symap->exist(path))
                 throw string("Error: \"" + path + "\" not generic, cannot be binded.");
-            return expressioner->popNext()->getString();
+            return path;
         } else
             throw string("Error: can 'bind' only after 'connect'.");
 

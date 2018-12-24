@@ -26,6 +26,8 @@ void BindedSymbolMap::openDataServer(int port, int frequency) {
     if (pthread_create(&serverThread, nullptr, startUpdatesRoutine, this))
             throw "Error: failed creating updates pthred";
 
+    cout << "opened." <<endl;
+
 }
 void BindedSymbolMap::openServerAndGetClient(int port) {
 
@@ -60,14 +62,13 @@ void BindedSymbolMap::openServerAndGetClient(int port) {
 void BindedSymbolMap::updateTable() {
     if(pthread_mutex_lock(&updatsMutex) <= FAILED)  //make sure two threads wont update at once and cause resource race
         throw runtime_error("lock failed: ");
-    char buffer[BUFFER_SIZE];
+
     vector<string> lines;
     //read from flightgear server the values
+    char buffer[BUFFER_SIZE];
+    bzero(buffer,BUFFER_SIZE);
     if (read(updatesSocket, buffer, BUFFER_SIZE) != FAILED) {
-        string packet = getInnerString('\n', buffer, '\n');
-        if (packet == "")
-            read(updatesSocket, buffer, BUFFER_SIZE);
-        packet = getInnerString('\n', buffer, '\n');
+        string packet = string(buffer);
         lines = split(packet, ',');
         if (lines.size() == paths.size()) {
             for (int i = 0; i < paths.size(); i++) {   //if its adress of variable
@@ -75,6 +76,7 @@ void BindedSymbolMap::updateTable() {
             }
         }
     }
+
     if(pthread_mutex_unlock(&updatsMutex) <= FAILED)
         throw runtime_error("unlock failed: ");
 }

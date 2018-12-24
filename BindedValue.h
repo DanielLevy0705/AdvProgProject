@@ -57,7 +57,7 @@ public:
 
     void sendToServer(const string& msg) {
         if (send(symap->getClientSocket(), msg.c_str(), msg.size(),0) == FAILED)
-            throw "Error: failed to send to server";
+            cout<< "Error: failed to send to server" << endl;
 
     }
     operator double() {

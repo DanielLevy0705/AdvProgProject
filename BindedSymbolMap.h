@@ -88,13 +88,20 @@ public:
     }
     void waitBetweenUpdates();
     bool exist(const string& name) {
-        return (symbolMap->find(name) != symbolMap->end());
+        bool res = (symbolMap->find(name) != symbolMap->end());;
+        return  res;
     }
+    bool isBindablePath(const string& name) {
+
+    };
 
     void set(const string& key, Value* val) {
         if ((*symbolMap)[key] != nullptr)
             delete (*symbolMap)[key];
         (*symbolMap)[key] = val;
+    }
+    void set(const string& key, double value) {
+        *(*symbolMap)[key] = value;
     }
 
     Value*& operator [] (const string& key) {
