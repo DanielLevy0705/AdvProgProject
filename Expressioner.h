@@ -5,9 +5,10 @@
 #include "BindedSymbolMap.h"
 #include "Expression.h"
 
+
 #ifndef EXPRESSIONER_H
 #define EXPRESSIONER_H
-
+#include "CommandSet.h"
 
 class Parser;
 using namespace std;
@@ -19,6 +20,7 @@ class Expressioner {
     bool active;
 
 public:
+    CommandSet* getCommandSet();
     explicit Expressioner(BindedSymbolMap* symap);
     void initiate(map<string, Expression*> dictionary);
     Expression* popNext();

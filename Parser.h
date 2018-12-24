@@ -22,6 +22,8 @@
 #include "Expressioner.h"
 
 #include "StringExpression.h"
+#include "CommandSet.h"
+#include "SetExpression.h"
 
 
 //#include "ValueExpression.h"
@@ -34,7 +36,6 @@ class Parser {
     Inputer inputer;
     BindedSymbolMap* symap;
     Expressioner* expressioner;
-    bool isPacketGetterON;
     //need to mark unary minus with a string that won't be in the expression.
     const string neg = "$";
     map<string, Expression*> dictionary;
@@ -45,7 +46,6 @@ public:
         expressioner = exprer;
         lexer = Lexer();
         inputer = Inputer();
-        isPacketGetterON = false;
     }
     void initiate(map<string, Expression*> dict) {
         dictionary = dict;
@@ -63,18 +63,16 @@ public:
     bool isNum(string word);
     bool isOpr(const string &word);
 
-//    void getCommandPacket() {
-//        isPacketGetterON = true;
-//        //create the required command packet
-//        CommandPacket cp;
-//        //get the next line from parser
-//        list<Expression> temp = next();
-//        while (temp.back().toString() != "}") {
-//            cp.push(temp);
-//            temp = next();
-//        }
-//        isPacketGetterON = false;
-//    }
+    CommandSet* getCommandSet() {
+        //create the required command packet
+        CommandSet* set = new CommandSet(expressioner);
+        //get the next line from parser
+        list<Expression*> temp = next();
+        while (typeid(*temp.back()) != typeid(EndSetExpression)) {
+            set->pushLine(temp);
+            temp = next();
+        }
+    }
     bool isLegalVarName(const string& word);
     bool isStringWord(const string& word);
 

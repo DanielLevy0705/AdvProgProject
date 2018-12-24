@@ -7,6 +7,7 @@ CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../LocalValue.h
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../Value.h
 
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../CommandSet.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Div.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Expressioner.cpp
@@ -24,6 +25,7 @@ CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Number.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Parser.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Plus.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Printable.h
+CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../SetExpression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../StringExpression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Value.h
 
@@ -31,6 +33,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o: ../AssignmentCommand.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindCommand.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindedValue.h
+CMakeFiles/untitled4.dir/Parser.cpp.o: ../CommandSet.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Div.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Expressioner.h
@@ -49,6 +52,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Parser.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Plus.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Printable.h
+CMakeFiles/untitled4.dir/Parser.cpp.o: ../SetExpression.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../StringExpression.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Value.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../ValueExpression.h
@@ -60,6 +64,7 @@ CMakeFiles/untitled4.dir/main.cpp.o: ../AssignmentCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindedValue.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../CommandSet.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Commands.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Div.h
@@ -78,6 +83,7 @@ CMakeFiles/untitled4.dir/main.cpp.o: ../Plus.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../PrintCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Printable.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../ProgramTools.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../SetExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../StringExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Value.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../ValueExpression.h

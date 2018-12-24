@@ -8,6 +8,7 @@ CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp
@@ -25,6 +26,7 @@ CMakeFiles/untitled4.dir/Expressioner.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
 CMakeFiles/untitled4.dir/Parser.cpp.o
@@ -32,6 +34,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
@@ -50,6 +53,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
@@ -61,6 +65,7 @@ CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
@@ -79,6 +84,7 @@ CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h

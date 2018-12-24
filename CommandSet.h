@@ -8,11 +8,12 @@
 #include <list>
 #include "Expression.h"
 #include "Expressioner.h"
+class Expressioner;
 
 class CommandSet : public Expression {
     Expressioner* expressioner;
     list<list<Expression*>> set;
-
+public:
     CommandSet(Expressioner* exprer) {
         expressioner = exprer;
     }
@@ -21,14 +22,14 @@ class CommandSet : public Expression {
         set.push_back(line);
     }
 
-public:
+
     string getString() const override {
         return std::__cxx11::string();
     }
 
     double calculate() const override {
         for(auto& line : set) {
-            expressioner->push(line);
+           // expressioner->push(line);
         }
     }
 

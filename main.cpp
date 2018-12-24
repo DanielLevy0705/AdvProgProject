@@ -2,6 +2,7 @@
 #include "ProgramTools.h"
 #include "Commands.h"
 #include "Expressions.h"
+#include "SetExpression.h"
 #include <map>
 using namespace std;
 
@@ -37,7 +38,9 @@ int main() {
                                                    {"print", new PrintCommand(expressioner)},
                                                    {"var", new VarCommand(symap, expressioner)},
                                                    {"=", new AssignmentCommand()},
-                                                   {"bind", new BindCommand(expressioner, symap)}};
+                                                   {"bind", new BindCommand(expressioner, symap)},
+                                                   {"{", new StartSetExpression()},
+                                                   {"}", new EndSetExpression()}};
     expressioner->initiate(commandsDictionary);
     while (expressioner->on()) {
         try {

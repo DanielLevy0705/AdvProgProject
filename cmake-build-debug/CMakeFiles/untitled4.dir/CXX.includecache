@@ -16,10 +16,6 @@ Expression.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 stdio.h
 -
@@ -76,23 +72,11 @@ string
 string.h
 -
 
-/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
-VarCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
-ConnectCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
-OpenDataServerCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h
-PrintCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h
-BindCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
-AssignmentCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+list
+-
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 
@@ -127,6 +111,8 @@ BindedSymbolMap.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+CommandSet.h
+/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
 Div.h
@@ -202,12 +188,6 @@ Expression.h
 MathExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/MathExpression.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-
 /home/elronbandel/CLionProjects/AdvProgProject2/Parser.cpp
 Parser.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
@@ -247,6 +227,10 @@ Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 StringExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
+CommandSet.h
+/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+SetExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
 Expression.h
@@ -254,19 +238,13 @@ Expression.h
 MathExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/MathExpression.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h
-iostream
--
-Expression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-
 /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
 iostream
 -
 
-/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h
+/home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
 string
@@ -291,26 +269,4 @@ Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 BindedValue.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-Expressions.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-ValueExpression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
-NewExpression.h
-/home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp
-ProgramTools.h
-/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h
-Commands.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
-Expressions.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
-map
--
 

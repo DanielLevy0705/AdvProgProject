@@ -261,12 +261,8 @@ list<Expression *> Parser::next() {
         } else if (line->size() == 1 && symap->exist(word)) {
             expList.emplace_back(new ValueExpression(symap, expressioner, word));
             line->popFirst();
-//            } else if (word == "{") {
-//                expList.emplace_back(getCommandPacket());
-//            } else if (word == "}" && isPacketGetterON) {
-//                expList.emplace_back(newExpression(word));
         } else {
-            delete line;
+                delete line;
             throw "Error: illegal expression: " + word;
         };
 

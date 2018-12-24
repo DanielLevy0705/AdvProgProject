@@ -9,9 +9,13 @@
 #include "Expressioner.h"
 #include "CommandSet.h"
 #include "BoolExpression.h"
+#include "ConditionExpression.h"
+#include "SetExpression.h"
 
 class IfCommand: public Expression {
     Expressioner* expressioner;
+    CommandSet* commandSet;
+
 
 
     IfCommand(Expressioner* exprer) {
@@ -19,11 +23,11 @@ class IfCommand: public Expression {
     }
 
 public:
-    double calculate() const override {
-        if (typeid((*(expressioner->next()))) == typeid(BoolExpression)) {
+    double calculate()  const override {
+        if (typeid((*(expressioner->next()))) == typeid(ConditionExpression)) {
             if (expressioner->popNext()->calculate()) {
-                if (typeid(*expressioner->next()) == typeid(CommandSet)) {
-                    expressioner->popNext()->calculate();
+                if (typeid(*expressioner->popNext()) == typeid(StartSetExpression)) {
+                   // commandSet = expressioner->getCommandSet();
                 }
             }
         }

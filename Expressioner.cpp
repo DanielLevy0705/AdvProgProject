@@ -7,6 +7,9 @@ Expressioner::Expressioner(BindedSymbolMap *symap) {
     active = true;
     parser = new Parser(symap, this);
 }
+CommandSet* Expressioner::getCommandSet()  {
+    return parser->getCommandSet();
+}
 void Expressioner::initiate(map<string, Expression*> dictionary) {
     parser->initiate(dictionary);
 }
