@@ -52,7 +52,7 @@ public:
     }
 
     string getSetString(double num) {
-        return string("set " + path + " " + to_string(num));
+        return string("set " + path + " " + to_string(num) + "\r\n");
     }
 
     void sendToServer(const string& msg) {

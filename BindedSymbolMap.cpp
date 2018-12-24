@@ -100,4 +100,5 @@ void BindedSymbolMap::connect(const string &ip, int port)  {
         throw "Error: failed to open client socket";
     if (::connect(clientSocket,(struct sockaddr*)&serverAddress, addressLen) == FAILED)
         throw "Error: client failed to connect to server";
+    connectedAsClient = true;
 }

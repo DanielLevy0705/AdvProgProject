@@ -22,18 +22,22 @@ public:
     }
 
     double calculate() const override {
-        throw string("Error: 'bind' can be used only after '='");
+        throw string("Error: 'bind' can be used only after '='.");
     }
 
     string getString() const override {
-        if (expressioner->argumentsInLine() != 1)
-            throw string("Error: 'bind' should get only one argument");
-        if (typeid(*expressioner->next()) != typeid(StringExpression))
-            throw string("Error: 'bind' should get string: \"...\"");
-        string path = expressioner->popNext()->getString();
-        if(!symap->exist(path))
-            throw string("Error: \"" + path + "\" not generic, cannot be binded");
-        return expressioner->popNext()->getString();
+        if (symap->canBind()) {
+            if (expressioner->argumentsInLine() != 1)
+                throw string("Error: 'bind' should get only one argument.");
+            if (typeid(*expressioner->next()) != typeid(StringExpression))
+                throw string("Error: 'bind' should get string: \"...\"");
+            string path = expressioner->popNext()->getString();
+            if(!symap->exist(path))
+                throw string("Error: \"" + path + "\" not generic, cannot be binded.");
+            return expressioner->popNext()->getString();
+        } else
+            throw string("Error: can 'bind' only after 'connect'.");
+
     }
 
     virtual void print(ostream &out) const {

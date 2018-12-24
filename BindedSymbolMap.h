@@ -52,6 +52,7 @@ class BindedSymbolMap {
     int updatesFrequency; //how many time a second should be updated
     pthread_mutex_t updatsMutex;
     vector<string> paths;
+    bool connectedAsClient;
 
 
     void openServerAndGetClient(int port);
@@ -77,6 +78,9 @@ public:
     void connect(const string& ip, int port);
     int getClientSocket() {
         return clientSocket;
+    }
+    bool canBind() {
+        return connectedAsClient;
     }
     void updateTable();
     bool isUpdatesActive() {
