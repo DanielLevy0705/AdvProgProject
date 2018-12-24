@@ -26,8 +26,6 @@ void BindedSymbolMap::openDataServer(int port, int frequency) {
     if (pthread_create(&serverThread, nullptr, startUpdatesRoutine, this))
             throw "Error: failed creating updates pthred";
 
-    cout << "opened." <<endl;
-
 }
 void BindedSymbolMap::openServerAndGetClient(int port) {
 
@@ -70,6 +68,11 @@ void BindedSymbolMap::updateTable() {
     if (read(updatesSocket, buffer, BUFFER_SIZE) != FAILED) {
         string packet = string(buffer);
         lines = split(packet, ',');
+        if (lines.size() != paths.size()) {
+            // if its not equal (happens when debugging and few packets are coming at once)
+            packet = getInnerString('\n', packet, '\n');
+            lines = split(packet,',');
+        }
         if (lines.size() == paths.size()) {
             for (int i = 0; i < paths.size(); i++) {   //if its adress of variable
                 (*symbolMap)[paths[i]] = new LocalValue((double)stof(lines[i]));
@@ -86,6 +89,11 @@ void BindedSymbolMap::waitBetweenUpdates() {
 }
 //the function that connects to the flightgear as a client;
 void BindedSymbolMap::connect(const string &ip, int port)  {
+    if (!connectedAsClient) {
+        //should be initiated;
+        serverIp = ip;
+        serverPort = port;
+    }
     //connect to server and update:
     struct sockaddr_in serverAddress;
     socklen_t addressLen = sizeof(serverAddress);

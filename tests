@@ -24,6 +24,7 @@ print x                                    4                          passed
 
 -----------------------------------------------------------------------------
 
-openDataServer 5400 1
-connect 10.0.2.2 5402
-var x = bind "/controls/flight/aileron"
+openDataServer 5400 10
+connect 10.0.2.2 5402                      5                          passed
+var x = bind "/instrumentation/altimeter/pressure-alt-ft"
+print x
