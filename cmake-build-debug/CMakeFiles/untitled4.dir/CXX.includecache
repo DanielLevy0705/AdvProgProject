@@ -16,6 +16,10 @@ Expression.h
 Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 
+/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp
+BindedSymbolMap.h
+/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 stdio.h
 -
@@ -107,6 +111,12 @@ Printable.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
 typeinfo
 -
+
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp
+Expressioner.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+Parser.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 list

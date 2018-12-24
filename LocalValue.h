@@ -19,6 +19,12 @@ public:
     operator double() {
         return value;
     }
+
+    operator string() {
+        if ((int) value == value)
+            return to_string((int)value);
+        return to_string(value);
+    }
 };
 
 class StringValue: public Value {
@@ -32,6 +38,9 @@ public:
     }
     operator double() {
         return -1;
+    }
+    operator string() {
+        return value;
     }
 };
 

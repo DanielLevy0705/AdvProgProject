@@ -49,7 +49,7 @@ public:
     }
 
     string getString() const override {
-        return to_string(*(*symap)[name]);
+        return (string)*(*symap)[name];
     }
 
     virtual void print(ostream &out) const {

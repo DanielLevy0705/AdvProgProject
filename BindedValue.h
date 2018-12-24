@@ -64,6 +64,10 @@ public:
         return *(*symap)[path];
     }
 
+    operator string() {
+        return (string)*(*symap)[path];
+    }
+
 
 };
 

@@ -32,7 +32,7 @@ public:
             symap->set(name, new LocalValue(0));
             ValueExpression(symap, expressioner, name).calculate();
         } else {
-            throw string("Error: no compitable arguments after 'var");
+            throw string("Error: no compitable arguments after 'var'");
         }
     }
 
