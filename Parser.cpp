@@ -206,10 +206,18 @@ Line Parser::getMathLine(Line *line) {
                     if ((*line)[1] != "-" && (*line)[1] != "(") {
                         throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
                     }
+                    if ((*line)[1] == "-" && (mathExp.empty())) {
+                        throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
+                    } else if ((*line)[0] != "(" && (*line)[1] == "-" &&
+                               !isNum(mathExp.back()) &&
+                               mathExp.back() != ")" &&
+                               !symap->exist(mathExp.back())) {
+                        throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
+                    }
                     //if the next char is an unary minus and the size > 2.
                     if (line->size() > 2) {
                         //if the next char does not fit to an unary minus throw exception.
-                        if ((*line)[2] != "(" &&
+                        if ((*line)[1] != "(" && (*line)[2] != "(" &&
                             !isNum((*line)[2]) &&
                             (!symap->exist((*line)[2]))) {
                             throw "Error: illegal line: " + (*line)[0];
@@ -262,7 +270,7 @@ list<Expression *> Parser::next() {
             expList.emplace_back(new ValueExpression(symap, expressioner, word));
             line->popFirst();
         } else {
-                delete line;
+            delete line;
             throw "Error: illegal expression: " + word;
         };
 

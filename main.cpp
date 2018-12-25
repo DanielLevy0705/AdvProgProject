@@ -53,7 +53,8 @@ int main() {
         } catch (const string &errMsg) {
             cout << errMsg << endl;
         } catch (...) {
-            //unexpected exception has ocurred. need to fix this and exit the program properly.
+            //unexpected exception has occurred. need to fix this and exit the program properly.
+            cout << "Error : unexpected exception has occurred";
         }
     }
     delete symap;
