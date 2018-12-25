@@ -24,14 +24,16 @@ public:
     double calculate()  const override {
         if (typeid((*(expressioner->next()))) == typeid(ConditionExpression)) {
             bool condition = expressioner->popNext()->calculate();
+            Expression* exp = expressioner->popNext();
             if (condition) {
-                Expression* exp = expressioner->popNext();
                 if (typeid(*exp) == typeid(CommandSet)) {
                     exp->calculate();
                 } else {
                     cout << "Error: no commands set inside { } after 'if'." <<endl;
                     exp->calculate();
                 }
+            }else if (typeid(*exp) != typeid(CommandSet)) {
+                exp->calculate();
             }
         }
     }
