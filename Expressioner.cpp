@@ -3,33 +3,43 @@
 //
 #include "Expressioner.h"
 #include "Parser.h"
+
 Expressioner::Expressioner(BindedSymbolMap *symap) {
     active = true;
     parser = new Parser(symap, this);
 }
-CommandSet* Expressioner::getCommandSet()  {
+
+CommandSet *Expressioner::getCommandSet() {
     return parser->getCommandSet();
 }
-void Expressioner::initiate(map<string, Expression*> dictionary) {
+
+void Expressioner::initiate(map<string, Expression *> dictionary) {
     parser->initiate(dictionary);
 }
-Expression* Expressioner::popNext()  {
+
+Expression *Expressioner::popNext() {
     if (expressions.empty()) {
         load();
     }
-    Expression* next = expressions.front();
-    expressions.pop_front();
+    Expression *next = expressions.front();
+    //pop only if next!= null
+    if (next != NULL) {
+        expressions.pop_front();
+    }
     return next;
 }
-Expression* Expressioner::next()  {
+
+Expression *Expressioner::next() {
     if (expressions.empty())
         return nullptr;
     return expressions.front();
 }
-void Expressioner::push(list<Expression *> expList)  {
+
+void Expressioner::push(list<Expression *> expList) {
     reserve.emplace_front(expList);
 }
-void Expressioner::load()  {
+
+void Expressioner::load() {
     //if there is no more expressions get more from parser or from reserve
     if (reserve.empty()) {
         expressions = parser->next();
@@ -38,6 +48,7 @@ void Expressioner::load()  {
         reserve.pop_back();
     }
 }
+
 Expressioner::~Expressioner() {
     delete parser;
 }

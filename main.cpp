@@ -4,6 +4,7 @@
 #include "Expressions.h"
 #include "SetExpression.h"
 #include <map>
+
 using namespace std;
 
 int main() {
@@ -31,25 +32,28 @@ int main() {
                                 "/controls/engines/engine/throttle",
                                 "/engines/engine/rpm"};
 
-    BindedSymbolMap* symap = new BindedSymbolMap(bindPaths); //will be connected to data server and flight server
-    Expressioner* expressioner = new Expressioner(symap);
-    map<string, Expression*> commandsDictionary = {{"openDataServer",new OpenDataServerCommand(symap, expressioner)},
-                                                   {"connect",new ConnectCommand(symap, expressioner)},
-                                                   {"print", new PrintCommand(expressioner)},
-                                                   {"var", new VarCommand(symap, expressioner)},
-                                                   {"=", new AssignmentCommand()},
-                                                   {"bind", new BindCommand(expressioner, symap)},
-                                                   {"{", new StartSetExpression()},
-                                                   {"}", new EndSetExpression()}};
+    BindedSymbolMap *symap = new BindedSymbolMap(bindPaths); //will be connected to data server and flight server
+    Expressioner *expressioner = new Expressioner(symap);
+    map<string, Expression *> commandsDictionary = {{"openDataServer", new OpenDataServerCommand(symap, expressioner)},
+                                                    {"connect",        new ConnectCommand(symap, expressioner)},
+                                                    {"print",          new PrintCommand(expressioner)},
+                                                    {"var",            new VarCommand(symap, expressioner)},
+                                                    {"=",              new AssignmentCommand()},
+                                                    {"bind",           new BindCommand(expressioner, symap)},
+                                                    {"{",              new StartSetExpression()},
+                                                    {"}",              new EndSetExpression()}};
     expressioner->initiate(commandsDictionary);
     while (expressioner->on()) {
         try {
+            Expression *exp = expressioner->popNext();
+            if (exp != NULL) {
+                exp->calculate();
+            }
 
-            Expression* exp = expressioner->popNext();
-            exp->calculate();
-
-        } catch (const string& errMsg) {
-            cout << errMsg <<endl;
+        } catch (const string &errMsg) {
+            cout << errMsg << endl;
+        } catch (...) {
+            //unexpected exception has ocurred. need to fix this and exit the program properly.
         }
     }
     delete symap;
