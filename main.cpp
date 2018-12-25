@@ -46,7 +46,7 @@ int main() {
     while (expressioner->on()) {
         try {
             Expression *exp = expressioner->popNext();
-            if (exp != NULL) {
+            if (exp != nullptr) {
                 exp->calculate();
             }
 

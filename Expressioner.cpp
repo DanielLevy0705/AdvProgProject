@@ -23,7 +23,7 @@ Expression *Expressioner::popNext() {
     }
     Expression *next = expressions.front();
     //pop only if next!= null
-    if (next != NULL) {
+    if (next != nullptr) {
         expressions.pop_front();
     }
     return next;
