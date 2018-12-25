@@ -24,30 +24,33 @@
 #include "StringExpression.h"
 #include "CommandSet.h"
 #include "SetExpression.h"
+#include "ConditionExpression.h"
 
 
 //#include "ValueExpression.h"
 
 class Expressioner;
+
 using namespace std;
 
 class Parser {
     Lexer lexer;
     Inputer inputer;
-    BindedSymbolMap* symap;
-    Expressioner* expressioner;
+    BindedSymbolMap *symap;
+    Expressioner *expressioner;
     //need to mark unary minus with a string that won't be in the expression.
     const string neg = "$";
-    map<string, Expression*> dictionary;
+    map<string, Expression *> dictionary;
 public:
-    
-    Parser(BindedSymbolMap* symbolMap, Expressioner* exprer) {
+
+    Parser(BindedSymbolMap *symbolMap, Expressioner *exprer) {
         symap = symbolMap;
         expressioner = exprer;
         lexer = Lexer();
         inputer = Inputer();
     }
-    void initiate(map<string, Expression*> dict) {
+
+    void initiate(map<string, Expression *> dict) {
         dictionary = dict;
 
     }
@@ -55,33 +58,42 @@ public:
     Line getMathLine(Line *line);
 
     Expression *applyOp(Expression *left, Expression *right, string op);
+
     int precendance(string opr);
 
     void shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values);
-    Expression* shuntingYard(Line exp);
+
+    Expression *shuntingYard(Line exp);
 
     bool isNum(string word);
+
     bool isOpr(const string &word);
 
-    CommandSet* getCommandSet() {
+    CommandSet *getCommandSet() {
         //create the required command packet
-        CommandSet* set = new CommandSet(expressioner);
+        CommandSet *set = new CommandSet(expressioner);
         //get the next line from parser
-        list<Expression*> temp = next();
+        list<Expression *> temp = next();
         while (typeid(*temp.back()) != typeid(EndSetExpression)) {
             set->pushLine(temp);
             temp = next();
         }
     }
-    bool isLegalVarName(const string& word);
-    bool isStringWord(const string& word);
 
-    bool isIp(const string& word);
+    bool isLegalVarName(const string &word);
+
+    bool isStringWord(const string &word);
+
+    bool isCondition(const string &word);
+
+    bool isIp(const string &word);
+
+    Expression *getConditionExpression(list<Expression *> &expList, Line *line);
 
 public:
 
 
-    list<Expression*> next();
+    list<Expression *> next();
 };
 
 #endif //PARSER_H

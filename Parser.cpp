@@ -1,6 +1,3 @@
-//
-// Created by elronbandel on 12/23/18.
-//
 #include "Parser.h"
 #include "NewExpression.h"
 #include "ValueExpression.h"
@@ -144,6 +141,11 @@ bool Parser::isLegalVarName(const string &word) {
     return true;
 }
 
+bool Parser::isCondition(const string &word) {
+    return (word == "<" || word == ">" || word == "<=" ||
+            word == ">=" || word == "==" || word == "!=");
+}
+
 bool parenthesesCheck(Line *line) {
     int counter = 0;
     for (int i = 0; i < line->size(); i++) {
@@ -162,6 +164,9 @@ Line Parser::getMathLine(Line *line) {
         throw "Error: parenthesis count is'nt equal : " + (*line)[0];
     }
     while (!line->empty()) {
+        if (!(isNum((*line)[0]) || isOpr((*line)[0]) || symap->exist((*line)[0]))) {
+            return mathExp;
+        }
         //if there's only one number
         if (line->size() == 1 && isNum((*line)[0])) {
             mathExp.addWord(line->popFirst());
@@ -206,7 +211,7 @@ Line Parser::getMathLine(Line *line) {
                     if ((*line)[1] != "-" && (*line)[1] != "(") {
                         throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
                     }
-                    if ((*line)[1] == "-" && (mathExp.empty())) {
+                    if ((*line)[1] == "-" && (mathExp.empty()) && (*line)[0] != "(") {
                         throw "Error: illegal line : " + (*line)[0] + " " + (*line)[1];
                     } else if ((*line)[0] != "(" && (*line)[1] == "-" &&
                                !isNum(mathExp.back()) &&
@@ -241,6 +246,23 @@ Line Parser::getMathLine(Line *line) {
     return mathExp;
 }
 
+Expression *Parser::getConditionExpression(list<Expression *> &expList, Line *line) {
+    Expression *left, *right;
+    string strVal = line->popFirst();
+    if (line->empty()) {
+        throw "Error : condition Expression is not legitimate " + strVal;
+    }
+    string word = line->first();
+    left = expList.back();
+    expList.pop_back();
+    if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
+        right = shuntingYard(getMathLine(line));
+    } else {
+        throw "Error : condition Expression is not legitimate " + (*line)[0];
+    }
+    return new ConditionExpression(strVal, left, right);
+}
+
 list<Expression *> Parser::next() {
     Line *line = new Line(lexer.lexer(inputer.next()));
     list<Expression *> expList;
@@ -269,6 +291,8 @@ list<Expression *> Parser::next() {
         } else if (line->size() == 1 && symap->exist(word)) {
             expList.emplace_back(new ValueExpression(symap, expressioner, word));
             line->popFirst();
+        } else if (isCondition(word)) {
+            expList.emplace_back(getConditionExpression(expList, line));
         } else {
             delete line;
             throw "Error: illegal expression: " + word;
