@@ -12,5 +12,7 @@
 #include "PrintCommand.h"
 #include "BindCommand.h"
 #include "AssignmentCommand.h"
+#include "IfCommand.h"
+#include "WhileCommand.h"
 
 #endif //UNTITLED4_COMMANDS_H

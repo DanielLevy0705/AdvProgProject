@@ -86,6 +86,30 @@ CMakeFiles/untitled4.dir/Parser.cpp.o
 CMakeFiles/untitled4.dir/StringsLibrary.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp
  /home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o
+ /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/MathExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Minus.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Mult.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Neg.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Number.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Plus.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp
+ /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
@@ -119,4 +143,5 @@ CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/main.cpp

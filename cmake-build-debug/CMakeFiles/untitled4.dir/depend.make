@@ -86,6 +86,30 @@ CMakeFiles/untitled4.dir/Parser.cpp.o: ../ValueExpression.h
 CMakeFiles/untitled4.dir/StringsLibrary.cpp.o: ../StringsLibrary.cpp
 CMakeFiles/untitled4.dir/StringsLibrary.cpp.o: ../StringsLibrary.h
 
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../AssignmentCommand.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../BindCommand.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../BindedValue.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Div.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Expression.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Expressioner.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Expressions.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../LocalValue.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../MathExpression.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Minus.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Mult.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Neg.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../NewExpression.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Number.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Plus.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Printable.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../StringExpression.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Value.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../ValueExpression.h
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../VarCommand.cpp
+CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../VarCommand.h
+
 CMakeFiles/untitled4.dir/main.cpp.o: ../AssignmentCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindedSymbolMap.h
@@ -118,5 +142,6 @@ CMakeFiles/untitled4.dir/main.cpp.o: ../StringExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Value.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../ValueExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../VarCommand.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../WhileCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../main.cpp
 

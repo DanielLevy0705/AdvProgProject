@@ -4,7 +4,7 @@
 #include "Expressions.h"
 #include "SetExpression.h"
 #include "ExitCommand.h"
-#include "IfCommand.h"
+
 #include <map>
 
 using namespace std;
@@ -45,7 +45,8 @@ int main() {
                                                     {"{", new StartSetExpression()},
                                                     {"}", new EndSetExpression()},
                                                     {"exit", new ExitCommand(expressioner)},
-                                                    {"if", new IfCommand(expressioner)}};
+                                                    {"if", new IfCommand(expressioner)},
+                                                    {"while", new WhileCommand(expressioner)}};
     expressioner->initiate(commandsDictionary);
     while (expressioner->on()) {
         try {

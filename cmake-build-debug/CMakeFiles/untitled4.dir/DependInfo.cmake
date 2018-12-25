@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/Expressioner.cpp.o"
   "/home/elronbandel/CLionProjects/AdvProgProject2/Parser.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/Parser.cpp.o"
   "/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/StringsLibrary.cpp.o"
+  "/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/VarCommand.cpp.o"
   "/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp" "/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles/untitled4.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

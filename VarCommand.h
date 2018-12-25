@@ -4,7 +4,7 @@
 
 
 #ifndef VARCOMMAND_H
-#include "Expressioner.h"
+
 #include "Expressions.h"
 #include "BindedSymbolMap.h"
 #include "ValueExpression.h"
@@ -25,16 +25,7 @@ public:
         expressioner = expr;
     }
 
-    double calculate() const override {
-        if (expressioner->argumentsInLine() >= 1 &&
-                typeid((*(expressioner->next()))) == typeid(NewExpression)) {
-            string name = expressioner->popNext()->getString();
-            symap->set(name, new LocalValue(0));
-            ValueExpression(symap, expressioner, name).calculate();
-        } else {
-            throw string("Error: no compitable arguments after 'var'");
-        }
-    }
+    double calculate() const override;
 
     string getString() const override {
         return "ConnectCommand";

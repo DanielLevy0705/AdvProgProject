@@ -95,6 +95,10 @@ BindCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
 AssignmentCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
+IfCommand.h
+/home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h
+WhileCommand.h
+/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
 map
@@ -109,8 +113,6 @@ Expressioner.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
-string
--
 Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 MathExpression.h
@@ -131,8 +133,6 @@ typeinfo
 -
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
-list
--
 string
 -
 BindedSymbolMap.h
@@ -263,8 +263,6 @@ BindedValue.h
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
-Expressioner.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
 Expressions.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
 BindedSymbolMap.h
@@ -273,6 +271,20 @@ ValueExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
 NewExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
+
+/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+Expressioner.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+CommandSet.h
+/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+BoolExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/BoolExpression.h
+ConditionExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
+SetExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/main.cpp
 ProgramTools.h
@@ -285,8 +297,6 @@ SetExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
 ExitCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h
-IfCommand.h
-/home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h
 map
 -
 

@@ -312,6 +312,33 @@ StringsLibrary.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/StringsLibrary.cpp.s
 .PHONY : StringsLibrary.cpp.s
 
+VarCommand.o: VarCommand.cpp.o
+
+.PHONY : VarCommand.o
+
+# target to build an object file
+VarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/VarCommand.cpp.o
+.PHONY : VarCommand.cpp.o
+
+VarCommand.i: VarCommand.cpp.i
+
+.PHONY : VarCommand.i
+
+# target to preprocess a source file
+VarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/VarCommand.cpp.i
+.PHONY : VarCommand.cpp.i
+
+VarCommand.s: VarCommand.cpp.s
+
+.PHONY : VarCommand.s
+
+# target to generate assembly for a file
+VarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/VarCommand.cpp.s
+.PHONY : VarCommand.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -369,6 +396,9 @@ help:
 	@echo "... StringsLibrary.o"
 	@echo "... StringsLibrary.i"
 	@echo "... StringsLibrary.s"
+	@echo "... VarCommand.o"
+	@echo "... VarCommand.i"
+	@echo "... VarCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -28,26 +28,25 @@ public:
     }
 
     double calculate() const override {
-        if (expressioner->argumentsInLine() > 0) {
-
-            Expression* next = expressioner->popNext();
-
-            if (typeid(*next) == typeid(AssignmentCommand)){
+        if (expressioner->next() != nullptr) {
+            if (typeid(*expressioner->next()) == typeid(AssignmentCommand)) {
+                Expression* next = expressioner->popNext();
                 if (expressioner->argumentsInLine() == 0)
                     throw string("Error: operator = with no argument to assign");
                 next = expressioner->popNext();
                 if (symap->exist(name) && typeid(*next) != typeid(StringExpression)
-                                       && typeid(*next) != typeid(BindCommand)) {
+                    && typeid(*next) != typeid(BindCommand)) {
                     symap->set(name, next->calculate());
                 } else if (typeid(*next) == typeid(BindCommand)) {
-                   symap->set(name, new BindedValue(next->getString(), symap));
+                    symap->set(name, new BindedValue(next->getString(), symap));
                 } else if (typeid(*next) == typeid(StringExpression)) {
                     symap->set(name, new StringValue(next->getString()));
                 } else {
                     symap->set(name, new LocalValue(next->calculate()));
-            }
+                }
             }
         }
+
         return *(*symap)[name];
     }
 
