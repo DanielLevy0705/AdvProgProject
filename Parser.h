@@ -69,15 +69,16 @@ public:
 
     bool isOpr(const string &word);
 
-    CommandSet *getCommandSet() {
+    CommandSet* getCommandSet() {
         //create the required command packet
-        CommandSet *set = new CommandSet(expressioner);
+        CommandSet* set = new CommandSet(expressioner);
         //get the next line from parser
         list<Expression *> temp = next();
         while (typeid(*temp.back()) != typeid(EndSetExpression)) {
             set->pushLine(temp);
             temp = next();
         }
+        return set;
     }
 
     bool isLegalVarName(const string &word);

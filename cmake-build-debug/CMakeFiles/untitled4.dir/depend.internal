@@ -6,9 +6,34 @@ CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.cpp
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp
+ /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp
@@ -35,6 +60,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
  /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
@@ -65,13 +91,17 @@ CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/BoolExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Div.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
  /home/elronbandel/CLionProjects/AdvProgProject2/MathExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Minus.h

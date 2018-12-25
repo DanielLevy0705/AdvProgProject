@@ -53,8 +53,6 @@ class BindedSymbolMap {
     pthread_mutex_t updatsMutex;
     vector<string> paths;
     bool connectedAsClient;
-    string serverIp;
-    int serverPort;
 
 
     void openServerAndGetClient(int port);
@@ -66,9 +64,6 @@ public:
         symbolMap = new map<string, Value*>;
         updatesThreadActive = new bool(false); //the
         updatsMutex = PTHREAD_MUTEX_INITIALIZER;
-        serverIp = "";
-        serverPort = -1;
-        connectedAsClient = false;
     }
     //external function to open the data server
     void openDataServer(int port, int frequency);
@@ -82,8 +77,6 @@ public:
     }
     void connect(const string& ip, int port);
     int getClientSocket() {
-        if (clientSocket != FAILED)
-            connect(serverIp, serverPort);
         return clientSocket;
     }
     bool canBind() {

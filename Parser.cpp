@@ -269,8 +269,10 @@ list<Expression *> Parser::next() {
     while (!line->empty()) {
         Line temp;
         string word = line->first();
-
-        if (dictionary.find(word) != dictionary.end()) {
+        if (word == "{") { //in case its start of command set
+            line->popFirst();
+            expList.emplace_back(getCommandSet());
+        } else if (dictionary.find(word) != dictionary.end()) {
             //if the word is recognized by the map add it to list
             expList.emplace_back(dictionary[word]);
             line->popFirst();

@@ -102,13 +102,28 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BoolExpression.h">
 			<Option target="untitled4"/>
 		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.cpp">
+			<Option target="untitled4"/>
+		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h">
 			<Option target="untitled4"/>
 		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp">

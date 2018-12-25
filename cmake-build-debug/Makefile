@@ -150,6 +150,87 @@ BindedSymbolMap.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.s
 .PHONY : BindedSymbolMap.cpp.s
 
+CommandSet.o: CommandSet.cpp.o
+
+.PHONY : CommandSet.o
+
+# target to build an object file
+CommandSet.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/CommandSet.cpp.o
+.PHONY : CommandSet.cpp.o
+
+CommandSet.i: CommandSet.cpp.i
+
+.PHONY : CommandSet.i
+
+# target to preprocess a source file
+CommandSet.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/CommandSet.cpp.i
+.PHONY : CommandSet.cpp.i
+
+CommandSet.s: CommandSet.cpp.s
+
+.PHONY : CommandSet.s
+
+# target to generate assembly for a file
+CommandSet.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/CommandSet.cpp.s
+.PHONY : CommandSet.cpp.s
+
+ConditionExpression.o: ConditionExpression.cpp.o
+
+.PHONY : ConditionExpression.o
+
+# target to build an object file
+ConditionExpression.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ConditionExpression.cpp.o
+.PHONY : ConditionExpression.cpp.o
+
+ConditionExpression.i: ConditionExpression.cpp.i
+
+.PHONY : ConditionExpression.i
+
+# target to preprocess a source file
+ConditionExpression.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ConditionExpression.cpp.i
+.PHONY : ConditionExpression.cpp.i
+
+ConditionExpression.s: ConditionExpression.cpp.s
+
+.PHONY : ConditionExpression.s
+
+# target to generate assembly for a file
+ConditionExpression.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ConditionExpression.cpp.s
+.PHONY : ConditionExpression.cpp.s
+
+ExitCommand.o: ExitCommand.cpp.o
+
+.PHONY : ExitCommand.o
+
+# target to build an object file
+ExitCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.o
+.PHONY : ExitCommand.cpp.o
+
+ExitCommand.i: ExitCommand.cpp.i
+
+.PHONY : ExitCommand.i
+
+# target to preprocess a source file
+ExitCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.i
+.PHONY : ExitCommand.cpp.i
+
+ExitCommand.s: ExitCommand.cpp.s
+
+.PHONY : ExitCommand.s
+
+# target to generate assembly for a file
+ExitCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.s
+.PHONY : ExitCommand.cpp.s
+
 Expressioner.o: Expressioner.cpp.o
 
 .PHONY : Expressioner.o
@@ -270,6 +351,15 @@ help:
 	@echo "... BindedSymbolMap.o"
 	@echo "... BindedSymbolMap.i"
 	@echo "... BindedSymbolMap.s"
+	@echo "... CommandSet.o"
+	@echo "... CommandSet.i"
+	@echo "... CommandSet.s"
+	@echo "... ConditionExpression.o"
+	@echo "... ConditionExpression.i"
+	@echo "... ConditionExpression.s"
+	@echo "... ExitCommand.o"
+	@echo "... ExitCommand.i"
+	@echo "... ExitCommand.s"
 	@echo "... Expressioner.o"
 	@echo "... Expressioner.i"
 	@echo "... Expressioner.s"

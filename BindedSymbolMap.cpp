@@ -95,11 +95,6 @@ void BindedSymbolMap::waitBetweenUpdates() {
 
 //the function that connects to the flightgear as a client;
 void BindedSymbolMap::connect(const string &ip, int port) {
-    if (!connectedAsClient) {
-        //should be initiated;
-        serverIp = ip;
-        serverPort = port;
-    }
     //connect to server and update:
     struct sockaddr_in serverAddress;
     socklen_t addressLen = sizeof(serverAddress);
@@ -117,4 +112,19 @@ void BindedSymbolMap::connect(const string &ip, int port) {
     if (::connect(clientSocket, (struct sockaddr *) &serverAddress, addressLen) == FAILED)
         throw "Error: client failed to connect to server";
     connectedAsClient = true;
+    char buffer[BUFFER_SIZE];
+    buffer[0] = 'c';
+    buffer[1] = '\r';
+    buffer[2] = '\n';
+    if (send(clientSocket, buffer, BUFFER_SIZE,0) != FAILED)
+        cout << "sent" << endl;
+    bzero(buffer, BUFFER_SIZE);
+    vector<string> lines;
+    if (read(clientSocket, buffer, BUFFER_SIZE) != FAILED) {
+        string packet = string(buffer);
+        lines = split(packet, '\n');
+        for (auto& line : lines) {
+            cout << line <<endl;
+        }
+    }
 }

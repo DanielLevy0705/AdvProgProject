@@ -27,11 +27,7 @@ public:
         return std::__cxx11::string();
     }
 
-    double calculate() const override {
-        for(auto& line : set) {
-           // expressioner->push(line);
-        }
-    }
+    double calculate() const override;
 
 
 };

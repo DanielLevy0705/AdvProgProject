@@ -22,7 +22,6 @@ class Expressioner {
     bool active;
 
 public:
-    CommandSet *getCommandSet();
 
     explicit Expressioner(BindedSymbolMap *symap);
 

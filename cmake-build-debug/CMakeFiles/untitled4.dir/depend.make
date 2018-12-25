@@ -6,8 +6,33 @@ CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../LocalValue.h
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../Value.h
 
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../CommandSet.cpp
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../Expression.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../Expressioner.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../LocalValue.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../Printable.h
+CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../Value.h
+
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../ConditionExpression.cpp
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../ConditionExpression.h
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../Expression.h
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../Printable.h
+
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../ExitCommand.cpp
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../ExitCommand.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../Expression.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../Expressioner.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../LocalValue.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../Printable.h
+CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../Value.h
+
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../ConditionExpression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Div.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Expressioner.cpp
@@ -34,6 +59,7 @@ CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindCommand.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../BindedValue.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/Parser.cpp.o: ../ConditionExpression.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Div.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/Parser.cpp.o: ../Expressioner.h
@@ -64,13 +90,17 @@ CMakeFiles/untitled4.dir/main.cpp.o: ../AssignmentCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindedValue.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../BoolExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../CommandSet.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Commands.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../ConditionExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Div.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../ExitCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Expressioner.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Expressions.h
+CMakeFiles/untitled4.dir/main.cpp.o: ../IfCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../LocalValue.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../MathExpression.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../Minus.h

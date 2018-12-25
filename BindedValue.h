@@ -37,7 +37,7 @@ public:
     static void* sendAsClient(void* arg) {
         Info* info = (Info*)arg;
         //write massage to server
-        info->bindedValue->sendToServer( info->bindedValue->getSetString(info->num) );
+        info->bindedValue->sendToServer( info->bindedValue->getSetString(info->num).c_str() );
         pthread_exit(nullptr);
     }
 
@@ -55,10 +55,15 @@ public:
         return string("set " + path + " " + to_string(num) + "\r\n");
     }
 
-    void sendToServer(const string& msg) {
+    void sendToServer(const char* msg) {
+        char buffer[BUFFER_SIZE];
+        bzero(buffer, BUFFER_SIZE);
+        if (write(symap->getClientSocket(), msg, strlen(msg)) <= FAILED)
+            cout<< "Error: failed to send to server." << endl;
+        cout << msg << endl;
+        if (read(symap->getClientSocket(), buffer, BUFFER_SIZE) <= FAILED)
+            cout<< "Error: failed getting server response." << endl;
 
-        if (send(symap->getClientSocket(), msg.c_str(), msg.size(),0) <= FAILED)
-            cout<< "Error: failed to send to server" << endl;
 
     }
     operator double() {

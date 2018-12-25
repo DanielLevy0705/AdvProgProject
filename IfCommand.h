@@ -14,23 +14,30 @@
 
 class IfCommand: public Expression {
     Expressioner* expressioner;
-    CommandSet* commandSet;
 
-
+public:
 
     IfCommand(Expressioner* exprer) {
         expressioner = exprer;
     }
 
-public:
     double calculate()  const override {
         if (typeid((*(expressioner->next()))) == typeid(ConditionExpression)) {
-            if (expressioner->popNext()->calculate()) {
-                if (typeid(*expressioner->popNext()) == typeid(StartSetExpression)) {
-                   // commandSet = expressioner->getCommandSet();
+            bool condition = expressioner->popNext()->calculate();
+            if (condition) {
+                Expression* exp = expressioner->popNext();
+                if (typeid(*exp) == typeid(CommandSet)) {
+                    exp->calculate();
+                } else {
+                    cout << "Error: no commands set inside { } after 'if'." <<endl;
+                    exp->calculate();
                 }
             }
         }
+    }
+
+    string getString() const override {
+        return "if";
     }
 };
 
