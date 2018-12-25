@@ -3,6 +3,7 @@
 #include "Commands.h"
 #include "Expressions.h"
 #include "SetExpression.h"
+#include "ExitCommand.h"
 #include <map>
 
 using namespace std;
@@ -35,13 +36,14 @@ int main() {
     BindedSymbolMap *symap = new BindedSymbolMap(bindPaths); //will be connected to data server and flight server
     Expressioner *expressioner = new Expressioner(symap);
     map<string, Expression *> commandsDictionary = {{"openDataServer", new OpenDataServerCommand(symap, expressioner)},
-                                                    {"connect",        new ConnectCommand(symap, expressioner)},
-                                                    {"print",          new PrintCommand(expressioner)},
-                                                    {"var",            new VarCommand(symap, expressioner)},
-                                                    {"=",              new AssignmentCommand()},
-                                                    {"bind",           new BindCommand(expressioner, symap)},
-                                                    {"{",              new StartSetExpression()},
-                                                    {"}",              new EndSetExpression()}};
+                                                    {"connect", new ConnectCommand(symap, expressioner)},
+                                                    {"print", new PrintCommand(expressioner)},
+                                                    {"var", new VarCommand(symap, expressioner)},
+                                                    {"=", new AssignmentCommand()},
+                                                    {"bind", new BindCommand(expressioner, symap)},
+                                                    {"{", new StartSetExpression()},
+                                                    {"}", new EndSetExpression()},
+                                                    {"exit", new ExitCommand(expressioner)}};
     expressioner->initiate(commandsDictionary);
     while (expressioner->on()) {
         try {
