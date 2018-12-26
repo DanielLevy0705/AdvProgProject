@@ -30,7 +30,7 @@ public:
             que.push("exit");
         } else {
             que.push("exit");
-            throw string("Error: file not found!");
+            cout <<"Error: file '"+ path +"' not found."<<endl;
         }
 
 
