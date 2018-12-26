@@ -17,7 +17,7 @@ using namespace std;
 
 class Expressioner {
     Parser *parser;
-    list<list<Expointer >> reserve;
+    list<list<Expointer>> reserve;
     list<Expointer> expressions;
     bool active;
 

@@ -98,7 +98,7 @@ public:
     }
     void updateTable();
     bool isUpdatesActive() {
-        return updatesThreadActive;
+        return *updatesThreadActive;
     }
     void waitBetweenUpdates();
     bool exist(const string& name) {
