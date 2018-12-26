@@ -11,7 +11,6 @@
 
 #include "CommandSet.h"
 #include "Expointer.h"
-
 class Parser;
 
 using namespace std;

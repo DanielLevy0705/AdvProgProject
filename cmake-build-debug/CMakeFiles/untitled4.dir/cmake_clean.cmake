@@ -5,9 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled4.dir/Expressioner.cpp.o"
   "CMakeFiles/untitled4.dir/Parser.cpp.o"
   "CMakeFiles/untitled4.dir/ConditionExpression.cpp.o"
-  "CMakeFiles/untitled4.dir/ExitCommand.cpp.o"
   "CMakeFiles/untitled4.dir/CommandSet.cpp.o"
   "CMakeFiles/untitled4.dir/VarCommand.cpp.o"
+  "CMakeFiles/untitled4.dir/Lexer.cpp.o"
   "untitled4.pdb"
   "untitled4"
 )

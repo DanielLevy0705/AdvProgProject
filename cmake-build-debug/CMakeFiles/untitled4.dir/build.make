@@ -135,22 +135,9 @@ CMakeFiles/untitled4.dir/ConditionExpression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/ConditionExpression.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp -o CMakeFiles/untitled4.dir/ConditionExpression.cpp.s
 
-CMakeFiles/untitled4.dir/ExitCommand.cpp.o: CMakeFiles/untitled4.dir/flags.make
-CMakeFiles/untitled4.dir/ExitCommand.cpp.o: ../ExitCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled4.dir/ExitCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/ExitCommand.cpp.o -c /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp
-
-CMakeFiles/untitled4.dir/ExitCommand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled4.dir/ExitCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp > CMakeFiles/untitled4.dir/ExitCommand.cpp.i
-
-CMakeFiles/untitled4.dir/ExitCommand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/ExitCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp -o CMakeFiles/untitled4.dir/ExitCommand.cpp.s
-
 CMakeFiles/untitled4.dir/CommandSet.cpp.o: CMakeFiles/untitled4.dir/flags.make
 CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../CommandSet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/untitled4.dir/CommandSet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled4.dir/CommandSet.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/CommandSet.cpp.o -c /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.cpp
 
 CMakeFiles/untitled4.dir/CommandSet.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/untitled4.dir/CommandSet.cpp.s: cmake_force
 
 CMakeFiles/untitled4.dir/VarCommand.cpp.o: CMakeFiles/untitled4.dir/flags.make
 CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../VarCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled4.dir/VarCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/untitled4.dir/VarCommand.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/VarCommand.cpp.o -c /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp
 
 CMakeFiles/untitled4.dir/VarCommand.cpp.i: cmake_force
@@ -174,6 +161,19 @@ CMakeFiles/untitled4.dir/VarCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/VarCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp -o CMakeFiles/untitled4.dir/VarCommand.cpp.s
 
+CMakeFiles/untitled4.dir/Lexer.cpp.o: CMakeFiles/untitled4.dir/flags.make
+CMakeFiles/untitled4.dir/Lexer.cpp.o: ../Lexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled4.dir/Lexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/Lexer.cpp.o -c /home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp
+
+CMakeFiles/untitled4.dir/Lexer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled4.dir/Lexer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp > CMakeFiles/untitled4.dir/Lexer.cpp.i
+
+CMakeFiles/untitled4.dir/Lexer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/Lexer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp -o CMakeFiles/untitled4.dir/Lexer.cpp.s
+
 # Object files for target untitled4
 untitled4_OBJECTS = \
 "CMakeFiles/untitled4.dir/main.cpp.o" \
@@ -182,9 +182,9 @@ untitled4_OBJECTS = \
 "CMakeFiles/untitled4.dir/Expressioner.cpp.o" \
 "CMakeFiles/untitled4.dir/Parser.cpp.o" \
 "CMakeFiles/untitled4.dir/ConditionExpression.cpp.o" \
-"CMakeFiles/untitled4.dir/ExitCommand.cpp.o" \
 "CMakeFiles/untitled4.dir/CommandSet.cpp.o" \
-"CMakeFiles/untitled4.dir/VarCommand.cpp.o"
+"CMakeFiles/untitled4.dir/VarCommand.cpp.o" \
+"CMakeFiles/untitled4.dir/Lexer.cpp.o"
 
 # External object files for target untitled4
 untitled4_EXTERNAL_OBJECTS =
@@ -195,9 +195,9 @@ untitled4: CMakeFiles/untitled4.dir/StringsLibrary.cpp.o
 untitled4: CMakeFiles/untitled4.dir/Expressioner.cpp.o
 untitled4: CMakeFiles/untitled4.dir/Parser.cpp.o
 untitled4: CMakeFiles/untitled4.dir/ConditionExpression.cpp.o
-untitled4: CMakeFiles/untitled4.dir/ExitCommand.cpp.o
 untitled4: CMakeFiles/untitled4.dir/CommandSet.cpp.o
 untitled4: CMakeFiles/untitled4.dir/VarCommand.cpp.o
+untitled4: CMakeFiles/untitled4.dir/Lexer.cpp.o
 untitled4: CMakeFiles/untitled4.dir/build.make
 untitled4: CMakeFiles/untitled4.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable untitled4"

@@ -204,33 +204,6 @@ ConditionExpression.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ConditionExpression.cpp.s
 .PHONY : ConditionExpression.cpp.s
 
-ExitCommand.o: ExitCommand.cpp.o
-
-.PHONY : ExitCommand.o
-
-# target to build an object file
-ExitCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.o
-.PHONY : ExitCommand.cpp.o
-
-ExitCommand.i: ExitCommand.cpp.i
-
-.PHONY : ExitCommand.i
-
-# target to preprocess a source file
-ExitCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.i
-.PHONY : ExitCommand.cpp.i
-
-ExitCommand.s: ExitCommand.cpp.s
-
-.PHONY : ExitCommand.s
-
-# target to generate assembly for a file
-ExitCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/ExitCommand.cpp.s
-.PHONY : ExitCommand.cpp.s
-
 Expressioner.o: Expressioner.cpp.o
 
 .PHONY : Expressioner.o
@@ -257,6 +230,33 @@ Expressioner.s: Expressioner.cpp.s
 Expressioner.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Expressioner.cpp.s
 .PHONY : Expressioner.cpp.s
+
+Lexer.o: Lexer.cpp.o
+
+.PHONY : Lexer.o
+
+# target to build an object file
+Lexer.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Lexer.cpp.o
+.PHONY : Lexer.cpp.o
+
+Lexer.i: Lexer.cpp.i
+
+.PHONY : Lexer.i
+
+# target to preprocess a source file
+Lexer.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Lexer.cpp.i
+.PHONY : Lexer.cpp.i
+
+Lexer.s: Lexer.cpp.s
+
+.PHONY : Lexer.s
+
+# target to generate assembly for a file
+Lexer.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/Lexer.cpp.s
+.PHONY : Lexer.cpp.s
 
 Parser.o: Parser.cpp.o
 
@@ -384,12 +384,12 @@ help:
 	@echo "... ConditionExpression.o"
 	@echo "... ConditionExpression.i"
 	@echo "... ConditionExpression.s"
-	@echo "... ExitCommand.o"
-	@echo "... ExitCommand.i"
-	@echo "... ExitCommand.s"
 	@echo "... Expressioner.o"
 	@echo "... Expressioner.i"
 	@echo "... Expressioner.s"
+	@echo "... Lexer.o"
+	@echo "... Lexer.i"
+	@echo "... Lexer.s"
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"

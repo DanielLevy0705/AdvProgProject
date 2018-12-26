@@ -62,8 +62,7 @@ void BindedSymbolMap::openServerAndGetClient(int port) {
 }
 
 void BindedSymbolMap::updateTable() {
-    //make sure two threads wont update at once and cause resource race
-    if (pthread_mutex_lock(&updatsMutex) <= FAILED)
+    if (pthread_mutex_lock(&updatsMutex) <= FAILED)  //make sure two threads wont update at once and cause resource race
         throw runtime_error("lock failed: ");
 
     vector<string> lines;
@@ -84,7 +83,7 @@ void BindedSymbolMap::updateTable() {
             }
         }
     }
-    //unlock the mutex
+
     if (pthread_mutex_unlock(&updatsMutex) <= FAILED)
         throw runtime_error("unlock failed: ");
 }
@@ -104,7 +103,7 @@ void BindedSymbolMap::connect(const string &ip, int port) {
         throw "Error: failed finding the host";
     bzero((char *) &serverAddress, sizeof(serverAddress));
     serverAddress.sin_family = AF_INET;
-    bcopy(server->h_addr, (char *) &serverAddress.sin_addr.s_addr, server->h_length);
+    bcopy((char *) server->h_addr, (char *) &serverAddress.sin_addr.s_addr, server->h_length);
     serverAddress.sin_port = htons(port);
     //create socket to connect client to server
     clientSocket = socket(AF_INET, SOCK_STREAM, 0);
@@ -117,15 +116,15 @@ void BindedSymbolMap::connect(const string &ip, int port) {
     buffer[0] = 'c';
     buffer[1] = '\r';
     buffer[2] = '\n';
-    if (send(clientSocket, buffer, BUFFER_SIZE, 0) != FAILED)
+    if (send(clientSocket, buffer, BUFFER_SIZE,0) != FAILED)
         cout << "sent" << endl;
     bzero(buffer, BUFFER_SIZE);
     vector<string> lines;
     if (read(clientSocket, buffer, BUFFER_SIZE) != FAILED) {
         string packet = string(buffer);
         lines = split(packet, '\n');
-        for (auto &line : lines) {
-            cout << line << endl;
+        for (auto& line : lines) {
+            cout << line <<endl;
         }
     }
 }

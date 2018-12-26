@@ -2,10 +2,12 @@
 #define COMMANDSET_H
 
 #include <list>
-#include "Expointer .h"
+//#include "Expointer.h"
 
 
 class Expressioner;
+
+#include "Expointer.h"
 
 class CommandSet : public Expression {
     Expressioner *expressioner;

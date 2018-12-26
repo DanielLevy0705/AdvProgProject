@@ -99,7 +99,10 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BoolExpression.h">
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Command.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandExpression.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.cpp">
@@ -120,9 +123,6 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.cpp">
-			<Option target="untitled4"/>
-		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
@@ -135,13 +135,16 @@
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressions.h">
-			<Option target="untitled4"/>
-		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h">
@@ -160,9 +163,6 @@
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h">
-			<Option target="untitled4"/>
-		</Unit>
-		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Printable.h">
 			<Option target="untitled4"/>
 		</Unit>
 		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h">

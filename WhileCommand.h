@@ -10,6 +10,7 @@
 #include "CommandSet.h"
 #include "ConditionExpression.h"
 #include "SetExpression.h"
+#include "Expointer.h"
 
 class WhileCommand : public Command {
     Expressioner *expressioner;
@@ -20,33 +21,7 @@ public:
         expressioner = exprer;
     }
 
-    double execute() const override {
-        if ((expressioner->next()->getType()) == typeid(ConditionExpression)) {
-            Expointer conditionExp = expressioner->popNext();
-            bool condition = conditionExp->calculate();
-            Expointer commandsExp = expressioner->popNext();
-            if (condition) {
-                if (commandsExp->getType() == typeid(CommandSet)) {
-
-                    commandsExp->calculate();
-                    //build line that will help the expressioner to start the while again
-                    list<Expointer> whileLine;
-                    whileLine.emplace_front(commandsExp);
-                    whileLine.emplace_front(conditionExp);
-                    whileLine.emplace_front((Expointer) this);
-                    expressioner->push(whileLine);
-
-                } else {
-                    cout << "Error: no commands set inside { } after 'while'." << endl;
-                    // if it is other kind of command run like there was no while before
-                    commandsExp->calculate();
-                }
-            } else if (commandsExp->getType() != typeid(CommandSet)) {
-                // if it is other kind of command run like there was no while before
-                commandsExp->calculate();
-            }
-        }
-    }
+    double execute() const override;
 
     string getString() const override {
         return "while";

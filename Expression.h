@@ -2,7 +2,7 @@
 #define PROJ1_EXPRESSION_H
 
 
-#include <string>
+
 #include <typeinfo>
 
 

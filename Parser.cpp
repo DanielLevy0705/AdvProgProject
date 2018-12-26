@@ -1,19 +1,21 @@
 #include "Parser.h"
 #include "NewExpression.h"
 #include "ValueExpression.h"
+#include "Expointer.h"
 #include <list>
+#include <memory>
 
 Expointer Parser::applyOp(Expointer left, Expointer right, string op) {
     if (op == "+") {
-        return new Plus(left, right);
+        return newExpointer(new Plus(left, right));
     } else if (op == "-") {
-        return new Minus(left, right);
+        return newExpointer(new  Minus(left, right));
     } else if (op == "*") {
-        return new Mult(left, right);
+        return newExpointer(new  Mult(left, right));
     } else if (op == "/") {
-        return new Div(left, right);
+        return newExpointer(new  Div(left, right));
     } else if (op == neg) {
-        return new Neg(right);
+        return newExpointer(new  Neg(right));
     }
 }
 
@@ -32,7 +34,7 @@ int Parser::precendance(string opr) {
 
 void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expointer > &values) {
     string op;
-    Expointer leftVal, *rightVal;
+    Expointer leftVal, rightVal;
     if (oprs.top() == neg) {
         rightVal = values.top();
         values.pop();
@@ -68,10 +70,10 @@ Expointer Parser::shuntingYard(Line exp) {
             oprs.push(exp[i]);
             //if its a number push to values stack.
         } else if (isNum(exp[i])) {
-            values.push(new Number(exp[i]));
+            values.push(newExpointer(new  Number(exp[i])));
             //if its closing braces pop all operators to values stack.
         } else if (symap->exist(exp[i])) {
-            values.push(new ValueExpression(symap, expressioner, exp[i]));
+            values.push(newExpointer(new  ValueExpression(symap, expressioner, exp[i])));
         } else if (exp[i] == ")") {
             while (!oprs.empty() && oprs.top() != "(") {
                 shuntingYardHelper(oprs, values);
@@ -247,7 +249,7 @@ Line Parser::getMathLine(Line *line) {
 }
 
 Expointer Parser::getConditionExpression(list<Expointer > &expList, Line *line) {
-    Expointer left, *right;
+    Expointer left, right;
     string strVal = line->popFirst();
     if (line->empty()) {
         throw "Error : condition Expression is not legitimate " + strVal;
@@ -260,7 +262,7 @@ Expointer Parser::getConditionExpression(list<Expointer > &expList, Line *line) 
     } else {
         throw "Error : condition Expression is not legitimate " + (*line)[0];
     }
-    return new ConditionExpression(strVal, left, right);
+    return newExpointer(new  ConditionExpression(strVal, left, right));
 }
 
 list<Expointer > Parser::next() {
@@ -274,25 +276,25 @@ list<Expointer > Parser::next() {
             expList.emplace_back(getCommandSet());
         } else if (dictionary.find(word) != dictionary.end()) {
             //if the word is recognized by the map add it to list
-            expList.emplace_back(new CommandExpression(dictionary[word]));
+            expList.emplace_back(newExpointer(new  CommandExpression(dictionary[word])));
             line->popFirst();
         } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
             //if its the begginig of maths exp
             expList.emplace_back(shuntingYard(getMathLine(line)));
         } else if (isIp(word)) {
-            expList.emplace_back(new StringExpression(word));
+            expList.emplace_back(newExpointer(new  StringExpression(word)));
             line->popFirst();
         } else if (isStringWord(word)) {
             //if its a word in commas "____"
-            expList.emplace_back(new StringExpression(word.substr(1, word.size() - 2)));
+            expList.emplace_back(newExpointer(new  StringExpression(word.substr(1, word.size() - 2))));
             line->popFirst();
         } else if (isLegalVarName(word)) {
             //if its letters can emphsaize new name for var
-            expList.emplace_back(new NewExpression(word));
+            expList.emplace_back(newExpointer(new NewExpression(word)));
             line->popFirst();
             //it might be a variable that is already exists.
         } else if (line->size() == 1 && symap->exist(word)) {
-            expList.emplace_back(new ValueExpression(symap, expressioner, word));
+            expList.emplace_back(newExpointer(new  ValueExpression(symap, expressioner, word)));
             line->popFirst();
             //if its a condition get condition expression.
         } else if (isCondition(word)) {

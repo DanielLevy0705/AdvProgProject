@@ -5,7 +5,7 @@
 
 #ifndef VARCOMMAND_H
 
-#include "Expression.h"
+
 #include "BindedSymbolMap.h"
 #include "ValueExpression.h"
 #include "NewExpression.h"
