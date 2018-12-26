@@ -8,8 +8,12 @@
 #include <map>
 
 using namespace std;
-
-int main() {
+#define FILE_ARGUMENT 1
+int main(int argc, char** argv) {
+    bool compilerMode = argc-FILE_ARGUMENT;
+    string commandsFilePath;
+    if (compilerMode)
+        commandsFilePath = string(argv[FILE_ARGUMENT]);
     vector<string> bindPaths = {"/instrumentation/airspeed-indicator/indicated-speed-kt",
                                 "/instrumentation/altimeter/indicated-altitude-ft",
                                 "/instrumentation/altimeter/pressure-alt-ft",
@@ -47,7 +51,7 @@ int main() {
                                                     {"exit", new ExitCommand(expressioner)},
                                                     {"if", new IfCommand(expressioner)},
                                                     {"while", new WhileCommand(expressioner)}};
-    expressioner->initiate(commandsDictionary);
+    expressioner->initiate(commandsDictionary, commandsFilePath);
     while (expressioner->on()) {
         try {
             Expointer exp = expressioner->popNext();

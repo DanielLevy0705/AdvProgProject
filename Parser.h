@@ -56,9 +56,7 @@ public:
 
 
 
-    void initiate(map<string, Command *> dict) {
-        dictionary = dict;
-    }
+    void initiate(map<string, Command *> dict, const string& path);
 
     Line getMathLine(Line *line);
 

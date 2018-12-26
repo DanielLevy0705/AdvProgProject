@@ -2,6 +2,7 @@
 #include "NewExpression.h"
 #include "ValueExpression.h"
 #include "Expointer.h"
+#include "Inputer.h"
 #include <list>
 #include <memory>
 
@@ -158,6 +159,13 @@ bool parenthesesCheck(Line *line) {
         }
     }
     return !counter;
+}
+
+void Parser::initiate(map<string, Command *> dict, const string &path)  {
+    if (path != "") {
+        inputer.load(path);
+    }
+    dictionary = dict;
 }
 
 Line Parser::getMathLine(Line *line) {

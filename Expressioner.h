@@ -25,7 +25,7 @@ public:
 
     explicit Expressioner(BindedSymbolMap *symap);
 
-    void initiate(map<string, Command *> dictionary);
+    void initiate(map<string, Command *> dictionary, const string& path);
 
     Expointer popNext();
 

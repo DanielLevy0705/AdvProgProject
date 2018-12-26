@@ -6,8 +6,8 @@ Expressioner::Expressioner(BindedSymbolMap *symap) {
     parser = new Parser(symap, this);
 }
 
-void Expressioner::initiate(map<string, Command *> dictionary) {
-    parser->initiate(dictionary);
+void Expressioner::initiate(map<string, Command *> dictionary, const string& path) {
+    parser->initiate(dictionary, path);
 }
 
 Expointer Expressioner::popNext() {
