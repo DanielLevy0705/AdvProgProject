@@ -17,6 +17,10 @@ Line Lexer::lexer(string input) {
                 newWordAddition = false;
                 newWord = "";
             }
+            //if its underscore add it.
+        } else if (input.at(idx) == '_') {
+            newWord += input[idx];
+            newWordAddition = true;
             //if its not alphabet,number or a dot, its an operator.
         } else if (!isalpha(input[idx]) && !isdigit(input[idx]) &&
                    (input[idx] != '.') && (input[idx] != '\"')) {
