@@ -3,7 +3,9 @@
 
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../BindedSymbolMap.cpp
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../Expression.h
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../LocalValue.h
+CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../Printable.h
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o: ../Value.h
 
 CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../BindedSymbolMap.h

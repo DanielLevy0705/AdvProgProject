@@ -9,3 +9,4 @@ double CommandSet::calculate() const  {
         expressioner->push(line);
     }
 }
+

@@ -4,6 +4,9 @@
 
 #ifndef VALUE_H
 #define VALUE_H
+
+#include "Expression.h"
+
 using namespace std;
 class Value {
 public:

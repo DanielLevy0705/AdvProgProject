@@ -4,7 +4,9 @@
 CMakeFiles/untitled4.dir/BindedSymbolMap.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Printable.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
 CMakeFiles/untitled4.dir/CommandSet.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h

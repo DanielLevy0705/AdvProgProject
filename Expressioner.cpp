@@ -9,7 +9,7 @@ Expressioner::Expressioner(BindedSymbolMap *symap) {
     parser = new Parser(symap, this);
 }
 
-void Expressioner::initiate(map<string, Expression *> dictionary) {
+void Expressioner::initiate(map<string, Expression*> dictionary) {
     parser->initiate(dictionary);
 }
 
@@ -31,7 +31,7 @@ Expression *Expressioner::next() {
     return expressions.front();
 }
 
-void Expressioner::push(list<Expression *> expList) {
+void Expressioner::push(list<Expression*> expList) {
     reserve.emplace_front(expList);
 }
 

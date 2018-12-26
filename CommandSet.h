@@ -8,6 +8,7 @@
 #include <list>
 #include "Expression.h"
 #include "Expressioner.h"
+
 class Expressioner;
 
 class CommandSet : public Expression {
@@ -21,6 +22,8 @@ public:
     void pushLine(list<Expression*> line) {
         set.push_back(line);
     }
+
+
 
 
     string getString() const override {

@@ -24,6 +24,8 @@
 #define MAX_CONNEDTED_CLIENTS 5
 #define FAILED -1
 #define BUFFER_SIZE 1024
+
+
 using  namespace std;
 
 static vector<string> split(const string& s, char delimiter){
@@ -53,6 +55,10 @@ class BindedSymbolMap {
     pthread_mutex_t updatsMutex;
     vector<string> paths;
     bool connectedAsClient;
+
+
+
+private:
 
 
     void openServerAndGetClient(int port);

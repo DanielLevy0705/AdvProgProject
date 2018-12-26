@@ -62,6 +62,8 @@ int main() {
             cout << "Error : unexpected exception has occurred";
         }
     }
+    symap->close();
+
     delete symap;
     delete expressioner;
 }

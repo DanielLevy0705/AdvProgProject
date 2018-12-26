@@ -40,6 +40,7 @@ class Parser {
     Expressioner *expressioner;
     //need to mark unary minus with a string that won't be in the expression.
     const string neg = "$";
+    vector<Expression*> expressions;
     map<string, Expression *> dictionary;
 public:
 
@@ -50,9 +51,10 @@ public:
         inputer = Inputer();
     }
 
+
+
     void initiate(map<string, Expression *> dict) {
         dictionary = dict;
-
     }
 
     Line getMathLine(Line *line);
@@ -77,6 +79,10 @@ public:
         while (typeid(*temp.back()) != typeid(EndSetExpression)) {
             set->pushLine(temp);
             temp = next();
+        }
+        temp.pop_back();
+        if (temp.size() > 0) {
+            set->pushLine(temp);
         }
         return set;
     }
