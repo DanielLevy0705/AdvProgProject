@@ -26,6 +26,6 @@ print x                                    4                          passed
 
 openDataServer 5400 10
 connect 10.0.2.2 5402                      5                          passed
-var x = bind "/instrumentation/altimeter/pressure-alt-ft"
+var z = bind "/instrumentation/altimeter/pressure-alt-ft"
 var y = bind "/controls/flight/rudder"
 print x

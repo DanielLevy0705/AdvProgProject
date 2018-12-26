@@ -1,9 +1,8 @@
-#include <thread>
 #include "BindedSymbolMap.h"
 
 //the function that will update the map in seperate thread
 void *BindedSymbolMap::startUpdatesRoutine(void *symbolMap) {
-    BindedSymbolMap *symap = (BindedSymbolMap *) symbolMap;
+    BindedSymbolMap *symap = (BindedSymbolMap*) symbolMap;
     if (symap != nullptr) {
         //while this thread should be active try and get info from client
         while (symap->isUpdatesActive()) {
@@ -24,7 +23,7 @@ void BindedSymbolMap::openDataServer(int port, int frequency) {
 
     //get one pulse of information to set the table
     updateTable();
-
+    *updatesThreadActive = true;
     // start the updates thread
     if (pthread_create(&serverThread, nullptr, startUpdatesRoutine, this))
         throw "Error: failed creating updates pthred";
@@ -91,8 +90,7 @@ void BindedSymbolMap::updateTable() {
 
 void BindedSymbolMap::waitBetweenUpdates() {
     if (updatesFrequency != 0)
-        this_thread::sleep_for(chrono::milliseconds(1000 / updatesFrequency));
-
+        usleep(1000 / updatesFrequency);
 }
 
 //the function that connects to the flightgear as a client;
