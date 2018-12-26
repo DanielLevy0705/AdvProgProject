@@ -8,6 +8,7 @@
 class Expressioner;
 
 #include "Expointer.h"
+#include "Expression.h"
 
 class CommandSet : public Expression {
     Expressioner *expressioner;

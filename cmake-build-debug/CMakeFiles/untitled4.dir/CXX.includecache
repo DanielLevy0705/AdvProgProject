@@ -24,12 +24,6 @@ Command.h
 StringExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp
-thread
--
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 stdio.h
 -
@@ -107,6 +101,8 @@ list
 -
 Expointer.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Commands.h
 VarCommand.h
