@@ -7,16 +7,18 @@
 
 class Plus : public MathExpression {
     Expression *leftExp, *rightExp;
-    string strRep;
 public:
-    Plus(string strVal, Expression *left, Expression *right) {
+    Plus( Expression *left, Expression *right) {
         leftExp = left;
         rightExp = right;
-        strVal = strRep;
     }
 
     virtual double calculate() const {
         return leftExp->calculate() + rightExp->calculate();
+    }
+
+    const type_info& getType() const override {
+        return typeid(Plus);
     }
 };
 

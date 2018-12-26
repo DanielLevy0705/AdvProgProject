@@ -7,8 +7,9 @@
 
 #include "Expressioner.h"
 #include "BindedSymbolMap.h"
+#include "Command.h"
 
-class OpenDataServerCommand : public Expression {
+class OpenDataServerCommand : public Command {
     BindedSymbolMap *symap;
     Expressioner *expressioner;
 public:
@@ -17,7 +18,7 @@ public:
         expressioner = expr;
     }
 
-    double calculate() const override {
+    double execute() const override {
         if (expressioner->argumentsInLine() != 2)
             throw string("Error: not enough argument for:" + getString());
         try {
@@ -31,10 +32,6 @@ public:
 
     virtual string getString() const {
         return string("openDataServerCommand");
-    }
-
-    virtual void print(ostream &out) const {
-        out << "openDataServerCommand";
     }
 };
 

@@ -1,15 +1,11 @@
-//
-// Created by fatuity on 12/25/18.
-//
-
 #ifndef UNTITLED4_EXITCOMMAND_H
 #define UNTITLED4_EXITCOMMAND_H
 
 
-#include "Expression.h"
+#include "Command.h"
 #include "Expressioner.h"
 
-class ExitCommand : public Expression {
+class ExitCommand : public Command {
     Expressioner *expressioner;
 public:
     explicit ExitCommand(Expressioner *expnr) {
@@ -20,11 +16,7 @@ public:
         return "ExitCommand";
     }
 
-    virtual void print(ostream &out) const {
-        out << "ExitCommand";
-    }
-
-    virtual double calculate() const {
+    virtual double execute() const {
         expressioner->close();
     }
 };

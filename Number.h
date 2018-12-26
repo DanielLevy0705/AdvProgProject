@@ -24,6 +24,9 @@ public:
     virtual string getString() const {
         return number;
     }
+    const type_info& getType() const override {
+        return typeid(Number);
+    }
 };
 
 

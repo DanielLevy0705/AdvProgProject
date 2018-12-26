@@ -5,29 +5,29 @@
 #ifndef OPENSETEXPRESSION_H
 #define OPENSETEXPRESSION_H
 
-#include "Expression.h"
+#include "Command.h"
 
 
-class StartSetExpression : public Expression {
+class StartSetExpression : public Command {
 
 public:
     string getString() const override {
         return "{";
     }
 
-    double calculate() const override {
+    double execute() const override {
         return 0;
     }
 };
 
-class EndSetExpression : public Expression {
+class EndSetExpression : public Command {
 public:
     string getString() const override {
         return "}";
     }
 
 
-    double calculate() const override {
+    double execute() const override {
         return 0;
     }
 

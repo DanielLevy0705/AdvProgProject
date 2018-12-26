@@ -5,15 +5,15 @@
 
 Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
     if (op == "+") {
-        return new Plus(op, left, right);
+        return new Plus(left, right);
     } else if (op == "-") {
-        return new Minus(op, left, right);
+        return new Minus(left, right);
     } else if (op == "*") {
-        return new Mult(op, left, right);
+        return new Mult(left, right);
     } else if (op == "/") {
-        return new Div(op, left, right);
+        return new Div(left, right);
     } else if (op == neg) {
-        return new Neg(op, right);
+        return new Neg(right);
     }
 }
 
@@ -274,7 +274,7 @@ list<Expression *> Parser::next() {
             expList.emplace_back(getCommandSet());
         } else if (dictionary.find(word) != dictionary.end()) {
             //if the word is recognized by the map add it to list
-            expList.emplace_back(dictionary[word]);
+            expList.emplace_back(new CommandExpression(dictionary[word]));
             line->popFirst();
         } else if (isNum(word) || isOpr(word) || symap->exist(word) || word == "(") {
             //if its the begginig of maths exp
@@ -290,11 +290,14 @@ list<Expression *> Parser::next() {
             //if its letters can emphsaize new name for var
             expList.emplace_back(new NewExpression(word));
             line->popFirst();
+            //it might be a variable that is already exists.
         } else if (line->size() == 1 && symap->exist(word)) {
             expList.emplace_back(new ValueExpression(symap, expressioner, word));
             line->popFirst();
+            //if its a condition get condition expression.
         } else if (isCondition(word)) {
             expList.emplace_back(getConditionExpression(expList, line));
+            //if its not any of those its not a valid input.
         } else {
             delete line;
             throw "Error: illegal expression: " + word;
@@ -304,6 +307,3 @@ list<Expression *> Parser::next() {
     delete line;
     return expList;
 }
-
-
-

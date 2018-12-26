@@ -1,22 +1,19 @@
-//
-// Created by elronbandel on 12/23/18.
-//
-
 #ifndef ASSIGNMENTCOMMAND_H
 #define ASSIGNMENTCOMMAND_H
 
-#include "Expressions.h"
+#include "Command.h"
 
 
-class AssignmentCommand : public Expression {
+class AssignmentCommand : public Command {
 public:
-    AssignmentCommand(){}
+    AssignmentCommand() {}
 
+    // a Value type expression will handle the assignment.
     string getString() const override {
         throw string("Error: '=' can be put only after memory stored value");
     }
 
-    double calculate() const override {
+    double execute() const override {
         throw string("Error: '=' can be put only after memory stored value");
     }
 };

@@ -1,7 +1,7 @@
 
 #include "ProgramTools.h"
 #include "Commands.h"
-#include "Expressions.h"
+#include "Expression.h"
 #include "SetExpression.h"
 #include "ExitCommand.h"
 
@@ -36,7 +36,7 @@ int main() {
 
     BindedSymbolMap *symap = new BindedSymbolMap(bindPaths); //will be connected to data server and flight server
     Expressioner *expressioner = new Expressioner(symap);
-    map<string, Expression *> commandsDictionary = {{"openDataServer", new OpenDataServerCommand(symap, expressioner)},
+    map<string, Command*> commandsDictionary = {{"openDataServer", new OpenDataServerCommand(symap, expressioner)},
                                                     {"connect", new ConnectCommand(symap, expressioner)},
                                                     {"print", new PrintCommand(expressioner)},
                                                     {"var", new VarCommand(symap, expressioner)},

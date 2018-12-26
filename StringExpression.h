@@ -1,7 +1,3 @@
-//
-// Created by elronbandel on 12/23/18.
-//
-
 #ifndef STRINGEXPRESSION_H
 #define STRINGEXPRESSION_H
 
@@ -25,10 +21,8 @@ public:
     string getString() const override {
         return str;
     }
-
-
-    virtual void print(ostream &out) const {
-        out << str;
+    const type_info& getType() const override {
+        return typeid(StringExpression);
     }
 };
 

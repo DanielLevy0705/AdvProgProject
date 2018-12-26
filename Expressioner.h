@@ -2,8 +2,8 @@
 
 #include <string>
 
+#include "Command.h"
 #include "BindedSymbolMap.h"
-#include "Expression.h"
 
 
 #ifndef EXPRESSIONER_H
@@ -25,7 +25,7 @@ public:
 
     explicit Expressioner(BindedSymbolMap *symap);
 
-    void initiate(map<string, Expression *> dictionary);
+    void initiate(map<string, Command *> dictionary);
 
     Expression *popNext();
 

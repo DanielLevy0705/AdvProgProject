@@ -10,7 +10,7 @@
 #include <map>
 #include <stack>
 #include "Line.h"
-#include "Expressions.h"
+#include "Expression.h"
 #include "Lexer.h"
 #include "Div.h"
 #include "Mult.h"
@@ -20,7 +20,7 @@
 #include "Neg.h"
 #include "Inputer.h"
 #include "Expressioner.h"
-
+#include "CommandExpression.h"
 #include "StringExpression.h"
 #include "CommandSet.h"
 #include "SetExpression.h"
@@ -40,8 +40,7 @@ class Parser {
     Expressioner *expressioner;
     //need to mark unary minus with a string that won't be in the expression.
     const string neg = "$";
-    vector<Expression*> expressions;
-    map<string, Expression *> dictionary;
+    map<string, Command *> dictionary;
 public:
 
     Parser(BindedSymbolMap *symbolMap, Expressioner *exprer) {
@@ -53,7 +52,7 @@ public:
 
 
 
-    void initiate(map<string, Expression *> dict) {
+    void initiate(map<string, Command *> dict) {
         dictionary = dict;
     }
 
@@ -76,7 +75,7 @@ public:
         CommandSet* set = new CommandSet(expressioner);
         //get the next line from parser
         list<Expression *> temp = next();
-        while (typeid(*temp.back()) != typeid(EndSetExpression)) {
+        while (temp.back()->getType() != typeid(EndSetExpression)) {
             set->pushLine(temp);
             temp = next();
         }

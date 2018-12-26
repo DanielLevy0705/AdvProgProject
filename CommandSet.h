@@ -1,13 +1,9 @@
-//
-// Created by elronbandel on 12/23/18.
-//
-
 #ifndef COMMANDSET_H
 #define COMMANDSET_H
 
 #include <list>
 #include "Expression.h"
-#include "Expressioner.h"
+
 
 class Expressioner;
 
@@ -23,7 +19,9 @@ public:
         set.push_back(line);
     }
 
-
+    const type_info& getType() const override {
+        return typeid(CommandSet);
+    }
 
 
     string getString() const override {

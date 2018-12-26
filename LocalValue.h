@@ -1,6 +1,3 @@
-//
-// Created by elronbandel on 12/20/18.
-//
 #include "Value.h"
 #ifndef LOCALVALUE_H
 #define LOCALVALUE_H

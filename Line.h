@@ -1,7 +1,3 @@
-//
-// Created by fatuity on 12/18/18.
-//
-
 #ifndef PROJ1_LINE_H
 #define PROJ1_LINE_H
 
@@ -21,6 +17,7 @@ public:
 
     Line() {}
 
+    //return the first string in the line.
     string first() {
         if (line.empty()) {
             throw "line is empty";
@@ -28,6 +25,7 @@ public:
         return line.at(0);
     }
 
+    //pop the first string in the line and return it.
     string popFirst() {
         if (line.empty()) {
             throw "line is empty";
@@ -38,6 +36,7 @@ public:
         return retVal;
     }
 
+    //return the string in the n'th place in the line.
     string operator[](size_t n) {
         if (line.size() - 1 < n) {
             return nullptr;
@@ -47,10 +46,6 @@ public:
 
     int size() {
         return line.size();
-    }
-
-    bool has(int n) {
-        return (!line.empty());
     }
 
     void addWord(string newWord) {

@@ -5,15 +5,16 @@
 
 #ifndef VARCOMMAND_H
 
-#include "Expressions.h"
+#include "Expression.h"
 #include "BindedSymbolMap.h"
 #include "ValueExpression.h"
 #include "NewExpression.h"
+#include "Command.h"
 
 class Expressioner;
 
 
-class VarCommand: public Expression {
+class VarCommand : public Command {
 
     Expressioner *expressioner;
     BindedSymbolMap *symap;
@@ -25,14 +26,10 @@ public:
         expressioner = expr;
     }
 
-    double calculate() const override;
+    double execute() const override;
 
     string getString() const override {
         return "ConnectCommand";
-    }
-
-    virtual void print(ostream &out) const {
-        out << "ConnectCommand";
     }
 
 };

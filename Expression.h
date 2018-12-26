@@ -3,19 +3,20 @@
 
 
 #include <string>
-#include "Printable.h"
 #include <typeinfo>
 
 
 using namespace std;
 
-class Expression : public Printable {
+class Expression {
 
 public:
 
     virtual double calculate() const = 0;
 
     virtual string getString() const = 0;
+
+    virtual const type_info& getType() const = 0;
 
 
 };

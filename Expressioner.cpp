@@ -1,6 +1,3 @@
-//
-// Created by elronbandel on 12/23/18.
-//
 #include "Expressioner.h"
 #include "Parser.h"
 
@@ -9,7 +6,7 @@ Expressioner::Expressioner(BindedSymbolMap *symap) {
     parser = new Parser(symap, this);
 }
 
-void Expressioner::initiate(map<string, Expression*> dictionary) {
+void Expressioner::initiate(map<string, Command*> dictionary) {
     parser->initiate(dictionary);
 }
 

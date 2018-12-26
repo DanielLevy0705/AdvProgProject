@@ -11,17 +11,18 @@
 
 class Neg : public MathExpression {
     Expression* expression;
-    string strVal;
 public:
-    Neg(string stringVal, Expression* exp) {
+    Neg( Expression* exp) {
         expression = exp;
-        strVal = stringVal;
     }
 
     virtual double calculate() const {
         return -expression->calculate();
     }
 
+    const type_info& getType() const override {
+        return typeid(Neg);
+    }
 };
 
 

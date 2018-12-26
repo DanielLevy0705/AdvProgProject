@@ -5,14 +5,13 @@
 #ifndef IFCOMMAND_H
 #define IFCOMMAND_H
 
-#include "Expression.h"
+#include "Command.h"
 #include "Expressioner.h"
 #include "CommandSet.h"
-#include "BoolExpression.h"
 #include "ConditionExpression.h"
 #include "SetExpression.h"
 
-class IfCommand: public Expression {
+class IfCommand: public Command {
     Expressioner* expressioner;
 
 public:
@@ -21,18 +20,18 @@ public:
         expressioner = exprer;
     }
 
-    double calculate()  const override {
-        if (typeid((*(expressioner->next()))) == typeid(ConditionExpression)) {
+    double execute()  const override {
+        if ((expressioner->next()->getType()) == typeid(ConditionExpression)) {
             bool condition = expressioner->popNext()->calculate();
             Expression* exp = expressioner->popNext();
             if (condition) {
-                if (typeid(*exp) == typeid(CommandSet)) {
+                if (exp->getType() == typeid(CommandSet)) {
                     exp->calculate();
                 } else {
                     cout << "Error: no commands set inside { } after 'if'." <<endl;
                     exp->calculate();
                 }
-            }else if (typeid(*exp) != typeid(CommandSet)) {
+            }else if (exp->getType() != typeid(CommandSet)) {
                 exp->calculate();
             }
         }

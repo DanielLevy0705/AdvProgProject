@@ -1,7 +1,4 @@
-//
-// Created by elronbandel on 12/25/18.
-//
-
+#include "Expressioner.h"
 #include "CommandSet.h"
 
 double CommandSet::calculate() const  {

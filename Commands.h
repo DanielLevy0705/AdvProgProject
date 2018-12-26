@@ -1,11 +1,5 @@
-//
-// Created by elronbandel on 12/23/18.
-//
-
-#ifndef COMMANDS_H
-#define COMMANDS_H
-
-//#include "AssignmentCommand.h"
+#ifndef UNTITLED4_COMMANDS_H
+#define UNTITLED4_COMMANDS_H
 #include "VarCommand.h"
 #include "ConnectCommand.h"
 #include "OpenDataServerCommand.h"
@@ -14,5 +8,4 @@
 #include "AssignmentCommand.h"
 #include "IfCommand.h"
 #include "WhileCommand.h"
-
 #endif //UNTITLED4_COMMANDS_H

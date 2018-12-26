@@ -8,8 +8,9 @@
 
 #include "BindedSymbolMap.h"
 #include "Expressioner.h"
+#include "Command.h"
 
-class ConnectCommand : public Expression {
+class ConnectCommand : public Command {
 
     Expressioner *expressioner;
     BindedSymbolMap *symap;
@@ -21,7 +22,7 @@ public:
         expressioner = expr;
     }
 
-    double calculate() const override {
+    double execute() const override {
 
         if (expressioner->argumentsInLine() != 2)
             throw string("Error: not enough argument for:" + getString());
@@ -42,10 +43,6 @@ public:
 
     string getString() const override {
         return "ConnectCommand";
-    }
-
-    virtual void print(ostream &out) const {
-        out << "ConnectCommand";
     }
 };
 

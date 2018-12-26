@@ -29,17 +29,17 @@ public:
 
     double calculate() const override {
         if (expressioner->next() != nullptr) {
-            if (typeid(*expressioner->next()) == typeid(AssignmentCommand)) {
+            if (expressioner->next()->getType() == typeid(AssignmentCommand)) {
                 Expression* next = expressioner->popNext();
                 if (expressioner->argumentsInLine() == 0)
                     throw string("Error: operator = with no argument to assign");
                 next = expressioner->popNext();
-                if (symap->exist(name) && typeid(*next) != typeid(StringExpression)
-                    && typeid(*next) != typeid(BindCommand)) {
+                if (symap->exist(name) && next->getType() != typeid(StringExpression)
+                    && next->getType() != typeid(BindCommand)) {
                     symap->set(name, next->calculate());
-                } else if (typeid(*next) == typeid(BindCommand)) {
+                } else if (next->getType() == typeid(BindCommand)) {
                     symap->set(name, new BindedValue(next->getString(), symap));
-                } else if (typeid(*next) == typeid(StringExpression)) {
+                } else if (next->getType() == typeid(StringExpression)) {
                     symap->set(name, new StringValue(next->getString()));
                 } else {
                     symap->set(name, new LocalValue(next->calculate()));
@@ -54,10 +54,9 @@ public:
         return (string)*(*symap)[name];
     }
 
-    virtual void print(ostream &out) const {
-        out << "ConnectCommand";
+    const type_info& getType() const override {
+        return typeid(ValueExpression);
     }
-
 };
 
 #endif //UNTITLED4_VALUEEXPRESSION_H

@@ -14,6 +14,9 @@ public:
     }
     NewExpression() : StringExpression(""){
     }
+    const type_info& getType() const override {
+        return typeid(NewExpression);
+    }
 };
 
 #endif //UNTITLED4_NEWEXPRESSION_H

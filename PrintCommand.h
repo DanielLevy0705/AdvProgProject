@@ -6,12 +6,12 @@
 #define PRINTCOMMAND_H
 
 #include <iostream>
-#include "Expression.h"
 #include "Expressioner.h"
+#include "Command.h"
 
 using namespace std;
 
-class PrintCommand : public Expression {
+class PrintCommand : public Command {
 
     Expressioner *expressioner;
 
@@ -21,7 +21,7 @@ public:
         expressioner = expr;
     }
 
-    double calculate() const override {
+    double execute() const override {
 
         while (expressioner->argumentsInLine() > 0) {
             cout << expressioner->popNext()->getString();
@@ -34,11 +34,6 @@ public:
     string getString() const override {
         return "print";
     }
-
-    virtual void print(ostream &out) const {
-        out << "print";
-    }
-
 
 };
 
