@@ -69,6 +69,9 @@ public:
         paths = pats;
         symbolMap = new map<string, Value*>;
         updatesThreadActive = new bool(false); //the
+       clientSocket = FAILED;
+       updatesSocket = FAILED;
+       updatesServerSocket = FAILED;
         updatsMutex = PTHREAD_MUTEX_INITIALIZER;
     }
 
@@ -79,9 +82,12 @@ public:
 
     void close() {
         *updatesThreadActive = false;
-        ::close(updatesSocket);
-        ::close(clientSocket);
-        ::close(updatesServerSocket);
+        if(updatesSocket != FAILED)
+            ::close(updatesSocket);
+        if(clientSocket != FAILED)
+            ::close(clientSocket);
+        if(clientSocket != FAILED);
+            ::close(updatesServerSocket);
     }
     void connect(const string& ip, int port);
     int getClientSocket() {
