@@ -138,7 +138,7 @@ bool Parser::isLegalVarName(const string &word) {
     if (isdigit(word[0]))
         return false;
     for (auto c : word) {
-        if (!isdigit(c) && !isalpha(c))
+        if (!isdigit(c) && !isalpha(c) && c != '_')
             return false;
     }
     return true;

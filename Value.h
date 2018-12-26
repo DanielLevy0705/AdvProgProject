@@ -5,6 +5,7 @@
 #ifndef VALUE_H
 #define VALUE_H
 
+#include <string>
 #include "Expression.h"
 
 using namespace std;
