@@ -27,7 +27,13 @@ public:
                 que.push(line);
             }
             sourceFile.close();
+            que.push("exit");
+        } else {
+            que.push("exit");
+            throw string("Error: file not found!");
         }
+
+
     }
 //next - function that loads the next line from the que or the user
     string next() {
