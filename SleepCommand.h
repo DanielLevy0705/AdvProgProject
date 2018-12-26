@@ -23,7 +23,7 @@ public:
 
     double execute() const override {
         usleep(expressioner->popNext()->calculate());
-
+        return 0;
     }
 
     string getString() const override {
