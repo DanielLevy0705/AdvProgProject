@@ -11,6 +11,8 @@ public:
     virtual double execute() const = 0;
 
     virtual string getString() const = 0;
+
+    virtual ~Command() {}
 };
 
 #endif //UNTITLED4_COMMAND_H

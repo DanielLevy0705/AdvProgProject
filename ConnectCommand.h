@@ -38,7 +38,7 @@ public:
             throw string("Error: failed Connecting because:" + err);
         }
 
-
+        return 0;
     }
 
     string getString() const override {

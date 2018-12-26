@@ -18,6 +18,7 @@ public:
 
     virtual double execute() const {
         expressioner->close();
+        return 0;
     }
 };
 

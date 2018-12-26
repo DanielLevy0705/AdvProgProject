@@ -1,6 +1,3 @@
-//
-// Created by elronbandel on 12/26/18.
-//
 #include "BindCommand.h"
 #include "ValueExpression.h"
 

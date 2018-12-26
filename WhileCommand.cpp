@@ -31,4 +31,5 @@ double WhileCommand::execute() const  {
             commandsExp->calculate();
         }
     }
+    return 0;
 }

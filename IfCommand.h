@@ -35,6 +35,7 @@ public:
                 exp->calculate();
             }
         }
+        return 0;
     }
 
     string getString() const override {

@@ -28,6 +28,7 @@ public:
         } catch (const string &err) {
             throw string("Error: failed opening data server because:" + err);
         }
+        return 0;
     }
 
     virtual string getString() const {
