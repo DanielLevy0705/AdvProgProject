@@ -19,6 +19,7 @@
 #define FAILED -1
 class BindedValue;
 typedef struct Info {
+    BindedSymbolMap* symap;
     BindedValue* bindedValue;
     double num;
 
@@ -29,6 +30,7 @@ class BindedValue : public Value {
     string path;
     BindedSymbolMap* symap;
 
+
 public:
     BindedValue(const string& pth, BindedSymbolMap* symbolMap) {
         path = pth;
@@ -37,7 +39,7 @@ public:
     static void* sendAsClient(void* arg) {
         Info* info = (Info*)arg;
         //write massage to server
-        info->bindedValue->sendToServer( info->bindedValue->getSetString(info->num).c_str() );
+        info->symap->sendAsClient(info->bindedValue->getSetString(info->num).c_str() );
         pthread_exit(nullptr);
     }
 
@@ -46,6 +48,7 @@ public:
             Info* info = new Info();
             info->bindedValue = this;
             info->num = num;
+            info->symap = symap;
             //send command to server to set value in diffrent thread
             pthread_t clientThread;
             pthread_create(&clientThread, nullptr, sendAsClient, info);
@@ -59,17 +62,6 @@ public:
         return string("set " + path + " " + to_string(num) + "\r\n");
     }
 
-    void sendToServer(const char* msg) {
-        char buffer[BUFFER_SIZE];
-        bzero(buffer, BUFFER_SIZE);
-        if (write(symap->getClientSocket(), msg, strlen(msg)) <= FAILED)
-            cout<< "Error: failed to send to server." << endl;
-        cout << msg << endl;
-        if (read(symap->getClientSocket(), buffer, BUFFER_SIZE) <= FAILED)
-            cout<< "Error: failed getting server response." << endl;
-
-
-    }
     operator double() {
         return *(*symap)[path];
     }

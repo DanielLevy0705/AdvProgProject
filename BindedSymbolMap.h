@@ -105,9 +105,11 @@ public:
         bool res = (symbolMap->find(name) != symbolMap->end());;
         return  res;
     }
-    bool isBindablePath(const string& name) {
 
-    };
+    void sendAsClient(const char* msg) {
+        if (::write(clientSocket, msg, strlen(msg)) <= FAILED)
+            cout<< "Error: failed to send to server." << endl;
+    }
 
     void set(const string& key, Value* val) {
         if ((*symbolMap)[key] != nullptr)

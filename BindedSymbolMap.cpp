@@ -112,20 +112,5 @@ void BindedSymbolMap::connect(const string &ip, int port) {
     if (::connect(clientSocket, (struct sockaddr *) &serverAddress, addressLen) == FAILED)
         throw "Error: client failed to connect to server";
     connectedAsClient = true;
-    char buffer[BUFFER_SIZE];
-    buffer[0] = 'c';
-    buffer[1] = '\r';
-    buffer[2] = '\n';
-    if (send(clientSocket, buffer, BUFFER_SIZE,0) != FAILED)
-        cout << "sent" << endl;
-    bzero(buffer, BUFFER_SIZE);
-    vector<string> lines;
-    if (read(clientSocket, buffer, BUFFER_SIZE) != FAILED) {
-        string packet = string(buffer);
-        lines = split(packet, '\n');
-        for (auto& line : lines) {
-            cout << line <<endl;
-        }
-    }
 }
 
