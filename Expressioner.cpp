@@ -38,6 +38,7 @@ void Expressioner::load() {
         expressions = parser->next();
     } else {
         expressions = reserve.back();
+
         reserve.pop_back();
     }
 }
