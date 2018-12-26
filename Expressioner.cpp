@@ -6,15 +6,15 @@ Expressioner::Expressioner(BindedSymbolMap *symap) {
     parser = new Parser(symap, this);
 }
 
-void Expressioner::initiate(map<string, Command*> dictionary) {
+void Expressioner::initiate(map<string, Command *> dictionary) {
     parser->initiate(dictionary);
 }
 
-Expression *Expressioner::popNext() {
+Expointer Expressioner::popNext() {
     if (expressions.empty()) {
         load();
     }
-    Expression *next = expressions.front();
+    Expointer next = expressions.front();
     //pop only if next!= null
     if (next != nullptr) {
         expressions.pop_front();
@@ -22,13 +22,13 @@ Expression *Expressioner::popNext() {
     return next;
 }
 
-Expression *Expressioner::next() {
+Expointer Expressioner::next() {
     if (expressions.empty())
         return nullptr;
     return expressions.front();
 }
 
-void Expressioner::push(list<Expression*> expList) {
+void Expressioner::push(list<Expointer> expList) {
     reserve.emplace_front(expList);
 }
 

@@ -50,7 +50,7 @@ int main() {
     expressioner->initiate(commandsDictionary);
     while (expressioner->on()) {
         try {
-            Expression *exp = expressioner->popNext();
+            Expointer exp = expressioner->popNext();
             if (exp != nullptr) {
                 exp->calculate();
             }

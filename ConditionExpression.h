@@ -1,28 +1,24 @@
-//
-// Created by fatuity on 12/23/18.
-//
-
 #ifndef UNTITLED4_CONDITIONEXPRESSION_H
 #define UNTITLED4_CONDITIONEXPRESSION_H
 
 
 #include <map>
-#include "Expression.h"
+#include "Expointer .h"
 
 class ConditionExpression : public Expression {
-    Expression *leftExp, *rightExp;
+    Expointer leftExp, rightExp;
     string strVal;
     enum Condition {
         Less, Bigger, LessEqual, BiggerEqual, Equal, NotEqual
     };
-    map<string, Condition> conditionMap = {{"<",  Less},
-                                           {">",  Bigger},
-                                           {"<=", LessEqual},
-                                           {">=", BiggerEqual},
-                                           {"==", Equal},
-                                           {"!=", NotEqual}};
+    map <string, Condition> conditionMap = {{"<",  Less},
+                                            {">",  Bigger},
+                                            {"<=", LessEqual},
+                                            {">=", BiggerEqual},
+                                            {"==", Equal},
+                                            {"!=", NotEqual}};
 public:
-    ConditionExpression(string str, Expression *left, Expression *right) {
+    ConditionExpression(string str, Expointer left, Expointer right) {
         strVal = str;
         leftExp = left;
         rightExp = right;

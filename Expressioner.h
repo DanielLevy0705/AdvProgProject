@@ -10,6 +10,7 @@
 #define EXPRESSIONER_H
 
 #include "CommandSet.h"
+#include "Expointer.h"
 
 class Parser;
 
@@ -17,8 +18,8 @@ using namespace std;
 
 class Expressioner {
     Parser *parser;
-    list<list<Expression *>> reserve;
-    list<Expression *> expressions;
+    list<list<Expointer >> reserve;
+    list<Expointer> expressions;
     bool active;
 
 public:
@@ -27,11 +28,11 @@ public:
 
     void initiate(map<string, Command *> dictionary);
 
-    Expression *popNext();
+    Expointer popNext();
 
-    Expression *next();
+    Expointer next();
 
-    void push(list<Expression *> expList);
+    void push(list<Expointer> expList);
 
     bool on() { return active; }
 

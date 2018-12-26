@@ -2,13 +2,13 @@
 #define PROJ1_MINUS_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
 #include "MathExpression.h"
 
 class Minus : public MathExpression {
-    Expression *leftExp, *rightExp;
+    Expointer leftExp, rightExp;
 public:
-    Minus( Expression *left, Expression *right) {
+    Minus( Expointer left, Expointer right) {
         leftExp = left;
         rightExp = right;
     }

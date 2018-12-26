@@ -2,14 +2,14 @@
 #define PROJ1_DIV_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
 #include "MathExpression.h"
 
 class Div : public MathExpression {
-    Expression *leftExp;
-    Expression *rightExp;
+    Expointer  leftExp;
+    Expointer  rightExp;
 public:
-    Div( Expression *left, Expression *right) {
+    Div( Expointer  left, Expointer  right) {
         if (right->calculate() == 0) {
             throw "dividing by zero exception";
         }

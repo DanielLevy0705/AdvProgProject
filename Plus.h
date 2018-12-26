@@ -2,13 +2,13 @@
 #define PROJ1_PLUS_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
 #include "MathExpression.h"
 
 class Plus : public MathExpression {
-    Expression *leftExp, *rightExp;
+    Expointer leftExp, rightExp;
 public:
-    Plus( Expression *left, Expression *right) {
+    Plus( Expointer left, Expointer right) {
         leftExp = left;
         rightExp = right;
     }

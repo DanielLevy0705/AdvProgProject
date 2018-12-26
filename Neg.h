@@ -1,18 +1,14 @@
-//
-// Created by fatuity on 12/22/18.
-//
-
 #ifndef PROJ1_NEG_H
 #define PROJ1_NEG_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
 #include "MathExpression.h"
 
 class Neg : public MathExpression {
-    Expression* expression;
+    Expointer expression;
 public:
-    Neg( Expression* exp) {
+    Neg( Expointer  exp) {
         expression = exp;
     }
 

@@ -3,7 +3,7 @@
 #include "ValueExpression.h"
 #include <list>
 
-Expression *Parser::applyOp(Expression *left, Expression *right, string op) {
+Expointer Parser::applyOp(Expointer left, Expointer right, string op) {
     if (op == "+") {
         return new Plus(left, right);
     } else if (op == "-") {
@@ -30,9 +30,9 @@ int Parser::precendance(string opr) {
     return 0;
 }
 
-void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values) {
+void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expointer > &values) {
     string op;
-    Expression *leftVal, *rightVal;
+    Expointer leftVal, *rightVal;
     if (oprs.top() == neg) {
         rightVal = values.top();
         values.pop();
@@ -55,12 +55,12 @@ void Parser::shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values
     }
 }
 
-Expression *Parser::shuntingYard(Line exp) {
-    stack<Expression *> values;
+Expointer Parser::shuntingYard(Line exp) {
+    stack<Expointer > values;
     stack<string> oprs;
     string op;
-    Expression *rightVal;
-    Expression *leftVal;
+    Expointer rightVal;
+    Expointer leftVal;
     //run all over the expression.
     for (int i = 0; i < exp.size(); i++) {
         //if its opening braces push to oprators stack.
@@ -246,8 +246,8 @@ Line Parser::getMathLine(Line *line) {
     return mathExp;
 }
 
-Expression *Parser::getConditionExpression(list<Expression *> &expList, Line *line) {
-    Expression *left, *right;
+Expointer Parser::getConditionExpression(list<Expointer > &expList, Line *line) {
+    Expointer left, *right;
     string strVal = line->popFirst();
     if (line->empty()) {
         throw "Error : condition Expression is not legitimate " + strVal;
@@ -263,9 +263,9 @@ Expression *Parser::getConditionExpression(list<Expression *> &expList, Line *li
     return new ConditionExpression(strVal, left, right);
 }
 
-list<Expression *> Parser::next() {
+list<Expointer > Parser::next() {
     Line *line = new Line(lexer.lexer(inputer.next()));
-    list<Expression *> expList;
+    list<Expointer > expList;
     while (!line->empty()) {
         Line temp;
         string word = line->first();

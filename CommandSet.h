@@ -2,24 +2,24 @@
 #define COMMANDSET_H
 
 #include <list>
-#include "Expression.h"
+#include "Expointer .h"
 
 
 class Expressioner;
 
 class CommandSet : public Expression {
-    Expressioner* expressioner;
-    list<list<Expression*>> set;
+    Expressioner *expressioner;
+    list<list<Expointer >> set;
 public:
-    CommandSet(Expressioner* exprer) {
+    CommandSet(Expressioner *exprer) {
         expressioner = exprer;
     }
 
-    void pushLine(list<Expression*> line) {
+    void pushLine(list<Expointer> line) {
         set.push_back(line);
     }
 
-    const type_info& getType() const override {
+    const type_info &getType() const override {
         return typeid(CommandSet);
     }
 

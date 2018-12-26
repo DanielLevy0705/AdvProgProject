@@ -15,13 +15,13 @@
 
 class ValueExpression : public Expression {
 
-    Expressioner* expressioner;
-    BindedSymbolMap* symap;
+    Expressioner *expressioner;
+    BindedSymbolMap *symap;
     string name;
 
 public:
     //constructor:
-    ValueExpression(BindedSymbolMap *bindedSymbolMap, Expressioner *expr, const string& nam) {
+    ValueExpression(BindedSymbolMap *bindedSymbolMap, Expressioner *expr, const string &nam) {
         symap = bindedSymbolMap;
         expressioner = expr;
         name = nam;
@@ -30,7 +30,7 @@ public:
     double calculate() const override {
         if (expressioner->next() != nullptr) {
             if (expressioner->next()->getType() == typeid(AssignmentCommand)) {
-                Expression* next = expressioner->popNext();
+                Expointer next = expressioner->popNext();
                 if (expressioner->argumentsInLine() == 0)
                     throw string("Error: operator = with no argument to assign");
                 next = expressioner->popNext();
@@ -51,10 +51,10 @@ public:
     }
 
     string getString() const override {
-        return (string)*(*symap)[name];
+        return (string) *(*symap)[name];
     }
 
-    const type_info& getType() const override {
+    const type_info &getType() const override {
         return typeid(ValueExpression);
     }
 };

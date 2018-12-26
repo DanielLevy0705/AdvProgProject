@@ -58,13 +58,13 @@ public:
 
     Line getMathLine(Line *line);
 
-    Expression *applyOp(Expression *left, Expression *right, string op);
+    Expointer applyOp(Expointer left, Expointer right, string op);
 
     int precendance(string opr);
 
-    void shuntingYardHelper(stack<string> &oprs, stack<Expression *> &values);
+    void shuntingYardHelper(stack<string> &oprs, stack<Expointer > &values);
 
-    Expression *shuntingYard(Line exp);
+    Expointer shuntingYard(Line exp);
 
     bool isNum(string word);
 
@@ -74,7 +74,7 @@ public:
         //create the required command packet
         CommandSet* set = new CommandSet(expressioner);
         //get the next line from parser
-        list<Expression *> temp = next();
+        list<Expointer > temp = next();
         while (temp.back()->getType() != typeid(EndSetExpression)) {
             set->pushLine(temp);
             temp = next();
@@ -94,12 +94,12 @@ public:
 
     bool isIp(const string &word);
 
-    Expression *getConditionExpression(list<Expression *> &expList, Line *line);
+    Expointer getConditionExpression(list<Expointer > &expList, Line *line);
 
 public:
 
 
-    list<Expression *> next();
+    list<Expointer > next();
 };
 
 #endif //PARSER_H

@@ -2,13 +2,13 @@
 #define PROJ1_MULT_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
 #include "MathExpression.h"
 
 class Mult : public MathExpression {
-    Expression *leftExp, *rightExp;
+    Expointer leftExp, rightExp;
 public:
-    Mult(Expression *left, Expression *right) {
+    Mult(Expointer left, Expointer right) {
         leftExp = left;
         rightExp = right;
     }
@@ -17,7 +17,7 @@ public:
         return leftExp->calculate() * rightExp->calculate();
     }
 
-    const type_info& getType() const override {
+    const type_info &getType() const override {
         return typeid(Mult);
     }
 };
