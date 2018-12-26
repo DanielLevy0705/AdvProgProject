@@ -23,6 +23,7 @@ void BindedSymbolMap::openDataServer(int port, int frequency) {
 
     //get one pulse of information to set the table
     updateTable();
+    //make it true
     *updatesThreadActive = true;
     // start the updates thread
     if (pthread_create(&serverThread, nullptr, startUpdatesRoutine, this))
