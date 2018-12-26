@@ -25,7 +25,7 @@ public:
         rightExp = right;
     }
 
-    virtual double calculate() const;
+    virtual double calculate() const override;
 
     virtual string getString() const {
         if (calculate() != 0) {
