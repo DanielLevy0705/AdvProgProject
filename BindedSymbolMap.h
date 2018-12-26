@@ -71,6 +71,8 @@ public:
         updatesThreadActive = new bool(false); //the
         updatsMutex = PTHREAD_MUTEX_INITIALIZER;
     }
+
+
     //external function to open the data server
     void openDataServer(int port, int frequency);
 

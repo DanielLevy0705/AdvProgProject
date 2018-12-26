@@ -49,6 +49,10 @@ public:
         lexer = Lexer();
         inputer = Inputer();
     }
+    ~Parser() {
+        for (auto pair : dictionary)
+            delete pair.second;
+    }
 
 
 
