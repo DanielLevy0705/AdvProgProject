@@ -4,6 +4,7 @@
 #include "Expression.h"
 #include "SetExpression.h"
 #include "ExitCommand.h"
+#include "SleepCommand.h"
 
 #include <map>
 
@@ -50,7 +51,8 @@ int main(int argc, char** argv) {
                                                     {"}", new EndSetExpression()},
                                                     {"exit", new ExitCommand(expressioner)},
                                                     {"if", new IfCommand(expressioner)},
-                                                    {"while", new WhileCommand(expressioner)}};
+                                                    {"while", new WhileCommand(expressioner)},
+                                                    {"sleep", new SleepCommand(expressioner)}};
     expressioner->initiate(commandsDictionary, commandsFilePath);
     while (expressioner->on()) {
         try {

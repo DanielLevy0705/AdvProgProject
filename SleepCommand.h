@@ -5,6 +5,7 @@
 #ifndef SLEEPCOMMAND_H
 #define SLEEPCOMMAND_H
 
+#include <thread>
 #include "Expressioner.h"
 #include "Command.h"
 #include "ValueExpression.h"
@@ -22,7 +23,8 @@ public:
     }
 
     double execute() const override {
-        usleep(expressioner->popNext()->calculate());
+        int time = expressioner->popNext()->calculate();
+        this_thread::sleep_for(chrono::milliseconds(time));
         return 0;
     }
 

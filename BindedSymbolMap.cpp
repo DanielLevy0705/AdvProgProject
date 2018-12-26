@@ -1,3 +1,4 @@
+#include <thread>
 #include "BindedSymbolMap.h"
 
 //the function that will update the map in seperate thread
@@ -90,7 +91,8 @@ void BindedSymbolMap::updateTable() {
 
 void BindedSymbolMap::waitBetweenUpdates() {
     if (updatesFrequency != 0)
-        usleep(1000 / updatesFrequency);
+        this_thread::sleep_for(chrono::milliseconds(1000 / updatesFrequency));
+
 }
 
 //the function that connects to the flightgear as a client;
