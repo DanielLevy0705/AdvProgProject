@@ -42,12 +42,16 @@ public:
     }
 
     void operator = (double num) {
-        Info* info = new Info();
-        info->bindedValue = this;
-        info->num = num;
-        //send command to server to set value in diffrent thread
-        pthread_t clientThread;
-        pthread_create(&clientThread, nullptr, sendAsClient, info);
+        if (path[0] == '/') {
+            Info* info = new Info();
+            info->bindedValue = this;
+            info->num = num;
+            //send command to server to set value in diffrent thread
+            pthread_t clientThread;
+            pthread_create(&clientThread, nullptr, sendAsClient, info);
+        } else {
+            *((*symap)[path]) = num;
+        }
 
     }
 

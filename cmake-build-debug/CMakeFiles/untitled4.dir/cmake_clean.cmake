@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled4.dir/WhileCommand.cpp.o"
   "CMakeFiles/untitled4.dir/VarCommand.cpp.o"
   "CMakeFiles/untitled4.dir/Lexer.cpp.o"
+  "CMakeFiles/untitled4.dir/BindCommand.cpp.o"
   "untitled4.pdb"
   "untitled4"
 )

@@ -54,6 +54,10 @@ public:
         return (string) *(*symap)[name];
     }
 
+    string getName() {
+        return name;
+    }
+
     const type_info &getType() const override {
         return typeid(ValueExpression);
     }

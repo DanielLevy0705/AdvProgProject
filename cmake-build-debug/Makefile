@@ -123,6 +123,33 @@ untitled4/fast:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/build
 .PHONY : untitled4/fast
 
+BindCommand.o: BindCommand.cpp.o
+
+.PHONY : BindCommand.o
+
+# target to build an object file
+BindCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.o
+.PHONY : BindCommand.cpp.o
+
+BindCommand.i: BindCommand.cpp.i
+
+.PHONY : BindCommand.i
+
+# target to preprocess a source file
+BindCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.i
+.PHONY : BindCommand.cpp.i
+
+BindCommand.s: BindCommand.cpp.s
+
+.PHONY : BindCommand.s
+
+# target to generate assembly for a file
+BindCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/BindCommand.cpp.s
+.PHONY : BindCommand.cpp.s
+
 BindedSymbolMap.o: BindedSymbolMap.cpp.o
 
 .PHONY : BindedSymbolMap.o
@@ -402,6 +429,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... untitled4"
 	@echo "... edit_cache"
+	@echo "... BindCommand.o"
+	@echo "... BindCommand.i"
+	@echo "... BindCommand.s"
 	@echo "... BindedSymbolMap.o"
 	@echo "... BindedSymbolMap.i"
 	@echo "... BindedSymbolMap.s"

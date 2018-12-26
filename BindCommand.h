@@ -21,20 +21,7 @@ public:
         throw string("Error: 'bind' can be used only after '='.");
     }
 
-    string getString() const override {
-        if (symap->canBind()) {
-            if (expressioner->argumentsInLine() != 1)
-                throw string("Error: 'bind' should get only one argument.");
-            if (expressioner->next()->getType() != typeid(StringExpression))
-                throw string("Error: 'bind' should get string: \"...\"");
-            string path = expressioner->popNext()->getString();
-            if (!symap->exist(path))
-                throw string("Error: \"" + path + "\" not generic, cannot be binded.");
-            return path;
-        } else
-            throw string("Error: can 'bind' only after 'connect'.");
-
-    }
+    string getString() const override;
 };
 
 
