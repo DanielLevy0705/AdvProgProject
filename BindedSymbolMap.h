@@ -46,7 +46,7 @@ typedef struct sockaddr_in Address;
 class BindedSymbolMap {
     map<string, Value*>* symbolMap;
     //server-client members
-    pthread_t serverThread, clientThread;
+    pthread_t serverThread;
     bool* updatesThreadActive;
     int updatesServerSocket;
     int clientSocket;
