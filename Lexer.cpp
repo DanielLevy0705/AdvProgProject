@@ -17,7 +17,7 @@ Line Lexer::lexer(string input) {
                 newWordAddition = false;
                 newWord = "";
             }
-            //if its underscore add it.
+            //if its underscore add it
         } else if (input.at(idx) == '_') {
             newWord += input[idx];
             newWordAddition = true;
