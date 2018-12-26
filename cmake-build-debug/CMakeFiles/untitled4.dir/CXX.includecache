@@ -18,10 +18,6 @@ Command.h
 StringExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp
-BindedSymbolMap.h
-/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
-
 /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
 stdio.h
 -
@@ -121,12 +117,18 @@ WhileCommand.h
 /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp
 ConditionExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
+Expointer.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
 map
 -
 Expointer.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+Expression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h
 BindedSymbolMap.h
@@ -195,10 +197,6 @@ fstream
 -
 iostream
 -
-
-/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp
-Lexer.h
-/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/Lexer.h
 Line.h
@@ -336,18 +334,6 @@ string
 Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 
-/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp
-StringsLibrary.h
-/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.h
-
-/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.h
-string
--
-vector
--
-sstream
--
-
 /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
 Expression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
@@ -381,6 +367,14 @@ NewExpression.h
 /home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h
 Command.h
 /home/elronbandel/CLionProjects/AdvProgProject2/Command.h
+
+/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.cpp
+WhileCommand.h
+/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
+Expointer.h
+/home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+CommandExpression.h
+/home/elronbandel/CLionProjects/AdvProgProject2/CommandExpression.h
 
 /home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
 Command.h

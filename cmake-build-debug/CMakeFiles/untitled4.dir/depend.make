@@ -20,6 +20,7 @@ CMakeFiles/untitled4.dir/CommandSet.cpp.o: ../Value.h
 CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../ConditionExpression.cpp
 CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../ConditionExpression.h
 CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../Expointer.h
+CMakeFiles/untitled4.dir/ConditionExpression.cpp.o: ../Expression.h
 
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../BindedSymbolMap.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o: ../Command.h
@@ -99,6 +100,20 @@ CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../Value.h
 CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../ValueExpression.h
 CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../VarCommand.cpp
 CMakeFiles/untitled4.dir/VarCommand.cpp.o: ../VarCommand.h
+
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../BindedSymbolMap.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../Command.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../CommandExpression.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../CommandSet.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../ConditionExpression.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../Expointer.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../Expression.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../Expressioner.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../LocalValue.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../SetExpression.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../Value.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../WhileCommand.cpp
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o: ../WhileCommand.h
 
 CMakeFiles/untitled4.dir/main.cpp.o: ../AssignmentCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o: ../BindCommand.h

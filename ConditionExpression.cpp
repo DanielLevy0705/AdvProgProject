@@ -1,5 +1,6 @@
 #include "ConditionExpression.h"
 #include "Expointer.h"
+#include "Expression.h"
 double ConditionExpression::calculate() const {
     //switch the condition cases by the strVal and check if the condition is true
     switch (conditionMap.at(strVal)) {

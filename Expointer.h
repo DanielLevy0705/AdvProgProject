@@ -15,7 +15,7 @@ using namespace std;
 //typedef shared_ptr<Expression> Expointer;
 typedef shared_ptr<Expression> Expointer;
 
-Expointer newExpointer(Expression* exp) {
+static Expointer newExpointer(Expression* exp) {
     return shared_ptr<Expression>(exp);
 }
 

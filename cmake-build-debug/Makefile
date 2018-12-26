@@ -339,6 +339,33 @@ VarCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/VarCommand.cpp.s
 .PHONY : VarCommand.cpp.s
 
+WhileCommand.o: WhileCommand.cpp.o
+
+.PHONY : WhileCommand.o
+
+# target to build an object file
+WhileCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/WhileCommand.cpp.o
+.PHONY : WhileCommand.cpp.o
+
+WhileCommand.i: WhileCommand.cpp.i
+
+.PHONY : WhileCommand.i
+
+# target to preprocess a source file
+WhileCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/WhileCommand.cpp.i
+.PHONY : WhileCommand.cpp.i
+
+WhileCommand.s: WhileCommand.cpp.s
+
+.PHONY : WhileCommand.s
+
+# target to generate assembly for a file
+WhileCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled4.dir/build.make CMakeFiles/untitled4.dir/WhileCommand.cpp.s
+.PHONY : WhileCommand.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -399,6 +426,9 @@ help:
 	@echo "... VarCommand.o"
 	@echo "... VarCommand.i"
 	@echo "... VarCommand.s"
+	@echo "... WhileCommand.o"
+	@echo "... WhileCommand.i"
+	@echo "... WhileCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

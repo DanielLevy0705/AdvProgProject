@@ -2,6 +2,8 @@
 // Created by elronbandel on 12/26/18.
 //
 #include "WhileCommand.h"
+#include "Expointer.h"
+#include "CommandExpression.h"
 
 double WhileCommand::execute() const  {
     if ((expressioner->next()->getType()) == typeid(ConditionExpression)) {
@@ -16,7 +18,7 @@ double WhileCommand::execute() const  {
                 list<Expointer> whileLine;
                 whileLine.emplace_front(commandsExp);
                 whileLine.emplace_front(conditionExp);
-                whileLine.emplace_front(newExpointer(new WhileCommand(expressioner)));
+                whileLine.emplace_front(newExpointer(new CommandExpression(new WhileCommand(expressioner))));
                 expressioner->push(whileLine);
 
             } else {

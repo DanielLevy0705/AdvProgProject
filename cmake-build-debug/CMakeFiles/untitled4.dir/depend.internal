@@ -21,6 +21,7 @@ CMakeFiles/untitled4.dir/ConditionExpression.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp
  /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
 CMakeFiles/untitled4.dir/Expressioner.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
  /home/elronbandel/CLionProjects/AdvProgProject2/Command.h
@@ -100,6 +101,20 @@ CMakeFiles/untitled4.dir/VarCommand.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h
  /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp
  /home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h
+CMakeFiles/untitled4.dir/WhileCommand.cpp.o
+ /home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Command.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/Value.h
+ /home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.cpp
+ /home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h
 CMakeFiles/untitled4.dir/main.cpp.o
  /home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h
  /home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h
