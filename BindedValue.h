@@ -44,7 +44,7 @@ public:
     }
 
     void operator = (double num) {
-        if (path[0] == '/') {
+        if (path[0] == '/' && symap->isClientConnected()) {
             Info* info = new Info();
             info->bindedValue = this;
             info->num = num;

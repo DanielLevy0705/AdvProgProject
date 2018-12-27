@@ -100,6 +100,9 @@ public:
     bool isUpdatesActive() {
         return *updatesThreadActive;
     }
+    bool isClientConnected() {
+        return connectedAsClient;
+    }
     void waitBetweenUpdates();
     bool exist(const string& name) {
         bool res = (symbolMap->find(name) != symbolMap->end());;

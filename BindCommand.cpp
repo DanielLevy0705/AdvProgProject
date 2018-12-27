@@ -14,8 +14,9 @@ string BindCommand::getString() const  {
         } else {
             path = expressioner->popNext()->getString();
         }
-        if (!symap->exist(path))
-            throw string("Error: \"" + path + "\" not generic, cannot be binded.");
+        if (!symap->exist(path)) {
+            symap->set(path, new LocalValue(0));
+        }
         return path;
     } else
         throw string("Error: can 'bind' only after 'connect'.");

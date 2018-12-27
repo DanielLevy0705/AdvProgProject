@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
                                 "/controls/flight/elevator",
                                 "/controls/flight/rudder",
                                 "/controls/flight/flaps",
-                                "/controls/engines/engine/throttle",
+                                "//controls/engines/current-engine/throttle",
                                 "/engines/engine/rpm"};
 
     BindedSymbolMap *symap = new BindedSymbolMap(bindPaths); //will be connected to data server and flight server
