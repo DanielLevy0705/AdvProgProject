@@ -1,0 +1,11 @@
+#ifndef UNTITLED4_COMMANDS_H
+#define UNTITLED4_COMMANDS_H
+#include "VarCommand.h"
+#include "ConnectCommand.h"
+#include "OpenDataServerCommand.h"
+#include "PrintCommand.h"
+#include "BindCommand.h"
+#include "AssignmentCommand.h"
+#include "IfCommand.h"
+#include "WhileCommand.h"
+#endif //UNTITLED4_COMMANDS_H

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="untitled4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled4">
+				<Option output="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled4/fast">
+				<Option output="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/home/elronbandel/CLionProjects/AdvProgProject2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/AssignmentCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedSymbolMap.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/BindedValue.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Command.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CommandSet.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Commands.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConditionExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ConnectCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ExitCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expointer.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Expressioner.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/IfCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Inputer.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Lexer.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/LocalValue.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/NewExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/OpenDataServerCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Parser.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Parser.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/PrintCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ProgramTools.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/SetExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/SleepCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/StringsLibrary.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/Value.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/ValueExpression.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/VarCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/WhileCommand.h">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/main.cpp">
+			<Option target="untitled4"/>
+		</Unit>
+		<Unit filename="/home/elronbandel/CLionProjects/AdvProgProject2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

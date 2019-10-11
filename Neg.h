@@ -1,28 +1,23 @@
-//
-// Created by fatuity on 12/22/18.
-//
-
 #ifndef PROJ1_NEG_H
 #define PROJ1_NEG_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
+#include "MathExpression.h"
 
-class Neg : public Expression {
-    Expression expression;
-    string strVal;
+class Neg : public MathExpression {
+    Expointer expression;
 public:
-    Neg(string stringVal, Expression* exp) {
+    Neg( Expointer  exp) {
         expression = exp;
-        strVal = stringVal;
     }
 
-    double calculate() {
-        return -expression.calculate();
+    virtual double calculate() const {
+        return -expression->calculate();
     }
 
-    string getString() {
-        return strVal;
+    const type_info& getType() const override {
+        return typeid(Neg);
     }
 };
 

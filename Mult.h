@@ -1,29 +1,24 @@
-//
-// Created by fatuity on 12/18/18.
-//
-
 #ifndef PROJ1_MULT_H
 #define PROJ1_MULT_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
+#include "MathExpression.h"
 
-class Mult : public Expression {
-    Expression *leftExp, *rightExp;
-    string strRep;
+class Mult : public MathExpression {
+    Expointer leftExp, rightExp;
 public:
-    Mult(string strVal,Expression *left, Expression *right) {
+    Mult(Expointer left, Expointer right) {
         leftExp = left;
         rightExp = right;
-        strRep = strVal;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return leftExp->calculate() * rightExp->calculate();
     }
 
-    virtual string getString(){
-        return strRep;
+    const type_info &getType() const override {
+        return typeid(Mult);
     }
 };
 

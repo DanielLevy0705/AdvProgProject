@@ -2,24 +2,23 @@
 #define PROJ1_PLUS_H
 
 
-#include "Expression.h"
+#include "Expointer.h"
+#include "MathExpression.h"
 
-class Plus : public Expression {
-    Expression *leftExp, *rightExp;
-    string strRep;
+class Plus : public MathExpression {
+    Expointer leftExp, rightExp;
 public:
-    Plus(string strVal, Expression *left, Expression *right) {
+    Plus( Expointer left, Expointer right) {
         leftExp = left;
         rightExp = right;
-        strVal = strRep;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return leftExp->calculate() + rightExp->calculate();
     }
 
-    virtual string getString() {
-        return strRep;
+    const type_info& getType() const override {
+        return typeid(Plus);
     }
 };
 

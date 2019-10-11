@@ -2,29 +2,27 @@
 #define PROJ1_DIV_H
 
 
-#include <string>
-#include "Expression.h"
+#include "Expointer.h"
+#include "MathExpression.h"
 
-class Div : public Expression {
-    Expression *leftExp;
-    Expression *rightExp;
-    string strRep;
+class Div : public MathExpression {
+    Expointer  leftExp;
+    Expointer  rightExp;
 public:
-    Div(string strVal, Expression *left, Expression *right) {
+    Div( Expointer  left, Expointer  right) {
         if (right->calculate() == 0) {
             throw "dividing by zero exception";
         }
         leftExp = left;
         rightExp = right;
-        strRep = strVal;
     }
 
-    virtual double calculate() {
+    virtual double calculate() const {
         return this->leftExp->calculate() / this->rightExp->calculate();
     }
 
-    virtual string getString() {
-        return strRep;
+    const type_info& getType() const override {
+        return typeid(Div);
     }
 };
 
